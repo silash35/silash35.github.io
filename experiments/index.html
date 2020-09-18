@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiments</title>
+
+  @partial("resources/CDNs.html")
+
+  <!-- Local Files -->
+  <link rel="preload" href="resources/scss/style.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="resources/scss/style.scss"></noscript>
+  <script defer src="resources/js/index.js"></script>
+
+</head>
+<body>
+  <header>
+    @partial("resources/header.html")
+  </header>
+
+  <main class="container center row title">
+    <section class="col s12 m6">
+      <h1 class="left-align white-text">
+        My <br> projects
+      </h1>
+    </section>
+    <section class="col s12 m6 white-text">
+      <p class="flow-text justify">
+        This page stores some small projects that I created
+        to test and learn new technologies.
+        They are the experiments. <br>
+        This&nbsp;page&nbsp;is&nbsp;an&nbsp;experiment!
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>

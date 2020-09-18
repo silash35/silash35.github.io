@@ -1,0 +1,24 @@
+{
+  "name": "silash35.github.io",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/silash35/silash35.github.io.git",
+  "author": "Silas Henrique <silash35@gmail.com>",
+  "license": "Unlicense",
+  "private": false,
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-html-partials": "^0.0.6",
+    "parcel-plugin-static-files-copy": "^2.5.0",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "materialize-css": "^1.0.0"
+  }
+}
