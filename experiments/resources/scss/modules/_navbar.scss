@@ -1,0 +1,99 @@
+@use 'functions' as f;
+@use 'shadow' as s;
+@use 'colors' as c;
+
+%container{
+  display: block;
+  overflow: hidden;
+  height: 100%;
+
+  width: 70%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 800px){
+    width: 90%;
+  }
+}
+.nav{
+  height: 64px;
+
+  .navContainer{
+    @extend %container;
+    line-height: 64px;
+    @include s.shadow(4px);
+    background-color: c.$primaryColor;
+
+    %navItem{
+      list-style: none;
+      float: left;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .sidenavTrigger{
+      @extend %navItem;
+      display: none;
+    }
+
+    .logoContainer{
+      @extend %navItem;
+      color: c.$accentColor;
+      i{
+        height: 64px;
+        line-height: 64px;
+        font-size: f.pxToEm(58.8);
+      }
+    }
+
+    .navLinks{
+      float: right;
+      margin: 0px;
+      li{
+        @extend %navItem;
+        transition: background-color .3s;
+        a{
+          padding: 0 17px;
+          font-size: pxToEm(17);
+          font-weight: 700;
+          text-decoration: none;
+          color: c.$primaryColorText;
+        }
+      }
+      li:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.active{
+  box-shadow: inset 0px -4px c.$primaryColorText;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*
+@media screen and (max-width: 800px) {
+
+  .nav{
+    .navContainer{
+      width: 90%;
+      margin: 0 auto;
+
+      %navItem{
+      }
+
+      .sidenavTrigger{
+        display: none;
+      }
+
+      .logoContainer{
+      }
+
+      .navLinks{
+        display: none;
+      }
+    }
+  }
+
+}
+*/

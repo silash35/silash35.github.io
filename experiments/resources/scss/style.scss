@@ -1,41 +1,24 @@
 @charset "utf-8";
-@import url('/node_modules/materialize-css/dist/css/materialize.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-*{
-  font-family: Roboto, sans-serif;
-  font-display: swap;
-}
+@use 'modules/fonts';
+@use 'modules/navbar';
+@use 'modules/colors' as c;
 
 body{
+  @extend .robotoFont;
+
+  margin: 0px;
   height: 100%;
   width: 100%;
-  background-image: url("../images/chemistry.webp");
-  background-color: #ff5722;
+  //background-image: url("../images/chemistry.webp");
+  background-color: c.$accentColor;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-nav{
-  font-weight: bold;
-}
-
-#nav-desktop{
-  .active{
-    box-shadow: inset 0px -4px white;
-  }
-}
-
-#logo-container{
-  .text-large{
-    font-size: 2em;
-  }
-}
-
 .title{
-  background-color: #212121;
+  background-color: c.$primaryColor;
   border-radius: 20px;
   padding: 2vw;
   margin-top: 20vh;
