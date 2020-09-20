@@ -1,0 +1,26 @@
+@use 'modules/init.scss';
+@use 'modules/functions' as f;
+@use 'modules/variables' as v;
+
+%sideBySideText{
+  width: 50%;
+  @media screen and (max-width: v.$breakMedium){
+    width: 100%;
+  }
+}
+
+h1{
+  @extend %sideBySideText;
+  float: left;
+  font-weight: 700;
+  font-size: f.pxToEm(60);
+  text-align: left;
+}
+
+p{
+  @extend %sideBySideText;
+  float: left;
+  text-align: justify;
+  font-size: 30px;
+  font-weight: 400;
+}

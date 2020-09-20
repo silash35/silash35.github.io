@@ -1,9 +1,10 @@
-<nav class="nav">
-  <div class="navContainer">
+<header class="defaultHeader">
+  <nav class="navContainer">
 
-    <a href="#" class="sidenavTrigger">
+    <button onclick="openSidenav()" class="sidenavTrigger">
       <i class="material-icons">menu</i>
-    </a>
+    </button>
+
     <a class="logoContainer" href="index.html">
       <i class="material-icons">&nbsp;science&nbsp;</i>
     </a>
@@ -15,5 +16,6 @@
       <li><a href="login.html">Login</a></li>
     </ul>
 
-  </div>
-</nav>
+    <button onclick="closeSidenav()" class="screenDarkener"></button>
+  </nav>
+</header>

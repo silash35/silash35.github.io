@@ -1,62 +1,71 @@
 @use 'functions' as f;
+@use 'variables' as v;
 @use 'shadow' as s;
-@use 'colors' as c;
+
+$animeTime: 300ms;
+
+.active{
+  box-shadow: inset 0px -4px v.$primaryColorText;
+  background-color: rgba(0, 0, 0, 0.1);
+  @media screen and (max-width: v.$breakMedium){
+    box-shadow: none;
+  }
+}
 
 %container{
   display: block;
   overflow: hidden;
-  height: 100%;
-
   width: 70%;
   margin: 0 auto;
 
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: v.$breakMedium){
     width: 90%;
   }
 }
-.nav{
-  height: 64px;
+
+.defaultHeader{
+  @include s.shadow(16);
+  background-color: v.$primaryColor;
 
   .navContainer{
     @extend %container;
-    line-height: 64px;
-    @include s.shadow(4px);
-    background-color: c.$primaryColor;
-
-    %navItem{
-      list-style: none;
-      float: left;
-      text-align: center;
-      text-decoration: none;
-    }
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: v.$headerHeight;
+    grid-template-areas: "logo links";
+    justify-content: space-between;
 
     .sidenavTrigger{
-      @extend %navItem;
       display: none;
     }
 
     .logoContainer{
-      @extend %navItem;
-      color: c.$accentColor;
+      color: v.$accentColor;
+      grid-area: logo;
       i{
-        height: 64px;
-        line-height: 64px;
+        line-height: v.$headerHeight;
         font-size: f.pxToEm(58.8);
       }
     }
 
     .navLinks{
-      float: right;
-      margin: 0px;
+      grid-area: links;
+      align-self: center;
       li{
-        @extend %navItem;
+        list-style: none;
         transition: background-color .3s;
+        float: left;
+        padding: 0 17px;
         a{
-          padding: 0 17px;
-          font-size: pxToEm(17);
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+
+          line-height: v.$headerHeight;
+          font-size: f.pxToEm(17);
           font-weight: 700;
           text-decoration: none;
-          color: c.$primaryColorText;
+          color: v.$primaryColorText;
         }
       }
       li:hover{
@@ -64,36 +73,65 @@
       }
     }
   }
+  .screenDarkener{
+    all: unset;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    opacity: 0;
+    transition: visibility 0s,opacity $animeTime;
+  }
 }
 
-.active{
-  box-shadow: inset 0px -4px c.$primaryColorText;
-  background-color: rgba(0, 0, 0, 0.1);
-}
+@media screen and (max-width: v.$breakMedium){
 
-/*
-@media screen and (max-width: 800px) {
-
-  .nav{
+  .defaultHeader{
     .navContainer{
-      width: 90%;
-      margin: 0 auto;
-
-      %navItem{
-      }
+      grid-template-columns: auto;
+      grid-template-areas: "logo";
+      justify-content: center;
 
       .sidenavTrigger{
-        display: none;
-      }
+        all: unset;
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        float: left;
 
-      .logoContainer{
+        color: v.$primaryColorText;
+        i{
+          line-height: v.$headerHeight;
+          font-size: f.pxToEm(30);
+        }
       }
 
       .navLinks{
-        display: none;
+        position: fixed;
+        z-index: 1;
+
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 300px;
+
+        background-color: v.$primaryColor;
+        @include s.shadow(6);
+
+        visibility: collapse;
+        left: -300px;
+        transition: visibility 0s, left $animeTime;
+
+        li{
+          float: none;
+          text-align: start;
+        }
       }
     }
   }
 
 }
-*/

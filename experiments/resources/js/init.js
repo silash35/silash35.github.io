@@ -11,6 +11,27 @@ function setHeaderActive(){
 }
 
 function startCss(){
+  window.navLinks = document.querySelector('.navLinks');
+  window.screenDarkener = document.querySelector('.screenDarkener');
+
+  window.openSidenav = function(){
+    navLinks.style.visibility = 'visible';
+    navLinks.style.left = '0px';
+
+    screenDarkener.style.visibility = 'visible';
+    screenDarkener.style.opacity = '.2';
+  }
+
+  window.closeSidenav = function(){
+    navLinks.style.left = '-300px';
+    screenDarkener.style.opacity = '0';
+
+    //waits the animation ends
+    setTimeout(function(){
+      navLinks.style.visibility = 'collapse';
+      screenDarkener.style.visibility = 'collapse';
+    }, 300);
+  }
 }
 
 export default () => {setHeaderActive();startCss();};
