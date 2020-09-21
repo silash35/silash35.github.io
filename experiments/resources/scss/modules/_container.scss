@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+%container{
+  display: block;
+  overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
+
+  @media screen and (max-width: v.$breakMedium){
+    width: 90%;
+  }
+}

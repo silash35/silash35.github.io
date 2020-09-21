@@ -1,26 +1,39 @@
 @use 'modules/init.scss';
+@use 'modules/centerCard';
 @use 'modules/functions' as f;
 @use 'modules/variables' as v;
 
-%sideBySideText{
-  width: 50%;
+.centerCard{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "title description";
+  align-content: space-around;
+
+  width: 60%;
   @media screen and (max-width: v.$breakMedium){
-    width: 100%;
+    width: 80%;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 50%;
+    grid-template-areas: "title"
+                         "description";
   }
 }
 
 h1{
-  @extend %sideBySideText;
-  float: left;
+  grid-area: title;
+  align-self: center;
+
   font-weight: 700;
   font-size: f.pxToEm(60);
-  text-align: left;
 }
 
 p{
-  @extend %sideBySideText;
-  float: left;
+  grid-area: description;
+  align-self: center;
+
   text-align: justify;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 400
 }

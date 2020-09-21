@@ -4,7 +4,7 @@ init();
 let n1;
 let n2;
 let signal;
-let display = document.querySelector('#display');
+let display = document.querySelector('#displayText');
 
 window.addNum = function(num){
   if(display.innerText == 0){

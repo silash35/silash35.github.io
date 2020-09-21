@@ -14,13 +14,13 @@
   <title>Calculator</title>
 </head>
 <body>
-  <header>
-    @partial("resources/header.html")
-  </header>
+  <div class="grid">
 
-  <main>
-    <div class="calculator">
-        <div id="display">0</div>
+      @partial("resources/header.html")
+
+    <main>
+      <article class="centerCard">
+        <div class="display"><div id="displayText">0</div></div>
 
         <button class="btn-large number" onclick="addNum(1)">1</button>
         <button class="btn-large number" onclick="addNum(2)">2</button>
@@ -40,8 +40,8 @@
         <button class="btn-large number" onclick="addNum(0)">0</button>
         <button class="btn-large equal" id="equal" onclick="equal()">=</button>
         <button class="btn-large opera" onclick="opera('sum')">+</button>
-    </div>
-  </main>
-
+      </article>
+    </main>
+  </div>
 </body>
 </html>

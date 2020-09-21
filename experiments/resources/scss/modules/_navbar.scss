@@ -1,6 +1,7 @@
 @use 'functions' as f;
 @use 'variables' as v;
 @use 'shadow' as s;
+@use 'container';
 
 $animeTime: 300ms;
 
@@ -9,17 +10,6 @@ $animeTime: 300ms;
   background-color: rgba(0, 0, 0, 0.1);
   @media screen and (max-width: v.$breakMedium){
     box-shadow: none;
-  }
-}
-
-%container{
-  display: block;
-  overflow: hidden;
-  width: 70%;
-  margin: 0 auto;
-
-  @media screen and (max-width: v.$breakMedium){
-    width: 90%;
   }
 }
 

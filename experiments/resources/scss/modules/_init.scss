@@ -35,17 +35,3 @@ main{
   grid-area: main;
   align-self: center;
 }
-
-.centerCard{
-  @extend %container;
-  @include s.shadow(8);
-  background-color: v.$primaryColor;
-  color: v.$primaryColorText;
-  border-radius: 16px;
-  padding: 24px;
-
-  width: 60%;
-  @media screen and (max-width: v.$breakMedium){
-    width: 80%;
-  }
-}

@@ -1,0 +1,12 @@
+@use 'variables' as v;
+@use 'shadow' as s;
+@use 'container';
+
+.centerCard{
+  @extend %container;
+  @include s.shadow(8);
+  background-color: v.$primaryColor;
+  color: v.$primaryColorText;
+  border-radius: 4px;
+  padding: 24px;
+}
