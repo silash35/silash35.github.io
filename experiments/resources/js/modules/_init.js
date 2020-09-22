@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 function setHeaderActive(){
   let navLinks = document.querySelector('.navLinks').getElementsByTagName('li');
 
@@ -20,7 +22,7 @@ function startCss(){
 
     screenDarkener.style.visibility = 'visible';
     screenDarkener.style.opacity = '.2';
-  }
+  };
 
   window.closeSidenav = function(){
     navLinks.style.left = '-300px';
@@ -31,7 +33,7 @@ function startCss(){
       navLinks.style.visibility = 'collapse';
       screenDarkener.style.visibility = 'collapse';
     }, 300);
-  }
+  };
 }
 
 export default () => {setHeaderActive();startCss();};

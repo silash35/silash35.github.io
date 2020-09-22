@@ -6,21 +6,24 @@
   @partial("resources/CDNs.html")
 
   <!-- Local Files -->
-  <link rel="preload" href="resources/scss/login.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="resources/scss/login.scss"></noscript>
-  <script defer src="resources/js/login.js"></script>
+  <link rel="preload" href="resources/scss/userList.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="resources/scss/userList.scss"></noscript>
+  <script defer src="resources/js/userList.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User List</title>
 </head>
 <body>
-  <header>
+  <div class="grid">
+
     @partial("resources/header.html")
-  </header>
-    <main class="center-card">
+
+    <main>
+      <article class="centerCard">
         <h1>Registered users</h1>
         <ul class="collection" id="userList">
         </ul>
+      </article>
     </main>
 </body>
 </html>

@@ -1,5 +1,7 @@
 @use 'modules/variables' as v;
 
+$textFieldAccentColor: #1976d2;
+
 .textField{
   position: relative;
   width: 100%;
@@ -48,10 +50,10 @@
 
 .textField.used{
   input{
-    border-bottom: 2px solid v.$accentColor;
+    border-bottom: 2px solid $textFieldAccentColor;
   }
   label{
-    color: v.$accentColor;
+    color: $textFieldAccentColor;
     font-size: .8rem;
     top: -20px;
     pointer-events: none;

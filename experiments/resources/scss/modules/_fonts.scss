@@ -1,8 +1,39 @@
+@use 'functions' as f;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-.robotoFont{
+%robotoFont{
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 100%;
   font-display: swap;
+}
+
+h1{
+  font-weight: 300;
+  font-size: f.pxToEm(96);
+}
+
+h2{
+  font-weight: 300;
+  font-size: f.pxToEm(60);
+}
+
+h3{
+  font-weight: 400;
+  font-size: f.pxToEm(48);
+}
+
+h4{
+  font-weight: 400;
+  font-size: f.pxToEm(34);
+}
+
+h5{
+  font-weight: 400;
+  font-size: f.pxToEm(24);
+}
+
+h6{
+  font-weight: 500;
+  font-size: f.pxToEm(20);
 }

@@ -5,7 +5,7 @@
 @use 'shadow' as s;
 
 body{
-  @extend .robotoFont;
+  @extend %robotoFont;
 
   margin: 0px;
   height: 100%;
