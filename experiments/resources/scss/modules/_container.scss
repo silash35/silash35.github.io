@@ -3,10 +3,10 @@
 %container{
   display: block;
   overflow: hidden;
-  width: 70%;
   margin: 0 auto;
 
+  width: fit-content;
   @media screen and (max-width: v.$breakMedium){
-    width: 90%;
+    width: fit-content;
   }
 }

@@ -1,24 +1,39 @@
-@use 'modules/init';
+@use 'modules/init.scss';
+@use 'modules/centerCard';
+@use 'modules/button';
+@use 'modules/textField';
+@use 'modules/variables' as v;
+@use 'modules/functions' as f;
 
-.central-card{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+.centerCard{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 
-  padding: 20px;
   background-color: white;
-  border-radius: 20px;
-
-  text-align: center;
+  color: black;
 }
 
-.big-icon{
-  font-size: 8em;
+#loginForm{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+}
+
+#icon{
+  font-size: f.pxToEm(120);
+  color: v.$primaryColor;
 }
 
 #login{
+  @extend %button;
+  padding: 16px;
+  font-size: f.pxToEm(14);
+  color: white;
   background-color: #03a9f4;
 
   &:hover, &:focus{
@@ -28,16 +43,4 @@
   &:active{
     background-color: #0288d1;
   }
-}
-
-.center-card{
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  margin-top: 20px;
-  transform: translate(-50%, 0%);
-
-  padding: 20px;
-  background-color: white;
-  border-radius: 20px;
 }

@@ -14,24 +14,38 @@
   <title>Login</title>
 </head>
 <body>
-  <header>
+  <div class="grid">
+
     @partial("resources/header.html")
-  </header>
 
-  <main>
-    <div class="central-card">
-      <p>This page is just a demonstration, do not use real information<p>
-      <i class="material-icons big-icon">account_circle</i>
-      <form>
-        <input type="text" id="name" placeholder="name" onfocus="document.getElementById('feedBack').style = 'display: none'">
-        <input type="text" id="mail" placeholder="mail" onfocus="document.getElementById('feedBack').style = 'display: none'">
-      </form>
-      <button class="btn-large" id="login" onclick="register()">Login</button>
-      <br><br>
-      <div id=feedBack></div>
+    <main>
+      <article class="centerCard">
 
-    </div>
-  </main>
+        <p>This page is just a demonstration, do not use real information</p>
+        <i class="material-icons" id="icon">account_circle</i>
+
+        <form id="loginForm">
+
+          <div class="textField">
+            <input type="text" id="name"
+              onfocus="enableTextField('name')" onblur="disableTextField('name')">
+            <label for="name">name</label>
+          </div>
+
+          <div class="textField">
+            <input type="text" id="mail"
+              onfocus="enableTextField('mail')" onblur="disableTextField('mail')">
+            <label for="mail">mail</label>
+          </div>
+
+          <button id="login" type="button" onclick="register()">Login</button>
+        </form>
+
+        <div id=feedBack></div>
+
+      </article>
+    </main>
+  </div>
   <a href="userList.html"></a>
 </body>
 </html>

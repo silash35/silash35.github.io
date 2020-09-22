@@ -1,3 +1,4 @@
+import md5 from 'crypto-js/md5';
 import init from './modules/_init';
 init();
 
@@ -44,14 +45,31 @@ window.register = function(){
   }
 };
 
-window.enableTextField = function(id){
-  document.getElementById('feedBack').style = 'display: none';
-  document.getElementById(id).parentElement.classList.add('used');
+function getUsers(){
+
+  fetch('https://node-server-side.herokuapp.com/users')
+    .then((response) => response.json())
+    .then((response) => {
+      response.forEach((user) => {
+        let userAvatar = 'https://www.gravatar.com/avatar/' + md5(user.mail);
+
+        const item = document.createElement('li');
+        item.classList = 'collection-item avatar';
+        item.innerHTML = `<img class="circle" src="${userAvatar}">
+        <span>${user.name}</span>
+        <p>Email: ${user.mail}</p>`;
+
+        document.querySelector('#userList').appendChild(item);
+      });
+    });
+
 }
 
-window.disableTextField = function(id){
-  const textField = document.getElementById(id);
-  if (textField.value.length == 0){
-    textField.parentElement.classList.remove('used');
-  }
+if(document.querySelector('title').innerText == 'Login') {
+  M.toast({html: 'Login page that communicates with an external API'});
+}else{
+  getUsers();
+  M.toast({html: 'Shows a list of users using an external API'});
 }
+
+/*global M*/

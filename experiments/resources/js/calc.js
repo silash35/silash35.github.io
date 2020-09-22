@@ -1,4 +1,4 @@
-import init from './init.js';
+import init from './modules/_init.js';
 init();
 
 let n1;
@@ -46,6 +46,3 @@ window.equal = function(){
     console.log('Error: Operation not allowed ' + error);
   }
 };
-M.toast({html: 'A calculator using JavaScript'});
-
-/*global M*/
