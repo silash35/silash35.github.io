@@ -1,5 +1,7 @@
+import globalize from './modules/_globalize';
+import configTextField from './modules/_configTextField';
 import init from './modules/_init';
-init();
+init(); configTextField();
 
 function isValid(texto){
   if(texto == ''){
@@ -8,7 +10,7 @@ function isValid(texto){
   return true;
 }
 
-window.register = function(){
+globalize('register', () => {
   const name = document.getElementById('name');
   const mail = document.getElementById('mail');
   const feedBack = document.getElementById('feedBack');
@@ -40,16 +42,4 @@ window.register = function(){
     feedBack.innerText = 'invalid data';
     feedBack.style = 'color: red; display: inline-block';
   }
-};
-
-window.enableTextField = function(id){
-  document.getElementById('feedBack').style = 'display: none';
-  document.getElementById(id).parentElement.classList.add('used');
-};
-
-window.disableTextField = function(id){
-  const textField = document.getElementById(id);
-  if (textField.value.length == 0){
-    textField.parentElement.classList.remove('used');
-  }
-};
+});

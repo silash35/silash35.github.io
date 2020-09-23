@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  @partial("resources/CDNs.html")
+  @partial("resources/head.html")
+  <title>User List</title>
 
   <!-- Local Files -->
   <link rel="preload" href="resources/scss/userList.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="resources/scss/userList.scss"></noscript>
   <script defer src="resources/js/userList.js"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User List</title>
 </head>
 <body>
-  <div class="grid">
+  <div class="defaultLayout">
 
     @partial("resources/header.html")
 

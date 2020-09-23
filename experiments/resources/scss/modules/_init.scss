@@ -18,7 +18,7 @@ body{
   background-size: cover;
 }
 
-.grid{
+.defaultLayout{
   display: grid;
   grid: v.$headerHeight auto / auto;
   grid-template-areas: "header"

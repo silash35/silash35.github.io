@@ -1,6 +1,3 @@
 User-agent: *
-
-disallow: /
-allow: /index.html
-
+Disallow: /experiments/
 Sitemap: https://silash35.github.io/sitemap.xml
