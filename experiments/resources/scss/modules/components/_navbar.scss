@@ -1,7 +1,6 @@
-@use 'functions' as f;
-@use 'variables' as v;
-@use 'shadow' as s;
-@use 'container';
+@use '../utils/functions' as f;
+@use '../utils/variables' as v;
+@use '../utils/shadow' as s;
 
 $animeTime: 300ms;
 
@@ -18,7 +17,9 @@ $animeTime: 300ms;
   background-color: v.$primaryColor;
 
   .navContainer{
-    @extend %container;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
     width: 70%;
     @media screen and (max-width: v.$breakMedium){
       width: 90%;

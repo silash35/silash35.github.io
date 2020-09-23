@@ -1,7 +1,8 @@
 import globalize from './modules/_globalize';
-import configTextField from './modules/_configTextField';
 import init from './modules/_init';
-init(); configTextField();
+import configAlert from './modules/_configAlert';
+import configTextField from './modules/_configTextField';
+init(); configAlert(); configTextField();
 
 function isValid(texto){
   if(texto == ''){

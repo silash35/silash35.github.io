@@ -1,11 +1,11 @@
 @charset "utf-8";
-@use 'fonts';
-@use 'navbar';
-@use 'variables' as v;
-@use 'shadow' as s;
+@use 'components/navbar';
+@use 'utils/typography' as t;
+@use 'utils/variables' as v;
+@use 'utils/shadow' as s;
 
 body{
-  @extend %robotoFont;
+  @include t.roboto;
 
   margin: 0px;
   height: 100%;
@@ -33,5 +33,6 @@ header{
 
 main{
   grid-area: main;
-  align-self: center;
+  place-self: center;
+  margin: 10px;
 }

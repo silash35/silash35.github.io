@@ -12,11 +12,14 @@
 </head>
 <body>
   <div class="defaultLayout">
-
-      @partial("resources/header.html")
-
+    @partial("resources/header.html")
     <main>
-      <article class="centerCard">
+      <div class="alert">
+        <h2>What is it?</h2>
+        <p>This experiment is a simple calculator made with JavaScript</p>
+        <div><button onclick="closeAlert(this)">got it</button></div>
+      </div>
+      <article class="card">
         <div class="display"><div id="displayText">0</div></div>
 
         <button class="number" onclick="addNum(1)">1</button>

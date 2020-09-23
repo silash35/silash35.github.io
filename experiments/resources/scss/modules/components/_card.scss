@@ -1,9 +1,7 @@
-@use 'variables' as v;
-@use 'shadow' as s;
-@use 'container';
+@use '../utils/variables' as v;
+@use '../utils/shadow' as s;
 
-.centerCard{
-  @extend %container;
+.card{
   @include s.shadow(8);
   background-color: v.$primaryColor;
   color: v.$primaryColorText;

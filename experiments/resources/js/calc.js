@@ -1,5 +1,6 @@
-import init from './modules/_init.js';
-init();
+import init from './modules/_init';
+import configAlert from './modules/_configAlert';
+init(); configAlert();
 
 let n1;
 let n2;

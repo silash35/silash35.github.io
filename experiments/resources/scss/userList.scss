@@ -1,10 +1,11 @@
-@use 'modules/init.scss';
-@use 'modules/centerCard';
-@use 'modules/collection';
-@use 'modules/variables' as v;
-@use 'modules/functions' as f;
+@use 'modules/default.scss';
+@use 'modules/components/card';
+@use 'modules/components/alert';
+@use 'modules/components/collection';
+@use 'modules/utils/variables' as v;
+@use 'modules/utils/functions' as f;
 
-.centerCard{
+.card{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -13,6 +14,6 @@
   color: black;
 }
 
-h1{
+h2{
   margin: 0px;
 }

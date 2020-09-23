@@ -1,11 +1,12 @@
-@use 'modules/init.scss';
-@use 'modules/centerCard';
-@use 'modules/button';
-@use 'modules/textField';
-@use 'modules/variables' as v;
-@use 'modules/functions' as f;
+@use 'modules/default.scss';
+@use 'modules/components/card';
+@use 'modules/components/btn';
+@use 'modules/components/alert';
+@use 'modules/components/textField';
+@use 'modules/utils/variables' as v;
+@use 'modules/utils/functions' as f;
 
-.centerCard{
+.card{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -30,17 +31,5 @@
 }
 
 #login{
-  @extend %button;
-  padding: 16px;
-  font-size: f.pxToEm(14);
-  color: white;
-  background-color: #03a9f4;
-
-  &:hover, &:focus{
-    background-color: #039be5;
-  }
-
-  &:active{
-    background-color: #0288d1;
-  }
+  @extend .btn;
 }

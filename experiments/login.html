@@ -16,30 +16,30 @@
     @partial("resources/header.html")
 
     <main>
-      <article class="centerCard">
-
+      <div class="alert">
+        <h2>What is it?</h2>
+        <p>This experiment is a login screen that sends the data to a backend on Heroku</p>
+        <div><button onclick="closeAlert(this)">got it</button></div>
+      </div>
+      <article class="card">
         <p>This page is just a demonstration, do not use real information</p>
         <i class="material-icons" id="icon">account_circle</i>
 
         <form id="loginForm">
-
           <div class="textField">
             <input type="text" id="name"
               onfocus="enableTextField('name')" onblur="disableTextField('name')">
             <label for="name">name</label>
           </div>
-
           <div class="textField">
             <input type="text" id="mail"
               onfocus="enableTextField('mail')" onblur="disableTextField('mail')">
             <label for="mail">mail</label>
           </div>
-
           <button id="login" type="button" onclick="register()">Login</button>
         </form>
 
         <div id=feedBack></div>
-
       </article>
     </main>
   </div>

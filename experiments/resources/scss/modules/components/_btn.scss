@@ -1,0 +1,30 @@
+@use '../utils/functions' as f;
+@use '../utils/shadow' as s;
+@use '../utils/typography' as t;
+
+.btn{
+  all: unset;
+  @include t.roboto;
+  @include s.shadow(4);
+
+  border-radius: 4px;
+  padding: 16px;
+
+  text-align: center;
+  font-weight:500;
+  font-size: f.pxToEm(14);
+  letter-spacing: 1.25px;
+  color: white;
+
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  background-color: #03a9f4;
+  &:hover, &:focus{
+    background-color: #039be5;
+  }
+
+  &:active{
+    background-color: #0288d1;
+  }
+}

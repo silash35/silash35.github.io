@@ -1,6 +1,7 @@
 import md5 from 'crypto-js/md5';
-import init from './modules/_init';
-init();
+import init from './modules/_init.js';
+import configAlert from './modules/_configAlert';
+init(); configAlert();
 
 const getUsers = () => {
 
