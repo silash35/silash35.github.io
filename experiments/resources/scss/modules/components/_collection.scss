@@ -1,0 +1,39 @@
+.collection{
+  padding: 0px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+  list-style: none;
+  width: 100%;
+  .collectionItem{
+    display: flex;
+    width: 100%;
+    padding: 15px;
+
+    background-color: #fff;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    img{
+      width: 50px;
+      height: 50px;
+      float: left;
+      margin-right: 20px;
+
+      border-radius: 50%;
+      border-style: none;
+    }
+    .collectionItemText{
+      margin: 0px;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-content: center;
+      p{
+        line-height: 0;
+      }
+      .bold{
+        font-weight: bold;
+      }
+    }
+  }
+}

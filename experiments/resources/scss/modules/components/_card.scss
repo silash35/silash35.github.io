@@ -1,0 +1,11 @@
+@use '../utils/variables' as v;
+@use '../utils/shadow' as s;
+
+.card{
+  @include s.shadow(8);
+  background-color: v.$primaryColor;
+  overflow: hidden;
+  color: v.$primaryColorText;
+  border-radius: 4px;
+  padding: 24px;
+}

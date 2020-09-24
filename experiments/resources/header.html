@@ -1,24 +1,21 @@
-<nav class="grey darken-4" role="navigation">
-  <div class="nav-wrapper container">
+<header class="defaultHeader">
+  <nav class="navContainer">
 
-    <a id="logo-container" href="index.html" class="brand-logo">
-      <i class="deep-orange-text text-large material-icons">&nbsp;science&nbsp;</i>
+    <button onclick="openSidenav()" class="sidenavTrigger">
+      <i class="material-icons">menu</i>
+    </button>
+
+    <a class="logoContainer" href="index.html">
+      <i class="material-icons">&nbsp;science&nbsp;</i>
     </a>
 
-    <ul id="nav-desktop" class="right hide-on-med-and-down">
-      <li class="waves-effect"><a href="index.html">Home</a></li>
-      <li class="waves-effect"><a href="../index.html">Curriculum</a></li>
-      <li class="waves-effect"><a href="calc.html">Calculator</a></li>
-      <li class="waves-effect"><a href="login.html">Login</a></li>
+    <ul class="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="../index.html">Curriculum</a></li>
+      <li><a href="calc.html">Calculator</a></li>
+      <li><a href="login.html">Login</a></li>
     </ul>
 
-    <ul id="nav-mobile" class="sidenav grey darken-4">
-      <li><a class="white-text" href="index.html">Home</a></li>
-      <li><a class="white-text" href="../index.html">Curriculum</a></li>
-      <li><a class="white-text" href="calc.html">Calculator</a></li>
-      <li><a class="white-text" href="login.html">Login</a></li>
-    </ul>
-
-    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-  </div>
-</nav>
+    <button onclick="closeSidenav()" class="screenDarkener"></button>
+  </nav>
+</header>

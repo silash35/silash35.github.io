@@ -1,0 +1,133 @@
+@use '../utils/functions' as f;
+@use '../utils/variables' as v;
+@use '../utils/shadow' as s;
+
+$animeTime: 300ms;
+
+.active{
+  box-shadow: inset 0px -4px v.$primaryColorText;
+  background-color: rgba(0, 0, 0, 0.1);
+  @media screen and (max-width: v.$breakMedium){
+    box-shadow: none;
+  }
+}
+
+.defaultHeader{
+  @include s.shadow(16);
+  background-color: v.$primaryColor;
+
+  .navContainer{
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 70%;
+    @media screen and (max-width: v.$breakMedium){
+      width: 90%;
+    }
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: v.$headerHeight;
+    grid-template-areas: "logo links";
+    justify-content: space-between;
+
+    .sidenavTrigger{
+      display: none;
+    }
+
+    .logoContainer{
+      color: v.$accentColor;
+      grid-area: logo;
+      i{
+        line-height: v.$headerHeight;
+        font-size: f.pxToEm(58.8);
+      }
+    }
+
+    .navLinks{
+      grid-area: links;
+      align-self: center;
+      li{
+        list-style: none;
+        transition: background-color .3s;
+        float: left;
+        padding: 0 17px;
+        a{
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+
+          line-height: v.$headerHeight;
+          font-size: f.pxToEm(17);
+          font-weight: 700;
+          text-decoration: none;
+          color: v.$primaryColorText;
+        }
+      }
+      li:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .screenDarkener{
+    all: unset;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    visibility: collapse;
+    opacity: 0;
+    transition: visibility 0s,opacity $animeTime;
+  }
+}
+
+@media screen and (max-width: v.$breakMedium){
+
+  .defaultHeader{
+    .navContainer{
+      grid-template-columns: auto;
+      grid-template-areas: "logo";
+      justify-content: center;
+
+      .sidenavTrigger{
+        all: unset;
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        float: left;
+
+        color: v.$primaryColorText;
+        i{
+          line-height: v.$headerHeight;
+          font-size: f.pxToEm(30);
+        }
+      }
+
+      .navLinks{
+        position: fixed;
+        z-index: 10;
+
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 300px;
+
+        background-color: v.$primaryColor;
+        @include s.shadow(6);
+
+        visibility: collapse;
+        left: -300px;
+        transition: visibility 0s, left $animeTime;
+
+        li{
+          float: none;
+          text-align: start;
+        }
+      }
+    }
+  }
+
+}

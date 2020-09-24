@@ -1,0 +1,71 @@
+@use 'btn';
+@use 'card';
+@use '../utils/variables' as v;
+@use '../utils/shadow' as s;
+
+.alert{
+  @extend .card;
+  @include s.shadow(24);
+  background-color: white;
+  position: fixed;
+  width: fit-content;
+
+  right: 2vw;
+  top: 20px + v.$headerHeight;
+  z-index: 1;
+
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 300ms;
+
+  @media screen and (max-width: v.$breakMedium){
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: v.$footerHeight + 20px;
+    transform: translate(-50%, 0);
+
+    width: 90vw;
+  }
+
+  h2{
+    margin: 0px;
+    color: black;
+    font-size:20px;
+    font-weight:500;
+    letter-spacing:0.25px;
+    line-height:32px;
+  }
+
+  p{
+    color:rgba(0, 0, 0, 0.6);
+    font-size:16px;
+    font-weight:400;
+    letter-spacing:0.5px;
+    max-width: 300px;
+    margin: 0px;
+
+    @media screen and (max-width: v.$breakMedium){
+      max-width: max-content;
+    }
+  }
+
+  div{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    button{
+      @extend .btn;
+      box-shadow: none;
+      color:rgb(98, 0, 238);
+
+      background-color: rgba(0, 0, 0, 0);
+      &:hover, &:focus{
+        background-color: #b0bec5;
+      }
+      &:active{
+        background-color: #a9b2ff;
+      }
+    }
+  }
+}

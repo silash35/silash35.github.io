@@ -1,6 +1,8 @@
-import md5 from 'crypto-js/md5';
-import init from './init.js';
-init();
+import globalize from './modules/_globalize';
+import init from './modules/_init';
+import configAlert from './modules/_configAlert';
+import configTextField from './modules/_configTextField';
+init(); configAlert(); configTextField();
 
 function isValid(texto){
   if(texto == ''){
@@ -9,15 +11,14 @@ function isValid(texto){
   return true;
 }
 
-window.register = function(){
-  const name = document.querySelector('#name');
-  const mail = document.querySelector('#mail');
-  const feedBack = document.querySelector('#feedBack');
+globalize('register', () => {
+  const name = document.getElementById('name');
+  const mail = document.getElementById('mail');
+  const feedBack = document.getElementById('feedBack');
 
   if(isValid(name.value) && isValid(mail.value)){
     feedBack.innerText = 'Sending to the server';
-    feedBack.style = `color: yellow;
-      border-color: yellow;
+    feedBack.style = `color: #ffde03;
       display: inline-block;`;
 
     fetch('https://node-server-side.herokuapp.com/users',{
@@ -33,7 +34,6 @@ window.register = function(){
         if(response.ok && response.status == 200){
           feedBack.innerText = 'Successful registration';
           feedBack.style = `color: green;
-          border-color: green;
           display: inline-block;`;
           window.location.href = 'userList.html';
         }
@@ -41,35 +41,6 @@ window.register = function(){
 
   }else{
     feedBack.innerText = 'invalid data';
-    feedBack.style = 'color: red; border-color: red; display: inline-block';
+    feedBack.style = 'color: red; display: inline-block';
   }
-};
-
-function getUsers(){
-
-  fetch('https://node-server-side.herokuapp.com/users')
-    .then((response) => response.json())
-    .then((response) => {
-      response.forEach((user) => {
-        let userAvatar = 'https://www.gravatar.com/avatar/' + md5(user.mail);
-
-        const item = document.createElement('li');
-        item.classList = 'collection-item avatar';
-        item.innerHTML = `<img class="circle" src="${userAvatar}">
-        <span>${user.name}</span>
-        <p>Email: ${user.mail}</p>`;
-
-        document.querySelector('#userList').appendChild(item);
-      });
-    });
-
-}
-
-if(document.querySelector('title').innerText == 'Login') {
-  M.toast({html: 'Login page that communicates with an external API'});
-}else{
-  getUsers();
-  M.toast({html: 'Shows a list of users using an external API'});
-}
-
-/*global M*/
+});

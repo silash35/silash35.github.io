@@ -1,37 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  @partial("resources/CDNs.html")
+  @partial("resources/head.html")
+  <title>Login</title>
 
   <!-- Local Files -->
-  <link rel="preload" href="resources/scss/login.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="resources/scss/login.scss"></noscript>
+  <link rel="stylesheet" href="resources/scss/login.scss">
   <script defer src="resources/js/login.js"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
 </head>
 <body>
-  <header>
+  <div class="defaultLayout">
+
     @partial("resources/header.html")
-  </header>
 
-  <main>
-    <div class="central-card">
-      <p>This page is just a demonstration, do not use real information<p>
-      <i class="material-icons big-icon">account_circle</i>
-      <form>
-        <input type="text" id="name" placeholder="name" onfocus="document.getElementById('feedBack').style = 'display: none'">
-        <input type="text" id="mail" placeholder="mail" onfocus="document.getElementById('feedBack').style = 'display: none'">
-      </form>
-      <button class="btn-large" id="login" onclick="register()">Login</button>
-      <br><br>
-      <div id=feedBack></div>
+    <main>
+      <div class="alert">
+        <h2>What is it?</h2>
+        <p>This experiment is a login screen that sends the data to a backend on Heroku</p>
+        <div><button onclick="closeAlert(this)">got it</button></div>
+      </div>
+      <article class="card">
+        <p>This page is just a demonstration, do not use real information</p>
+        <i class="material-icons" id="icon">account_circle</i>
 
-    </div>
-  </main>
+        <form id="loginForm">
+          <div class="textField">
+            <input type="text" id="name"
+              onfocus="enableTextField('name')" onblur="disableTextField('name')">
+            <label for="name">name</label>
+          </div>
+          <div class="textField">
+            <input type="text" id="mail"
+              onfocus="enableTextField('mail')" onblur="disableTextField('mail')">
+            <label for="mail">mail</label>
+          </div>
+          <button id="login" type="button" onclick="register()">Login</button>
+        </form>
+
+        <div id=feedBack></div>
+      </article>
+    </main>
+  </div>
   <a href="userList.html"></a>
 </body>
 </html>

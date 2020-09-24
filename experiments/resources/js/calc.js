@@ -1,10 +1,11 @@
-import init from './init.js';
-init();
+import init from './modules/_init';
+import configAlert from './modules/_configAlert';
+init(); configAlert();
 
 let n1;
 let n2;
 let signal;
-let display = document.querySelector('#display');
+let display = document.querySelector('#displayText');
 
 window.addNum = function(num){
   if(display.innerText == 0){
@@ -46,6 +47,3 @@ window.equal = function(){
     console.log('Error: Operation not allowed ' + error);
   }
 };
-M.toast({html: 'A calculator using JavaScript'});
-
-/*global M*/

@@ -1,0 +1,32 @@
+@use 'modules/default.scss';
+@use 'modules/components/card';
+@use 'modules/utils/functions' as f;
+@use 'modules/utils/variables' as v;
+
+.card{
+  display: flex;
+  flex-flow: row;
+  gap: 50px;
+
+  width: 50vw;
+
+  @media screen and (max-width: v.$breakMedium){
+    gap: 20px;
+    width: 90vw;
+    flex-flow: column;
+  }
+}
+
+h1{
+  margin: 0px;
+  align-self: center;
+  @media screen and (max-width: v.$breakMedium){
+    align-self: flex-start;
+  }
+}
+
+p{
+  text-align: justify;
+  font-size: f.pxToEm(30);
+  font-weight: 400;
+}

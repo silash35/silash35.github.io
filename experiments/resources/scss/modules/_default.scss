@@ -1,0 +1,38 @@
+@charset "utf-8";
+@use 'components/navbar';
+@use 'utils/typography' as t;
+@use 'utils/variables' as v;
+@use 'utils/shadow' as s;
+
+body{
+  @include t.roboto;
+
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/chemistry.webp");
+  background-color: v.$accentColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.defaultLayout{
+  display: grid;
+  grid: v.$headerHeight auto / auto;
+  grid-template-areas: "header"
+                       "main";
+  width: 100vw;
+  height: 100vh;
+}
+
+header{
+  grid-area: header;
+}
+
+main{
+  grid-area: main;
+  place-self: center;
+  margin: 10px;
+}

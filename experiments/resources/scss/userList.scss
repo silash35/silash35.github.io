@@ -1,8 +1,7 @@
 @use 'modules/default.scss';
 @use 'modules/components/card';
-@use 'modules/components/btn';
 @use 'modules/components/alert';
-@use 'modules/components/textField';
+@use 'modules/components/collection';
 @use 'modules/utils/variables' as v;
 @use 'modules/utils/functions' as f;
 
@@ -10,26 +9,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
 
   background-color: white;
   color: black;
 }
 
-#loginForm{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-
-}
-
-#icon{
-  font-size: f.pxToEm(120);
-  color: v.$primaryColor;
-}
-
-#login{
-  @extend .btn;
+h2{
+  margin: 0px;
 }

@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  @partial("resources/CDNs.html")
+  @partial("resources/head.html")
+  <title>User List</title>
 
   <!-- Local Files -->
-  <link rel="preload" href="resources/scss/login.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="resources/scss/login.scss"></noscript>
-  <script defer src="resources/js/login.js"></script>
+  <link rel="stylesheet" href="resources/scss/userList.scss">
+  <script defer src="resources/js/userList.js"></script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User List</title>
 </head>
 <body>
-  <header>
+  <div class="defaultLayout">
+
     @partial("resources/header.html")
-  </header>
-    <main class="center-card">
-        <h1>Registered users</h1>
+
+    <main>
+      <div class="alert">
+        <h2>What is it?</h2>
+        <p>This experiment lists all accounts that have already logged in on the previous screen.</p>
+        <p>The account icon is picked up from the gravatar from the email</p>
+        <div><button onclick="closeAlert(this)">got it</button></div>
+      </div>
+      <article class="card">
+        <h2>Registered users</h2>
         <ul class="collection" id="userList">
         </ul>
+      </article>
     </main>
+  </div>
 </body>
 </html>
