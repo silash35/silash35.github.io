@@ -1,26 +1,10 @@
 @use 'modules/default.scss';
 @use 'modules/components/card';
 @use 'modules/components/alert';
-@use 'modules/components/btn';
+@use 'modules/components/btn' as b;
 @use 'modules/utils/variables' as v;
 @use 'modules/utils/functions' as f;
 
-button{
-  @extend .btn;
-  padding: 0px;
-  font-size: f.pxToEm(25);
-  color: black;
-  font-weight: 500;
-
-  background-color: #eceff1;
-  &:hover, &:focus{
-    background-color: #cfd8dc;
-  }
-
-  &:active{
-    background-color: #78909c;
-  }
-}
 .card{
   display: grid;
   grid-template-columns: repeat(4, 60px);
@@ -44,29 +28,29 @@ button{
   }
 }
 
+@mixin btn($color:null){
+  @if $color == null {
+    @include b.btn();
+  }@else{
+    @include b.btn($color);
+  }
+  padding: 0px;
+  font-size: f.pxToEm(25);
+  color: black;
+  font-weight: 500;
+}
+
+.number{
+  @include btn(#eceff1);
+}
+
 .opera{
+  @include btn(#b0bec5);
   font-size: f.pxToEm(30);
-  background-color: #b0bec5;
-
-  &:hover, &:focus{
-    background-color: #90a4ae;
-  }
-
-  &:active{
-    background-color: #607d8b;
-  }
 }
 
 #equal{
+  @include btn;
   font-size: f.pxToEm(40);
   grid-column: 2 / 4;
-
-  background-color: #03a9f4;
-  &:hover, &:focus{
-    background-color: #039be5;
-  }
-
-  &:active{
-    background-color: #0288d1;
-  }
 }
