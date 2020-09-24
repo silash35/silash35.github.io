@@ -12,6 +12,7 @@
 
   right: 2vw;
   top: 20px + v.$headerHeight;
+  z-index: 1;
 
   opacity: 1;
   transition-property: opacity;

@@ -4,6 +4,7 @@
 .card{
   @include s.shadow(8);
   background-color: v.$primaryColor;
+  overflow: hidden;
   color: v.$primaryColorText;
   border-radius: 4px;
   padding: 24px;
