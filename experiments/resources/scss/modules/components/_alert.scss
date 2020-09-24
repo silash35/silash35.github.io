@@ -1,5 +1,5 @@
-@use 'btn';
 @use 'card';
+@use 'modules/components/btn' as b;
 @use '../utils/variables' as v;
 @use '../utils/shadow' as s;
 
@@ -55,17 +55,10 @@
     flex-flow: row;
     justify-content: flex-end;
     button{
-      @extend .btn;
+      @include b.btn(lighten(v.$defaultColorText, 95%));
       box-shadow: none;
-      color:rgb(98, 0, 238);
-
+      color: v.$defaultColorText;
       background-color: rgba(0, 0, 0, 0);
-      &:hover, &:focus{
-        background-color: #b0bec5;
-      }
-      &:active{
-        background-color: #a9b2ff;
-      }
     }
   }
 }

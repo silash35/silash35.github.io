@@ -1,8 +1,8 @@
 @use 'modules/default.scss';
 @use 'modules/components/card';
-@use 'modules/components/btn';
 @use 'modules/components/alert';
 @use 'modules/components/textField';
+@use 'modules/components/btn' as b;
 @use 'modules/utils/variables' as v;
 @use 'modules/utils/functions' as f;
 
@@ -31,5 +31,5 @@
 }
 
 #login{
-  @extend .btn;
+  @include b.btn;
 }

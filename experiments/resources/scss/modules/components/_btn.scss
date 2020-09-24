@@ -1,8 +1,10 @@
 @use '../utils/functions' as f;
 @use '../utils/shadow' as s;
 @use '../utils/typography' as t;
+@use '../utils/variables' as v;
 
-.btn{
+@mixin btn($color: v.$defaultColor){
+
   all: unset;
   @include t.roboto;
   @include s.shadow(4);
@@ -19,12 +21,12 @@
   text-transform: uppercase;
   vertical-align: middle;
 
-  background-color: #03a9f4;
+  background-color: $color;
+  transition: background-color 300ms ease;
   &:hover, &:focus{
-    background-color: #039be5;
+    background-color:darken($color,8%);
   }
-
   &:active{
-    background-color: #0288d1;
+    background-color:darken($color,25%);
   }
 }
