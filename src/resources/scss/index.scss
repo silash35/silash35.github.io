@@ -1,0 +1,54 @@
+@use 'modules/standard';
+@use 'modules/utils/functions' as f;
+
+main{
+  place-self: center;
+}
+
+.presentation{
+
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+
+  & > *{
+    margin: 25px;
+    flex-basis: 20%;
+    box-sizing: border-box;
+  }
+
+  .presentationPhoto{
+    margin-top: auto;
+    margin-bottom: auto;
+    min-width: 200px;
+    img{
+      margin-top: 25px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+    }
+  }
+
+  .presentationText{
+    color: white;
+
+    %text{
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 0;
+      padding-bottom: 20px;
+    }
+
+    h1{
+      @extend %text;
+      margin: 0;
+      font-size: f.pxToEm(60);
+      color: #ff5722;
+    }
+    p{
+      @extend %text;
+      font-size: f.pxToEm(25);
+    }
+  }
+}
