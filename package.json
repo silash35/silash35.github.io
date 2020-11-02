@@ -18,6 +18,8 @@
     "sass": "^1.26.10"
   },
   "dependencies": {
+    "@material/button": "^7.0.0",
+    "@material/card": "^7.0.0",
     "crypto-js": "^4.0.0"
   }
 }

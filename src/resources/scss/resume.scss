@@ -1,1 +1,13 @@
+@use '@material/card/mdc-card';
 @use 'modules/standard';
+
+main{
+  @extend .mdc-card;
+  article{
+    @extend .mdc-card;
+    background-color: aquamarine;
+    margin: 5px;
+  }
+  margin: 20px;
+  background-color: white;
+}
