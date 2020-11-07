@@ -1,14 +1,13 @@
-@use '@material/card/mdc-card';
-@use '@material/list/mdc-list';
-@use 'modules/utils/variables' as v;
-@use 'modules/components/link';
-@use 'modules/standard';
+@use "@material/card/mdc-card";
+@use "modules/utils/variables" as v;
+@use "modules/components/link";
+@use "modules/components/dialogs";
+@use "modules/standard";
 
 main {
   @extend .mdc-card;
   margin: 5px 20px;
   background-color: #f7f7f7;
-  height: min-content;
 
   .resumeHeader {
     display: grid;
@@ -79,34 +78,14 @@ main {
         text-align: center;
       }
       ul {
-        @extend .mdc-list;
+        margin: 0;
+        padding: 8px 0;
+        list-style-type: none;
         @extend .mdc-card--outlined;
         li {
           padding: 5px 16px;
         }
       }
-    }
-  }
-
-  @media screen and (max-width: v.$breakMedium) {
-    .resumeHeader {
-      grid-template-areas:
-        "title title"
-        "contact contact";
-      place-items: center;
-      h1 {
-        padding-left: 0;
-      }
-      .presentationPhoto {
-        display: none;
-      }
-      .fill {
-        display: none;
-      }
-    }
-
-    .resumeContent {
-      column-count: 1;
     }
   }
 }

@@ -1,0 +1,38 @@
+@use "@material/button/mdc-button";
+@use "@material/card/mdc-card";
+@use "../utils/variables" as v;
+@use "./ripple";
+
+.dialogs {
+  @extend .mdc-card;
+  position: fixed;
+  left: 50px;
+  bottom: 40px;
+  z-index: 1;
+
+  width: 400px;
+  padding: 16px;
+  transition: opacity v.$animeTime;
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  .actions {
+    @extend .mdc-card__actions;
+    button {
+      @extend .mdc-button;
+      @extend .mdc-card__action;
+      @extend .mdc-card__action--button;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: v.$breakMedium) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}

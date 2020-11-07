@@ -1,0 +1,7 @@
+@use "@material/button/mdc-button";
+
+button {
+  .ripple {
+    @extend .mdc-button__ripple;
+  }
+}

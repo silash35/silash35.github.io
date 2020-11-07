@@ -1,2 +1,2 @@
-import init from './modules/_init';
+import init from "./modules/_init";
 init();

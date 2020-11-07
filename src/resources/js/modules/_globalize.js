@@ -1,3 +1,3 @@
-export default (name,value) => {
+export default (name, value) => {
   window[name] = value;
 };
