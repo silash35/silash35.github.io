@@ -3,53 +3,53 @@
 
 $animeTime: 300ms;
 
-.standardHeader{
+.standardHeader {
   display: flex;
   place-content: center;
-  nav{
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 85%;
 
-    .logoContainer{
+    .logoContainer {
       display: block;
       width: 80px;
     }
 
-    .navLinks{
-      display:flex;
-      li{
+    .navLinks {
+      display: flex;
+      li {
         list-style: none;
-        transition: color .3s;
+        transition: color 0.3s;
         padding-left: 50px;
-        a{
+        a {
           font-size: f.pxToEm(18);
           font-weight: 500;
           text-decoration: none;
           text-transform: uppercase;
           color: white;
 
-          &:hover{
+          &:hover {
             color: #ff5722;
           }
         }
 
-        &.active{
-          a{
+        &.active {
+          a {
             color: #ff5722;
           }
         }
       }
     }
 
-    button{
+    button {
       all: unset;
       display: none;
     }
 
-    .screenDarkener{
+    .screenDarkener {
       display: block;
       position: fixed;
       visibility: collapse;
@@ -62,33 +62,31 @@ $animeTime: 300ms;
 
       background-color: black;
       opacity: 0;
-      transition: visibility 0s,opacity $animeTime;
+      transition: visibility 0s, opacity $animeTime;
     }
-
   }
 
-
-  @media screen and (max-width: v.$breakMedium){
+  @media screen and (max-width: v.$breakMedium) {
     background-color: black;
-    nav{
+    nav {
       width: 90%;
 
-      .logoContainer{
+      .logoContainer {
         width: 60px;
         margin: auto;
       }
 
-      .sidenavTrigger{
+      .sidenavTrigger {
         all: unset;
         position: absolute;
         cursor: pointer;
         color: white;
-        i{
+        i {
           font-size: f.pxToEm(30);
         }
       }
 
-      .navLinks{
+      .navLinks {
         display: block;
         position: fixed;
         margin: 0;
@@ -103,27 +101,27 @@ $animeTime: 300ms;
         background-color: #111111;
         transition: left $animeTime;
 
-        li{
+        li {
           padding: 0;
-          transition: background-color .3s;
+          transition: background-color 0.3s;
 
-          a{
+          a {
             display: block;
             box-sizing: border-box;
             padding: 20px;
             width: 300px;
           }
 
-          &.active{
+          &.active {
             background-color: rgba(0, 0, 0, 0.2);
-            a{
+            a {
               color: white;
             }
           }
 
-          &:hover{
+          &:hover {
             background-color: rgba(0, 0, 0, 0.3);
-            a{
+            a {
               color: white;
             }
           }

@@ -1,9 +1,10 @@
 @charset "utf-8";
 @use 'components/navbar';
+@use 'components/link';
 @use 'utils/typography' as t;
 @use 'utils/variables' as v;
 
-body{
+body {
   @include t.roboto;
 
   margin: 0;
@@ -18,25 +19,27 @@ body{
 
   display: grid;
   grid: 100px auto / auto;
-  grid-template-areas: "header"
-                       "main";
+  grid-template-areas:
+    "header"
+    "main";
 
-  @media screen and (max-width: v.$breakMedium){
+  @media screen and (max-width: v.$breakMedium) {
     grid: 80px auto / auto;
-    grid-template-areas: "header"
-                         "main";
+    grid-template-areas:
+      "header"
+      "main";
   }
 }
 
-header{
+header {
   grid-area: header;
 }
 
-main{
+main {
   grid-area: main;
 }
 
-img{
+img {
   width: 100%;
   height: auto;
 }

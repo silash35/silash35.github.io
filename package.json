@@ -19,6 +19,10 @@
   },
   "dependencies": {
     "@material/card": "^7.0.0",
+    "@material/feature-targeting": "^8.0.0",
+    "@material/list": "^8.0.0",
+    "@material/ripple": "^8.0.0",
+    "@material/theme": "^8.0.0",
     "crypto-js": "^4.0.0"
   }
 }

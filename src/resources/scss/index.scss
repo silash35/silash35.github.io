@@ -1,52 +1,51 @@
 @use 'modules/standard';
 @use 'modules/utils/functions' as f;
 
-main{
+main {
   place-self: center;
 }
 
-.presentation{
-
+.presentation {
   display: flex;
   width: 90%;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
 
-  & > *{
+  & > * {
     margin: 25px;
     flex-basis: 20%;
     box-sizing: border-box;
   }
 
-  .presentationPhoto{
+  .presentationPhoto {
     margin-top: auto;
     margin-bottom: auto;
     min-width: 200px;
-    img{
+    img {
       margin-top: 25px;
       margin-bottom: 25px;
       border-radius: 50%;
     }
   }
 
-  .presentationText{
+  .presentationText {
     color: white;
 
-    %text{
+    %text {
       font-weight: 500;
       text-transform: uppercase;
       margin: 0;
       padding-bottom: 20px;
     }
 
-    h1{
+    h1 {
       @extend %text;
       margin: 0;
       font-size: f.pxToEm(60);
       color: #ff5722;
     }
-    p{
+    p {
       @extend %text;
       font-size: f.pxToEm(25);
     }
