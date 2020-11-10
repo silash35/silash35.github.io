@@ -1,7 +1,7 @@
 import globalize from "./_globalize";
 
 export default () => {
-  globalize("closeTip", (event) => {
+  globalize("closeDialog", (event) => {
     event.path[3].style.opacity = "0";
 
     //waits the animation ends

@@ -3,7 +3,7 @@
 @use "../utils/variables" as v;
 @use "./ripple";
 
-.dialogs {
+.dialog {
   @extend .mdc-card;
   position: fixed;
   left: 50px;
@@ -23,10 +23,6 @@
       @extend .mdc-button;
       @extend .mdc-card__action;
       @extend .mdc-card__action--button;
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
     }
   }
 
