@@ -1,2 +1,3 @@
-import init from "./modules/_init";
-init();
+import _configHeader from "./modules/_configHeader";
+import configHeader from "./modules/_configHeader";
+configHeader();

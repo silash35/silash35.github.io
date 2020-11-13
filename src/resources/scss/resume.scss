@@ -1,11 +1,11 @@
-@use "@material/card/mdc-card";
 @use "modules/utils/variables" as v;
+@use "modules/components/card" as c;
 @use "modules/components/link";
 @use "modules/components/dialog";
 @use "modules/standard";
 
 main {
-  @extend .mdc-card;
+  @include c.card();
   margin: 5px 20px;
   background-color: #f7f7f7;
 
@@ -68,7 +68,7 @@ main {
     padding: 10px;
 
     article {
-      @extend .mdc-card;
+      @include c.card();
       padding: 10px;
       margin: 10px 0;
 
@@ -78,12 +78,12 @@ main {
         text-align: center;
       }
       %cardContent{
-        @extend .mdc-card--outlined;
+        @include c.card(true);
         margin: 0;
       }
       p{
         @extend %cardContent;
-        padding: 15px;
+        padding: 16px;
       }
       ul{
         @extend %cardContent;

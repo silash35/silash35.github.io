@@ -1,8 +1,8 @@
 import globalize from "./modules/_globalize";
 import configDialog from "./modules/_configDialog";
-import init from "./modules/_init";
+import configHeader from "./modules/_configHeader";
 configDialog();
-init();
+configHeader();
 
 
 globalize("goToCurriculum", () => {

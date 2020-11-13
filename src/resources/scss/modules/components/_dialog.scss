@@ -1,10 +1,10 @@
 @use "@material/button/mdc-button";
-@use "@material/card/mdc-card";
+@use "./card" as c;
 @use "../utils/variables" as v;
 @use "./ripple";
 
 .dialog {
-  @extend .mdc-card;
+  @include c.card();
   position: fixed;
   left: 50px;
   bottom: 40px;
