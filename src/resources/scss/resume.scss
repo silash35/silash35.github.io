@@ -77,15 +77,47 @@ main {
       h2 {
         text-align: center;
       }
-      ul {
+      %cardContent{
+        @extend .mdc-card--outlined;
         margin: 0;
+      }
+      p{
+        @extend %cardContent;
+        padding: 15px;
+      }
+      ul{
+        @extend %cardContent;
         padding: 8px 0;
         list-style-type: none;
-        @extend .mdc-card--outlined;
         li {
           padding: 5px 16px;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: v.$breakMedium) {
+    .resumeHeader {
+      grid-template-areas:
+        "title title"
+        "contact contact";
+      place-items: center;
+      h1 {
+        padding-left: 0;
+      }
+      .presentationPhoto {
+        display: none;
+      }
+      ul {
+        flex-wrap: wrap;
+      }
+      .fill {
+        display: none;
+      }
+    }
+
+    .resumeContent {
+      column-count: 1;
     }
   }
 }
