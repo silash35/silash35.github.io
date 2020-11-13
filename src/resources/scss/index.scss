@@ -1,4 +1,5 @@
 @use "modules/standard";
+@use "modules/utils/variables" as v;
 @use "modules/utils/functions" as f;
 
 main {
@@ -7,24 +8,19 @@ main {
 
 .presentation {
   display: flex;
-  width: 90%;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
+  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.8);
 
-  & > * {
+  section {
     margin: 25px;
     flex-basis: 20%;
-    box-sizing: border-box;
   }
 
   .presentationPhoto {
-    margin-top: auto;
-    margin-bottom: auto;
-    min-width: 200px;
+    min-width: 250px;
     img {
-      margin-top: 25px;
-      margin-bottom: 25px;
       border-radius: 50%;
     }
   }
@@ -41,7 +37,6 @@ main {
 
     h1 {
       @extend %text;
-      margin: 0;
       font-size: f.pxToEm(60);
       color: #ff5722;
     }
