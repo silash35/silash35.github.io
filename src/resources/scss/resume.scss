@@ -1,8 +1,8 @@
+@use "modules/standard";
 @use "modules/utils/variables" as v;
 @use "modules/components/card" as c;
 @use "modules/components/link";
 @use "modules/components/dialog";
-@use "modules/standard";
 
 main {
   @include c.card();

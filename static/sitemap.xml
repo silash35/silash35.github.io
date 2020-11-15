@@ -6,15 +6,15 @@
 	</url>
 
     <url>
-		<loc>https://silash35.github.io/experiments/index.html</loc>
+		<loc>https://silash35.github.io/index.html</loc>
         <image:image>
-            <image:loc>https://silash35.github.io/experiments/resources/images/qui.jpg</image:loc>
+            <image:loc>https://silash35.github.io/resources/images/power.webp</image:loc>
         </image:image>
 	</url>
     <url>
-		<loc>https://silash35.github.io/experiments/calc.html</loc>
+		<loc>https://silash35.github.io/contact.html</loc>
 	</url>
     <url>
-		<loc>https://silash35.github.io/experiments/login.html</loc>
+		<loc>https://silash35.github.io/resume.html</loc>
 	</url>
 </urlset>

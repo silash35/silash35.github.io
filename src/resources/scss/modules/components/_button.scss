@@ -1,0 +1,24 @@
+@use "@material/button/mdc-button";
+@use "@material/button/mixins" as m;
+
+@mixin button($type: contained, $backColor: default, $fontColor: default) {
+  @extend .mdc-button;
+
+  @if $type == text {
+  } @else if $type == outlined {
+    @extend .mdc-button--outlined;
+  } @else {
+    @extend .mdc-button--raised;
+  }
+
+  i {
+    @extend .mdc-button__icon;
+  }
+
+  @if $backColor != default {
+    @include m.container-fill-color($backColor);
+  }
+  @if $fontColor != default {
+    @include m.ink-color($fontColor);
+  }
+}

@@ -1,12 +1,9 @@
 @use "modules/standard";
+@use "modules/components/card" as c;
+@use "modules/components/textField" as t;
 @use "modules/utils/variables" as v;
 @use "modules/utils/functions" as f;
-@use "@material/floating-label/mdc-floating-label";
-@use "@material/line-ripple/mdc-line-ripple";
-@use "@material/notched-outline/mdc-notched-outline";
-@use "@material/textfield/dist/mdc.textfield.css";
-@use "@material/textfield/mixins" as t;
-@use "@material/button/mdc-button";
+@use "modules/components/button" as b;
 
 main {
   display: flex;
@@ -32,13 +29,12 @@ main {
   grid-template-areas: "links message";
   overflow: hidden;
 
-  background-color: v.$orange;
-  border-radius: 15px;
+  @include c.card();
+  border-radius: 24px;
   margin: 10px;
 
   .links {
     grid-area: links;
-    background-color: white;
     display: grid;
     place-content: center;
     h3 {
@@ -71,6 +67,7 @@ main {
     display: flex;
     place-content: center;
     padding: 20px;
+    background-color: v.$orange;
 
     form {
       display: grid;
@@ -85,29 +82,18 @@ main {
       height: 100%;
 
       .textField {
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: black, $alpha: 0.3);
-        color: white;
-
-        @include t.caret-color(white);
-        @include t.label-color(white);
-        @include t.ink-color(white);
-        @include t.bottom-line-color(white);
-        @include t.hover-bottom-line-color(white);
-        @include t.line-ripple-color(white);
+        @include t.textField();
       }
 
       .textArea {
-        @extend .textField;
+        @include t.textField(false, true);
         grid-area: a;
       }
 
       button {
+        @include b.button(contained, white, black);
         grid-area: b;
         justify-self: end;
-        background-color: white;
-        color: black;
       }
     }
   }

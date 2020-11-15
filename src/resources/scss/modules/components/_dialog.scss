@@ -1,7 +1,6 @@
-@use "@material/button/mdc-button";
-@use "./card" as c;
+@use "../components/button" as b;
 @use "../utils/variables" as v;
-@use "./ripple";
+@use "./card" as c;
 
 .dialog {
   @include c.card();
@@ -20,7 +19,7 @@
   .actions {
     @extend .mdc-card__actions;
     button {
-      @extend .mdc-button;
+      @include b.button(text);
       @extend .mdc-card__action;
       @extend .mdc-card__action--button;
     }
