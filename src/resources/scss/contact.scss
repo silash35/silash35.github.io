@@ -15,6 +15,13 @@ main {
 }
 
 .title {
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+  text-align: center;
+
+  background-color: rgba($color: #000000, $alpha: 0.8);
   color: white;
 }
 
@@ -107,7 +114,7 @@ main {
 
   @media screen and (max-width: v.$breakMedium) {
     grid-template-columns: (90vw);
-    grid-template-rows: (61.8vw * 0.55) (100vw * 0.55);
+    grid-template-rows: minmax(300px, 61.8vw * 0.55) minmax(300px, 100vw * 0.55);
     grid-template-areas: "links" "message";
   }
 }
