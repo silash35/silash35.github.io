@@ -1,0 +1,113 @@
+@use "modules/standard";
+@use "modules/utils/variables" as v;
+@use "modules/utils/functions" as f;
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield/dist/mdc.textfield.css";
+@use "@material/textfield/mixins" as t;
+@use "@material/button/mdc-button";
+
+main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.title {
+  color: white;
+}
+
+.contactCard {
+  display: grid;
+  grid-template-rows: (100vw * 0.3);
+  grid-template-columns: (61.8vw * 0.55) (100vw * 0.55);
+  grid-template-areas: "links message";
+  overflow: hidden;
+
+  background-color: v.$orange;
+  border-radius: 15px;
+  margin: 10px;
+
+  .links {
+    grid-area: links;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    h3 {
+      margin: 0;
+      font-size: f.pxToEm(30);
+      font-weight: 700;
+      color: v.$orange;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        display: flex;
+        place-items: center;
+        a {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.87);
+          font-weight: 500;
+        }
+        img {
+          width: 25px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+  .message {
+    grid-area: message;
+    display: flex;
+    place-content: center;
+    padding: 20px;
+
+    form {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: min-content auto min-content;
+      grid-template-areas: "t t" "a a" ". b";
+
+      place-items: center;
+      gap: 20px;
+
+      width: 100%;
+      height: 100%;
+
+      .textField {
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: black, $alpha: 0.3);
+        color: white;
+
+        @include t.caret-color(white);
+        @include t.label-color(white);
+        @include t.ink-color(white);
+        @include t.bottom-line-color(white);
+        @include t.hover-bottom-line-color(white);
+        @include t.line-ripple-color(white);
+      }
+
+      .textArea {
+        @extend .textField;
+        grid-area: a;
+      }
+
+      button {
+        grid-area: b;
+        justify-self: end;
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+
+  @media screen and (max-width: v.$breakMedium) {
+    grid-template-columns: (90vw);
+    grid-template-rows: (61.8vw * 0.55) (100vw * 0.55);
+    grid-template-areas: "links" "message";
+  }
+}

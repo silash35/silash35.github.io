@@ -38,7 +38,7 @@ main {
     h1 {
       @extend %text;
       font-size: f.pxToEm(60);
-      color: #ff5722;
+      color: v.$orange;
     }
     p {
       @extend %text;

@@ -32,13 +32,13 @@ $animeTime: 300ms;
           color: white;
 
           &:hover {
-            color: #ff5722;
+            color: v.$orange;
           }
         }
 
         &.active {
           a {
-            color: #ff5722;
+            color: v.$orange;
           }
         }
       }
