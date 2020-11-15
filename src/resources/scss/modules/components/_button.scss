@@ -1,5 +1,6 @@
 @use "@material/button/mdc-button";
 @use "@material/button/mixins" as m;
+@use "@material/ripple/mixins" as r;
 
 @mixin button($type: contained, $backColor: default, $fontColor: default) {
   @extend .mdc-button;
@@ -21,4 +22,10 @@
   @if $fontColor != default {
     @include m.ink-color($fontColor);
   }
+
+  //ripple
+  @include r.surface;
+  @include r.radius-bounded;
+  @include r.states;
+  overflow: hidden;
 }

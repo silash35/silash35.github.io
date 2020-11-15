@@ -6,4 +6,16 @@
   } @else {
     @extend .mdc-card;
   }
+
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: #161616;
+  }
 }

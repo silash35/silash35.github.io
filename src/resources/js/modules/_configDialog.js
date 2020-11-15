@@ -1,12 +1,13 @@
 import globalize from "./_globalize";
 
 export default () => {
-  globalize("closeDialog", (event) => {
-    event.path[3].style.opacity = "0";
+  globalize("closeDialog", (id) => {
+    const dialog = document.getElementById(id);
+    dialog.style.opacity = "0";
 
     //waits the animation ends
     setTimeout(function () {
-      event.path[3].style.visibility = "collapse";
+      dialog.style.visibility = "collapse";
     }, 300);
   });
 };
