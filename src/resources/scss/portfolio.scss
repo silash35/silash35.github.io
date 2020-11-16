@@ -35,6 +35,10 @@ main {
       align-self: center;
     }
 
+    h2{
+      @extend .cardTitle;
+    }
+
     .content {
       margin: 16px;
       display: flex;

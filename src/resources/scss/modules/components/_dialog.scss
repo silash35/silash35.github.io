@@ -13,6 +13,10 @@
   padding: 16px;
   transition: opacity v.$animeTime;
 
+  h2{
+    @extend .cardTitle;
+  }
+
   .actions {
     @extend .mdc-card__actions;
     button {
