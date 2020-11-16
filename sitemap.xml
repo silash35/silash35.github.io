@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-	<url>
-		<loc>https://silash35.github.io/</loc>
-	</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://silash35.github.io/</loc>
+  </url>
 
-    <url>
-		<loc>https://silash35.github.io/experiments/index.html</loc>
-        <image:image>
-            <image:loc>https://silash35.github.io/experiments/resources/images/qui.jpg</image:loc>
-        </image:image>
+  <url>
+		<loc>https://silash35.github.io/index.html</loc>
+    <image:image>
+      <image:loc>https://silash35.github.io/resources/images/power.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://silash35.github.io/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://silash35.github.io/resume.html</loc>
 	</url>
-    <url>
-		<loc>https://silash35.github.io/experiments/calc.html</loc>
+	<url>
+    <loc>https://silash35.github.io/portfolio.html</loc>
 	</url>
-    <url>
-		<loc>https://silash35.github.io/experiments/login.html</loc>
+	<url>
+    <loc>https://silash35.github.io/curriculum.html</loc>
 	</url>
+	<url>
+    <loc>https://silash35.github.io/curriculo.html</loc>
+  </url>
 </urlset>
