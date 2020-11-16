@@ -22,15 +22,17 @@ main {
 
   article {
     @include c.card();
-    height: 450px;
-    width: 350px;
+    height: 400px;
+    width: 344px;
     margin: 30px;
 
     border-radius: 24px;
     overflow: hidden;
 
     img{
-      @extend .mdc-card__media--16-9;
+      width: 16px*23;
+      height: 9px*23;
+      align-self: center;
     }
 
     .content {
@@ -41,7 +43,6 @@ main {
       height: 100%;
 
       .actions{
-        @extend .mdc-card__action-buttons;
         a {
           @include b.button(text);
         }
