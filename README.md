@@ -1,8 +1,8 @@
-# Meu site com o meu Currículo
-Acesse em:
+# My personal website
+Go to:
 https://silash35.github.io
 
-## Tudo aqui está distribuído sob a seguinte licença:
+## Everything here is distributed under the following license:
 
 This is free and unencumbered software released into the public domain.
 

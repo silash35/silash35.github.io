@@ -1,23 +1,27 @@
 {
   "name": "silash35.github.io",
   "version": "1.0.0",
-  "main": "index.html",
   "repository": "https://github.com/silash35/silash35.github.io.git",
   "author": "Silas Henrique <silash35@gmail.com>",
   "license": "Unlicense",
   "private": false,
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "rm -rf .parcel-cache/ && parcel serve src/index.html",
+    "build": "parcel build src/index.html",
+    "postbuild": "cp -r static/* dist/"
   },
   "devDependencies": {
     "eslint": "^7.8.1",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-html-partials": "^0.0.6",
-    "parcel-plugin-static-files-copy": "^2.5.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "parcel": "^2.0.0-beta.1",
+    "posthtml-include": "^1.5.0",
     "sass": "^1.26.10"
   },
   "dependencies": {
+    "@material/button": "^8.0.0",
+    "@material/card": "^7.0.0",
+    "@material/ripple": "^8.0.0",
+    "@material/textfield": "^8.0.0",
     "crypto-js": "^4.0.0"
   }
 }

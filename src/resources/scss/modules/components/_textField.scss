@@ -1,0 +1,26 @@
+@use "@material/textfield/mdc-text-field";
+@use "@material/textfield/mixins" as t;
+
+@mixin textField($outlined: false, $area: false) {
+  @if $outlined {
+    //todo
+  } @else {
+    @extend .mdc-text-field;
+    @extend .mdc-text-field--filled;
+
+    @if $area {
+      @extend .mdc-text-field--textarea;
+    }
+
+    width: 100%;
+    height: 100%;
+
+    @include t.fill-color(rgba($color: black, $alpha: 0.3));
+    @include t.caret-color(white);
+    @include t.label-color(white);
+    @include t.ink-color(white);
+    @include t.bottom-line-color(white);
+    @include t.hover-bottom-line-color(white);
+    @include t.line-ripple-color(white);
+  }
+}

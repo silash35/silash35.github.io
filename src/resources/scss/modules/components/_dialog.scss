@@ -1,0 +1,30 @@
+@use "../components/button" as b;
+@use "../utils/variables" as v;
+@use "./card" as c;
+
+.dialog {
+  @include c.card();
+  position: fixed;
+  left: 50px;
+  bottom: 40px;
+  z-index: 1;
+
+  width: 400px;
+  padding: 16px;
+  transition: opacity v.$animeTime;
+
+  .actions {
+    @extend .mdc-card__actions;
+    button {
+      @include b.button(text);
+      @extend .mdc-card__action;
+      @extend .mdc-card__action--button;
+    }
+  }
+
+  @media screen and (max-width: v.$breakMedium) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}

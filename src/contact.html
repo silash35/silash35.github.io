@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <include src="resources/head.html"></include>
+
+    <title>Contact</title>
+    <link rel="stylesheet" href="resources/scss/contact.scss" />
+    <script defer src="resources/js/contact.js"></script>
+  </head>
+  <body>
+    <include src="resources/header.html"></include>
+    <main>
+      <section class="title">
+        <h1>Where to find me?</h1>
+      </section>
+      <article class="contactCard">
+        <section class="links">
+          <h3>My social networks</h3>
+          <ul>
+            <li>
+              <img
+                src="./resources/images/icons/email.svg"
+                alt="email Icon"
+              /><a
+                href="mailto:silash35@gmail.com"
+                title="Silas Henrique's e-mail address"
+              >
+                silash35@gmail.com
+              </a>
+            </li>
+            <li>
+              <img
+                src="./resources/images/icons/whatsapp.svg"
+                alt="Whatsapp Icon"
+              /><a
+                href="tel:+5571987529296"
+                title="Phone number of Silas Henrique"
+              >
+                +55 71 98752-9296
+              </a>
+            </li>
+            <li>
+              <img
+                src="./resources/images/icons/twitter.svg"
+                alt="twitter Icon"
+              />
+              <a
+                href="https://twitter.com/silash35"
+                title="twitter of Silas Henrique"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @silash35
+              </a>
+            </li>
+            <li>
+              <img
+                src="./resources/images/icons/github.svg"
+                alt="github Icon"
+              />
+              <a
+                href="https://github.com/silash35"
+                title="GitHub of Silas Henrique"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @silash35
+              </a>
+            </li>
+            <li>
+              <img
+                src="./resources/images/icons/instagram.svg"
+                alt="instagram Icon"
+              /><a
+                href="https://www.instagram.com/silash35a/"
+                title="Instagram of Silas Henrique"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @silash35a
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="message">
+          <form action="https://formsubmit.co/silash35@gmail.com" method="POST">
+
+            <label class="textField">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label">Your Name</span>
+              <input class="mdc-text-field__input" type="text" name="name" aria-labelledby="name" required />
+              <span class="mdc-line-ripple"></span>
+            </label>
+
+            <label class="textField">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label">E-mail</span>
+              <input class="mdc-text-field__input" type="text" name="email" aria-labelledby="email" required />
+              <span class="mdc-line-ripple"></span>
+            </label>
+
+            <label class="textArea">
+              <span class="mdc-floating-label">Your message</span>
+              <span class="mdc-text-field__ripple"></span>
+                <textarea name="message" class="mdc-text-field__input" aria-label="message"></textarea>
+              </span>
+              <span class="mdc-line-ripple"></span>
+            </label>
+
+            <button type="submit">
+              <div class="mdc-button__ripple"></div>
+              <i class="material-icons" aria-hidden="true">send</i>
+              <span class="mdc-button__label">Send</span>
+            </button>
+
+          </form>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

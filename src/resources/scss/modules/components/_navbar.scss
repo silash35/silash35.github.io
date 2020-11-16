@@ -1,0 +1,132 @@
+@use "../utils/variables" as v;
+@use "../utils/functions" as f;
+
+$animeTime: 300ms;
+
+.standardHeader {
+  display: flex;
+  place-content: center;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 85%;
+
+    .logoContainer {
+      display: block;
+      width: 80px;
+    }
+
+    .navLinks {
+      display: flex;
+      li {
+        list-style: none;
+        transition: color 0.3s;
+        padding-left: 50px;
+        a {
+          font-size: f.pxToEm(18);
+          font-weight: 500;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+
+          &:hover {
+            color: v.$orange;
+          }
+        }
+
+        &.active {
+          a {
+            color: v.$orange;
+          }
+        }
+      }
+    }
+
+    button {
+      all: unset;
+      display: none;
+    }
+
+    .screenDarkener {
+      display: block;
+      position: fixed;
+      visibility: collapse;
+
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 9;
+
+      background-color: black;
+      opacity: 0;
+      transition: visibility 0s, opacity $animeTime;
+    }
+  }
+
+  @media screen and (max-width: v.$breakMedium) {
+    background-color: black;
+    nav {
+      width: 90%;
+
+      .logoContainer {
+        width: 60px;
+        margin: auto;
+      }
+
+      .sidenavTrigger {
+        all: unset;
+        position: absolute;
+        cursor: pointer;
+        color: white;
+        i {
+          font-size: f.pxToEm(30);
+        }
+      }
+
+      .navLinks {
+        display: block;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        left: -300px;
+
+        background-color: #111111;
+        transition: left $animeTime;
+
+        li {
+          padding: 0;
+          transition: background-color 0.3s;
+
+          a {
+            display: block;
+            box-sizing: border-box;
+            padding: 20px;
+            width: 300px;
+          }
+
+          &.active {
+            background-color: rgba(0, 0, 0, 0.2);
+            a {
+              color: white;
+            }
+          }
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use "modules/standard";
+@use "modules/components/card" as c;
+@use "modules/components/centralTitle";
+@use "modules/utils/variables" as v;
+@use "modules/utils/functions" as f;
+@use "modules/components/button" as b;
+
+main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.title {
+  @extend %centralTitle;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  article {
+    @include c.card();
+    height: 400px;
+    width: 344px;
+    margin: 30px;
+
+    border-radius: 24px;
+    overflow: hidden;
+
+    img{
+      width: 16px*23;
+      height: 9px*23;
+      align-self: center;
+    }
+
+    .content {
+      margin: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      .actions{
+        a {
+          @include b.button(text);
+        }
+      }
+    }
+  }
+}
