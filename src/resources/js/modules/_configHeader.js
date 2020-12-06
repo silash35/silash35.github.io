@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import globalize from "./_globalize";
 
 function setHeaderActive() {
