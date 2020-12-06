@@ -1,7 +1,7 @@
 import globalize from "./modules/_globalize";
-import configDialog from "./modules/_configDialog";
+import setCloseElement from "./modules/_setCloseElement";
 import configHeader from "./modules/_configHeader";
-configDialog();
+setCloseElement();
 configHeader();
 
 globalize("goToCurriculum", () => {

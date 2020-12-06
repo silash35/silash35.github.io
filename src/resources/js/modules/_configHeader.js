@@ -26,7 +26,7 @@ function globalizeSidenavFunctions() {
     navLinks.style.left = "-300px";
     screenDarkener.style.opacity = "0";
 
-    //waits the animation ends
+    // waits the animation ends
     setTimeout(function () {
       screenDarkener.style.visibility = "collapse";
     }, 300);
