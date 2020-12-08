@@ -1,5 +1,7 @@
+@use "../utils/variables" as v;
+
 a {
-  color: #212121;
+  color: v.$darkGray;;
   text-decoration: underline;
 
   &:visited {
