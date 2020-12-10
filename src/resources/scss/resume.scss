@@ -78,15 +78,16 @@ main {
       h2 {
         text-align: center;
       }
-      %cardContent{
+      %cardContent {
         @include c.card(true);
         margin: 0;
       }
-      p{
+      p {
         @extend %cardContent;
+        font-size: 100%;
         padding: 16px;
       }
-      ul{
+      ul {
         @extend %cardContent;
         padding: 8px 0;
         list-style-type: none;
