@@ -1,5 +1,8 @@
 import globalize from "./_globalize";
 
+const navLinks = document.querySelector(".navLinks");
+const screenDarkener = document.querySelector(".screenDarkener");
+
 function setHeaderActive() {
   const links = navLinks.getElementsByTagName("li");
   let title = document.querySelector("title").innerText;
@@ -17,7 +20,6 @@ function setHeaderActive() {
 function globalizeSidenavFunctions() {
   globalize("openSidenav", () => {
     navLinks.style.left = "0px";
-
     screenDarkener.style.visibility = "visible";
     screenDarkener.style.opacity = ".2";
   });
@@ -34,9 +36,6 @@ function globalizeSidenavFunctions() {
 }
 
 export default () => {
-  globalize("navLinks", document.querySelector(".navLinks"));
-  globalize("screenDarkener", document.querySelector(".screenDarkener"));
-
   setHeaderActive();
   globalizeSidenavFunctions();
 };
