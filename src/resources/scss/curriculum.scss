@@ -16,9 +16,11 @@ header {
     padding: 0;
     margin: 0;
     list-style: none;
-    li{margin-bottom: 0;}
+    li {
+      margin-bottom: 0;
+    }
   }
-  p{
+  p {
     display: list-item;
     list-style: square outside;
     text-align: left;
