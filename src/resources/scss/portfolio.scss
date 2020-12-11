@@ -1,9 +1,10 @@
-@use "modules/standard";
-@use "modules/components/card" as c;
-@use "modules/components/centralTitle";
-@use "modules/utils/variables" as v;
-@use "modules/utils/functions" as f;
-@use "modules/components/button" as b;
+@use "base/default";
+@use "helpers/variables" as v;
+@use "helpers/functions" as f;
+
+@use "basics/buttons" as b;
+@use "basics/cards" as c;
+@use "basics/title";
 
 main {
   display: flex;
@@ -12,7 +13,7 @@ main {
 }
 
 .title {
-  @extend %centralTitle;
+  @extend %title;
 }
 
 .portfolio {

@@ -1,0 +1,22 @@
+@use "../globals/glob";
+@use '../layouts/header';
+
+@use "../helpers/media" as m;
+@use "../helpers/variables" as v;
+
+body {
+  background-image: url("../images/power.webp");
+  background-color: v.$darkGray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include m.forMedium() {
+    height: 80px;
+  }
+}

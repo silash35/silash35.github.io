@@ -1,5 +1,6 @@
-@use "../utils/variables" as v;
-@use "../utils/functions" as f;
+@use "../helpers/variables" as v;
+@use "../helpers/functions" as f;
+@use "../helpers/media" as m;
 
 $animeTime: 300ms;
 
@@ -66,7 +67,7 @@ $animeTime: 300ms;
     }
   }
 
-  @media screen and (max-width: v.$breakMedium) {
+  @include m.forMedium() {
     background-color: black;
     nav {
       width: 90%;

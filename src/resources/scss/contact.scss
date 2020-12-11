@@ -1,11 +1,12 @@
-@use "modules/standard";
-@use "modules/components/centralTitle";
-@use "modules/components/card" as c;
-@use "modules/components/button" as b;
-@use "modules/components/textField" as t;
+@use "base/default";
+@use "helpers/variables" as v;
+@use "helpers/functions" as f;
+@use "helpers/media" as m;
 
-@use "modules/utils/variables" as v;
-@use "modules/utils/functions" as f;
+@use "basics/textField" as t;
+@use "basics/buttons" as b;
+@use "basics/cards" as c;
+@use "basics/title";
 
 main {
   display: flex;
@@ -14,7 +15,7 @@ main {
 }
 
 .title {
-  @extend %centralTitle;
+  @extend %title;
 }
 
 .contactCard {
@@ -23,7 +24,6 @@ main {
   grid-template-columns: (61.8vw * 0.55) (100vw * 0.55);
   grid-template-areas: "links message";
   overflow: hidden;
-
   @include c.card();
   border-radius: 24px;
   margin: 10px;
@@ -93,7 +93,7 @@ main {
     }
   }
 
-  @media screen and (max-width: v.$breakMedium) {
+  @include m.forMedium() {
     grid-template-columns: (90vw);
     grid-template-rows: minmax(300px, 61.8vw * 0.55) minmax(300px, 100vw * 0.55);
     grid-template-areas: "links" "message";

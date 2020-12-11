@@ -1,8 +1,12 @@
-@use "modules/standard";
-@use "modules/utils/variables" as v;
-@use "modules/components/card" as c;
-@use "modules/components/link";
-@use "modules/components/dialog";
+@use "base/default";
+@use "helpers/variables" as v;
+@use "helpers/functions" as f;
+@use "helpers/media" as m;
+
+@use "basics/buttons" as b;
+@use "basics/cards" as c;
+@use "basics/dialog";
+@use "basics/title";
 
 main {
   @include c.card();
@@ -98,7 +102,7 @@ main {
     }
   }
 
-  @media screen and (max-width: v.$breakMedium) {
+  @include m.forMedium() {
     .resumeHeader {
       grid-template-areas:
         "title title"

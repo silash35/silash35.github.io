@@ -1,6 +1,7 @@
-@use "../components/button" as b;
-@use "../utils/variables" as v;
-@use "./card" as c;
+@use "cards" as c;
+@use "buttons" as b;
+@use "../helpers/media" as m;
+@use "../helpers/variables" as v;
 
 .dialog {
   @include c.card();
@@ -13,7 +14,7 @@
   padding: 16px;
   transition: opacity v.$animeTime;
 
-  h2{
+  h2 {
     @extend .cardTitle;
   }
 
@@ -26,7 +27,7 @@
     }
   }
 
-  @media screen and (max-width: v.$breakMedium) {
+  @include m.forMedium() {
     left: 0;
     bottom: 0;
     width: 100%;

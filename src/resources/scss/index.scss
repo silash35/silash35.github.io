@@ -1,6 +1,6 @@
-@use "modules/standard";
-@use "modules/utils/variables" as v;
-@use "modules/utils/functions" as f;
+@use "base/default";
+@use "helpers/variables" as v;
+@use "helpers/functions" as f;
 
 main {
   place-self: center;
