@@ -3,7 +3,7 @@
 
 @mixin textField($outlined: false, $area: false) {
   @if $outlined {
-    //todo
+    // todo
   } @else {
     @extend .mdc-text-field;
     @extend .mdc-text-field--filled;
