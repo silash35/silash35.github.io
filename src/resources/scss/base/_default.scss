@@ -13,12 +13,13 @@ body {
   background-size: cover;
 
   display: flex;
-  width: fit-content;
+  min-width: fit-content;
   flex-direction: column;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  place-items: center;
+  place-content: center;
 }

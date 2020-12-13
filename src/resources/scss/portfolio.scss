@@ -6,12 +6,6 @@
 @use "basics/cards" as c;
 @use "basics/title";
 
-main {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-}
-
 .title {
   @extend %title;
 }

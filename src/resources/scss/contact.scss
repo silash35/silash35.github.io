@@ -94,7 +94,7 @@ main {
   }
 
   @include m.forMedium() {
-    grid-template-columns: (90vw);
+    grid-template-columns: minmax(300px, 90vw);
     grid-template-rows: minmax(300px, 61.8vw * 0.55) minmax(300px, 100vw * 0.55);
     grid-template-areas: "links" "message";
   }
