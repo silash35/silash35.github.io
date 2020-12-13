@@ -7,6 +7,7 @@ $animeTime: 300ms;
 .standardHeader {
   display: flex;
   place-content: center;
+  height: 100px;
   nav {
     display: flex;
     justify-content: space-between;
@@ -16,7 +17,7 @@ $animeTime: 300ms;
 
     .logoContainer {
       display: block;
-      width: 80px;
+      width: 70px;
     }
 
     .navLinks {
@@ -69,6 +70,7 @@ $animeTime: 300ms;
 
   @include m.forMedium() {
     background-color: black;
+    height: 100px;
     nav {
       width: 90%;
 

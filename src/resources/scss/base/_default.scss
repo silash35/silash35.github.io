@@ -13,10 +13,12 @@ body {
   background-size: cover;
 
   display: flex;
+  width: fit-content;
   flex-direction: column;
-  justify-content: space-between;
+}
 
-  @include m.forMedium() {
-    height: 80px;
-  }
+main {
+  display: flex;
+  flex-grow: 1;
+  place-items: center;
 }

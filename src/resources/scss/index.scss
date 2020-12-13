@@ -2,11 +2,9 @@
 @use "helpers/variables" as v;
 @use "helpers/functions" as f;
 
-main {
-  place-self: center;
-}
-
 .presentation {
+  height: fit-content;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
