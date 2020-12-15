@@ -32,6 +32,7 @@ main {
     grid-area: links;
     display: grid;
     place-content: center;
+    background-color: v.$darkGray;
     h2 {
       margin: 0;
       font-size: f.pxToEm(30);
@@ -46,7 +47,7 @@ main {
         place-items: center;
         a {
           text-decoration: none;
-          color: rgba(0, 0, 0, 0.87);
+          color: white;
           font-weight: 500;
         }
         img {
