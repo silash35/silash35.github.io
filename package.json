@@ -20,8 +20,6 @@
     "sass": "^1.26.10"
   },
   "dependencies": {
-    "@material/button": "^8.0.0",
-    "@material/card": "^7.0.0",
     "@material/ripple": "^8.0.0",
     "@material/textfield": "^8.0.0"
   },

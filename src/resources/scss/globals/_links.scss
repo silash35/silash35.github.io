@@ -1,7 +1,7 @@
 @use "../helpers/variables" as v;
 
 a {
-  color: v.$darkGray;;
+  color: v.$darkGray;
   text-decoration: underline;
 
   &:visited {

@@ -1,10 +1,16 @@
-@use "@material/card/mdc-card";
+@use "../helpers/shadow" as s;
 
-@mixin card($outlined: false, $elevation: 16) {
+@mixin card($outlined: false, $elevation: 3, $elevate: false) {
+  box-sizing: border-box;
+
   @if $outlined {
-    @extend .mdc-card--outlined;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e0e0e0;
   } @else {
-    @extend .mdc-card;
+    @include s.shadow($elevation, $elevate);
+
+    border-radius: 4px;
   }
 
   .cardTitle {

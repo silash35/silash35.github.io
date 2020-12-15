@@ -86,7 +86,8 @@ main {
       }
 
       button {
-        @include b.button(contained, white, black);
+        @include b.button(contained, white);
+        color: black;
         grid-area: b;
         justify-self: end;
       }

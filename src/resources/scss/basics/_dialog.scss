@@ -5,6 +5,7 @@
 
 .dialog {
   @include c.card();
+  background-color: white;
   position: fixed;
   left: 50px;
   bottom: 40px;
@@ -15,15 +16,21 @@
   transition: opacity v.$animeTime;
 
   h2 {
-    @extend .cardTitle;
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 500;
   }
 
   .actions {
-    @extend .mdc-card__actions;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 52px;
+    padding: 8px;
     button {
       @include b.button(text);
-      @extend .mdc-card__action;
-      @extend .mdc-card__action--button;
     }
   }
 

@@ -1,31 +1,47 @@
-@use "@material/button/mdc-button";
-@use "@material/button/mixins" as m;
-@use "@material/ripple/mixins" as r;
+@use "@material/ripple/mixins" as ripple;
+@use "../helpers/shadow" as s;
 
-@mixin button($type: contained, $backColor: default, $fontColor: default) {
-  @extend .mdc-button;
+@mixin button($type: contained, $color: #6200ee) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 8px;
+  height: 36px;
+  min-width: 70px;
+
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  letter-spacing: 0.0892857143em;
+
+  border-radius: 4px;
+  overflow: hidden;
+
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple.states;
+
+  img,
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
 
   @if $type == text {
+    background-color: none;
+    color: $color;
   } @else if $type == outlined {
-    @extend .mdc-button--outlined;
+    background-color: none;
+    color: $color;
+    border-width: 2px;
+    border: 2px solid $color;
   } @else {
-    @extend .mdc-button--raised;
+    @include s.shadow(3, true);
+    background-color: $color;
+    color: white;
   }
-
-  img {
-    @extend .mdc-button__icon;
-  }
-
-  @if $backColor != default {
-    @include m.container-fill-color($backColor);
-  }
-  @if $fontColor != default {
-    @include m.ink-color($fontColor);
-  }
-
-  //ripple
-  @include r.surface;
-  @include r.radius-bounded;
-  @include r.states;
-  overflow: hidden;
 }
