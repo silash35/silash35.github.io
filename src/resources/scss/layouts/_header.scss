@@ -8,6 +8,11 @@ $animeTime: 300ms;
   display: flex;
   place-content: center;
   height: 100px;
+
+  a {
+    border-bottom: none;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -29,7 +34,6 @@ $animeTime: 300ms;
         a {
           font-size: f.pxToEm(18);
           font-weight: 500;
-          text-decoration: none;
           text-transform: uppercase;
           color: white;
 

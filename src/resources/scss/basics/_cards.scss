@@ -2,6 +2,7 @@
 
 @mixin card($outlined: false, $elevation: 3, $elevate: false) {
   box-sizing: border-box;
+  background-color: rgba($color: white, $alpha: 0.07);
 
   @if $outlined {
     border-width: 1px;
@@ -22,6 +23,5 @@
 
   p {
     font-size: 0.875rem;
-    color: #161616;
   }
 }

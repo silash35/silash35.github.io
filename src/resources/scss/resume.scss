@@ -11,7 +11,7 @@
 main {
   @include c.card();
   margin: 5px 20px;
-  background-color: #f7f7f7;
+  background-color: v.$darkGray;
 
   .resumeHeader {
     width: 100%;
@@ -41,7 +41,7 @@ main {
       justify-content: center;
       display: flex;
       list-style: none;
-      background-color: #141414;
+      background-color: v.$orange;
       margin: 0;
       padding: 0;
       width: 100%;
@@ -61,7 +61,7 @@ main {
       }
     }
     .fill {
-      background-color: #141414;
+      background-color: v.$orange;
       width: 100%;
       height: 100%;
     }

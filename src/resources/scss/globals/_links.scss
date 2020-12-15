@@ -1,10 +1,16 @@
 @use "../helpers/variables" as v;
 
 a {
-  color: v.$darkGray;
-  text-decoration: underline;
+  color: v.$orange;
+  text-decoration: none;
 
+  border-bottom: solid 1px;
+  transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+
+  &:hover {
+    border-color: transparent;
+  }
   &:visited {
-    color: #616161;
+    color: lighten($color: v.$orange, $amount: 10);
   }
 }
