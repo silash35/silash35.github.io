@@ -5,9 +5,7 @@
 
   @if $outlined {
     background-color: rgba($color: white, $alpha: 0.05);
-    border-width: 1px;
-    border-style: solid;
-    border-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
   } @else {
     @include s.shadow($elevation, $elevate);
     background-color: rgba($color: white, $alpha: 0.07);
