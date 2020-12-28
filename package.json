@@ -23,27 +23,5 @@
   "dependencies": {
     "@material/ripple": "^8.0.0",
     "@material/textfield": "^8.0.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "impliedStrict": true
-      }
-    },
-    "extends": [
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": "error",
-      "spaced-comment": "error"
-    }
   }
 }
