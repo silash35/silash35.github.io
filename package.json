@@ -6,7 +6,7 @@
   "license": "Unlicense",
   "private": false,
   "scripts": {
-    "dev": "rm -rf .parcel-cache/ && parcel serve src/index.html",
+    "dev": "parcel serve src/index.html",
     "build": "parcel build src/index.html",
     "postbuild": "cp -r static/* dist/"
   },
