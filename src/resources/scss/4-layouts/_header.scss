@@ -1,7 +1,7 @@
-@use "../helpers/variables" as v;
-@use "../helpers/functions" as f;
-@use "../helpers/shadow" as s;
-@use "../helpers/media" as m;
+@use "../1-helpers/variables" as v;
+@use "../1-helpers/functions" as f;
+@use "../1-helpers/shadow" as s;
+@use "../1-helpers/media" as m;
 
 $animeTime: 300ms;
 

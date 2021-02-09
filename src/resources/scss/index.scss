@@ -1,6 +1,7 @@
-@use "base/default";
-@use "helpers/variables" as v;
-@use "helpers/functions" as f;
+@use "1-helpers/variables" as v;
+@use "1-helpers/functions" as f;
+
+@use "5-base/default";
 
 .presentation {
   height: fit-content;

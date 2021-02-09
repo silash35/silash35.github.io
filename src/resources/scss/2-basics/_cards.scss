@@ -1,4 +1,4 @@
-@use "../helpers/shadow" as s;
+@use "../1-helpers/shadow" as s;
 
 @mixin card($outlined: false, $elevation: 3, $elevate: false) {
   box-sizing: border-box;

@@ -1,7 +1,8 @@
-@use "cards" as c;
-@use "buttons" as b;
-@use "../helpers/media" as m;
-@use "../helpers/variables" as v;
+@use "../1-helpers/media" as m;
+@use "../1-helpers/variables" as v;
+
+@use "../2-basics/cards" as c;
+@use "../2-basics/buttons" as b;
 
 .dialog {
   @include c.card();

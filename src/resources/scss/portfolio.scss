@@ -1,10 +1,11 @@
-@use "base/default";
-@use "helpers/variables" as v;
-@use "helpers/functions" as f;
+@use "1-helpers/variables" as v;
+@use "1-helpers/functions" as f;
 
-@use "basics/buttons" as b;
-@use "basics/cards" as c;
-@use "basics/title";
+@use "2-basics/buttons" as b;
+@use "2-basics/cards" as c;
+@use "2-basics/title";
+
+@use "5-base/default";
 
 .title {
   @extend %title;
