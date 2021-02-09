@@ -1,6 +1,6 @@
+import configHeader from "./modules/_configHeader";
 import globalize from "./modules/_globalize";
 import setCloseElement from "./modules/_setCloseElement";
-import configHeader from "./modules/_configHeader";
 setCloseElement();
 configHeader();
 
