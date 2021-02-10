@@ -27,6 +27,7 @@ main {
       grid-area: title;
       font-size: clamp(3em, calc(1em + 4.5vw), 5.5vw);
       padding-left: 10px;
+      text-align: center;
     }
     .presentationPhoto {
       grid-area: photo;
@@ -126,6 +127,26 @@ main {
 
     .resumeContent {
       column-count: 1;
+    }
+  }
+
+  @include m.forSmall() {
+    margin: 5px 5px;
+
+    .resumeHeader {
+      h1 {
+        font-size: f.pxToEm(40);
+      }
+    }
+
+    .resumeContent {
+      article {
+        h2 {
+          font-weight: 300;
+          font-size: 2.2em;
+          margin: 20px 0;
+        }
+      }
     }
   }
 }
