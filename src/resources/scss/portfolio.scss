@@ -18,8 +18,11 @@
   justify-content: space-evenly;
 
   article {
-    @include c.card();
-    background-color: v.$darkGray;
+    @include c.card($transparent: false);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 330px;
     margin: 30px;
     border-radius: 20px;

@@ -10,9 +10,8 @@
 @use "5-base/default";
 
 main {
-  @include c.card();
+  @include c.card($transparent: false);
   margin: 5px 20px;
-  background-color: v.$darkGray;
 
   .resumeHeader {
     width: 100%;
