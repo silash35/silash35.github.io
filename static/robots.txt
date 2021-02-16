@@ -1,2 +1,3 @@
 User-agent: *
+Disallow:
 Sitemap: https://silash35.github.io/sitemap.xml
