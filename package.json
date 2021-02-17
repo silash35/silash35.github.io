@@ -7,8 +7,9 @@
   "private": false,
   "scripts": {
     "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html",
-    "postbuild": "cp -r static/* dist/"
+    "prebuild": "parcel build src/index.html",
+    "build": "cp -r static/* dist/",
+    "postbuild": "workbox generateSW"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^0.12.0",
@@ -18,7 +19,8 @@
     "parcel": "^2.0.0-beta.1",
     "posthtml-include": "^1.5.0",
     "prettier": "^2.2.1",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "workbox-cli": "^6.1.0"
   },
   "dependencies": {
     "@material/ripple": "^8.0.0",
