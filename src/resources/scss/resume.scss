@@ -1,17 +1,17 @@
-@use "base/default";
-@use "helpers/variables" as v;
-@use "helpers/functions" as f;
-@use "helpers/media" as m;
+@use "1-helpers/variables" as v;
+@use "1-helpers/functions" as f;
+@use "1-helpers/media" as m;
 
-@use "basics/buttons" as b;
-@use "basics/cards" as c;
-@use "basics/dialog";
-@use "basics/title";
+@use "2-basics/buttons" as b;
+@use "2-basics/cards" as c;
+@use "2-basics/title";
+
+@use "4-layouts/dialog";
+@use "5-base/default";
 
 main {
-  @include c.card();
+  @include c.card($transparent: false);
   margin: 5px 20px;
-  background-color: v.$darkGray;
 
   .resumeHeader {
     width: 100%;
@@ -26,6 +26,7 @@ main {
       grid-area: title;
       font-size: clamp(3em, calc(1em + 4.5vw), 5.5vw);
       padding-left: 10px;
+      text-align: center;
     }
     .presentationPhoto {
       grid-area: photo;
@@ -125,6 +126,26 @@ main {
 
     .resumeContent {
       column-count: 1;
+    }
+  }
+
+  @include m.forSmall() {
+    margin: 5px 5px;
+
+    .resumeHeader {
+      h1 {
+        font-size: f.pxToEm(40);
+      }
+    }
+
+    .resumeContent {
+      article {
+        h2 {
+          font-weight: 300;
+          font-size: 2.2em;
+          margin: 20px 0;
+        }
+      }
     }
   }
 }

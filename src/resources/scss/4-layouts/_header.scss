@@ -1,7 +1,7 @@
-@use "../helpers/variables" as v;
-@use "../helpers/functions" as f;
-@use "../helpers/shadow" as s;
-@use "../helpers/media" as m;
+@use "../1-helpers/variables" as v;
+@use "../1-helpers/functions" as f;
+@use "../1-helpers/shadow" as s;
+@use "../1-helpers/media" as m;
 
 $animeTime: 300ms;
 
@@ -31,10 +31,11 @@ $animeTime: 300ms;
       li {
         list-style: none;
         transition: color 0.3s;
-        padding-left: 50px;
+        padding-left: 30px;
         a {
-          font-size: f.pxToEm(18);
+          font-size: f.pxToEm(19);
           font-weight: 500;
+          padding: 10px;
           text-transform: uppercase;
           color: white;
 

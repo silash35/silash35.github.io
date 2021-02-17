@@ -36,6 +36,6 @@ function globalizeSidenavFunctions() {
 }
 
 export default () => {
-  document.querySelector("body").onload = setHeaderActive;
+  setHeaderActive();
   globalizeSidenavFunctions();
 };

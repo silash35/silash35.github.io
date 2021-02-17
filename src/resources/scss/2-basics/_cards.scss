@@ -1,6 +1,7 @@
-@use "../helpers/shadow" as s;
+@use "../1-helpers/variables" as v;
+@use "../1-helpers/shadow" as s;
 
-@mixin card($outlined: false, $elevation: 3, $elevate: false) {
+@mixin card($outlined: false, $elevation: 3, $elevate: false, $transparent: true) {
   box-sizing: border-box;
 
   @if $outlined {
@@ -8,8 +9,12 @@
     border: 1px solid #e0e0e0;
   } @else {
     @include s.shadow($elevation, $elevate);
-    background-color: rgba($color: white, $alpha: 0.07);
-    border-radius: 4px;
+    @if $transparent {
+      background-color: rgba($color: white, $alpha: 0.07);
+    } @else {
+      background-color: v.$darkGray;
+    }
+    border-radius: 8px;
   }
 
   .cardTitle {

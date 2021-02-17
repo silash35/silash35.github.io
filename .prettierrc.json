@@ -7,7 +7,7 @@
 
   "overrides": [
     {
-      "files": "*.xml",
+      "files": ["*.xml", "head.html"],
       "options": {
         "printWidth": 999
       }

@@ -1,8 +1,13 @@
-import globalize from "./modules/_globalize";
-import setCloseElement from "./modules/_setCloseElement";
 import configHeader from "./modules/_configHeader";
-setCloseElement();
-configHeader();
+import globalize from "./modules/_globalize";
+import installSW from "./modules/_installServiceWorker";
+import setCloseElement from "./modules/_setCloseElement";
+
+window.addEventListener("load", function () {
+  configHeader();
+  installSW();
+  setCloseElement();
+});
 
 globalize("goToCurriculum", () => {
   const userLang = navigator.language || navigator.userLanguage;

@@ -1,5 +1,6 @@
 @use "@material/ripple/mixins" as ripple;
-@use "../helpers/shadow" as s;
+
+@use "../1-helpers/shadow" as s;
 
 @mixin button($type: contained, $color: #bb86fc) {
   display: inline-flex;
