@@ -11,6 +11,12 @@
       "src": "https://silash35.github.io/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "https://silash35.github.io/icons/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "theme_color": "#121212",
