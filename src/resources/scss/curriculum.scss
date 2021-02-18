@@ -1,84 +1,43 @@
 @charset "utf-8";
 
 @use "3-globals/roboto";
-// @use "1-helpers/media" as m;
 
 body {
   font-family: Roboto, sans-serif;
-  // min-width: 320px;
-  min-width: 615px; // Below that the layout breaks. I am working on a solution
-  margin: 0;
 }
 
-header {
-  text-align: center;
-  font-size: 1.2em;
-
-  /*
-  @include m.forSmall() {
-    font-size: 1.1em;
-    h1 {
-      font-size: 1.7em;
-    }
-  }
-  */
-
-  h1 {
-    border-bottom: solid 5px;
-    text-align: center;
-    margin: 20px auto;
-    width: fit-content;
-    padding: 0 50px;
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    li {
-      margin-bottom: 0;
-      white-space: nowrap;
-      padding: 0 5px;
-
-      border-right: 1.5px solid black;
-
-      &:last-child {
-        border: none;
-      }
-    }
-  }
-  p {
-    display: list-item;
-    list-style: square outside;
-    text-align: left;
-    margin-left: 2em;
-  }
+#page {
+  background-color: #ffffff;
+  color: #0e0e0e;
+  padding: 30px;
 }
 
-main {
-  h2 {
-    background-color: #3a3a3a;
-    color: #ffffff;
-    font-size: 1.5em;
+h1 {
+  margin-top: 0;
+}
 
-    text-align: center;
+%text {
+  font-size: large;
+}
+
+p {
+  @extend %text;
+  margin: 5px;
+}
+
+li {
+  @extend %text;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: #d1d1d1;
+    margin: 50px;
   }
 
-  div {
-    font-size: 1.2em;
-  }
-
-  ul {
-    list-style-type: square;
-    font-size: 1.2em;
-  }
-
-  li {
-    margin-bottom: 1.2em;
+  #page {
+    box-shadow: rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    padding: 90px;
   }
 }
