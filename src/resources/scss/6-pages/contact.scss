@@ -1,13 +1,13 @@
-@use "1-helpers/variables" as v;
-@use "1-helpers/functions" as f;
-@use "1-helpers/media" as m;
+@use "../1-helpers/variables" as v;
+@use "../1-helpers/functions" as f;
+@use "../1-helpers/media" as m;
 
-@use "2-basics/textField" as t;
-@use "2-basics/buttons" as b;
-@use "2-basics/cards" as c;
-@use "2-basics/title";
+@use "../2-basics/textField" as t;
+@use "../2-basics/buttons" as b;
+@use "../2-basics/cards" as c;
+@use "../2-basics/title";
 
-@use "5-base/default";
+@use "../5-base/default";
 
 main {
   display: flex;

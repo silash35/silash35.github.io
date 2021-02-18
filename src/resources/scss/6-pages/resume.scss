@@ -1,13 +1,13 @@
-@use "1-helpers/variables" as v;
-@use "1-helpers/functions" as f;
-@use "1-helpers/media" as m;
+@use "../1-helpers/variables" as v;
+@use "../1-helpers/functions" as f;
+@use "../1-helpers/media" as m;
 
-@use "2-basics/buttons" as b;
-@use "2-basics/cards" as c;
-@use "2-basics/title";
+@use "../2-basics/buttons" as b;
+@use "../2-basics/cards" as c;
+@use "../2-basics/title";
 
-@use "4-layouts/dialog";
-@use "5-base/default";
+@use "../4-layouts/dialog";
+@use "../5-base/default";
 
 main {
   @include c.card($transparent: false);
