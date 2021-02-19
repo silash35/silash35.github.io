@@ -19,6 +19,7 @@
   .presentationPhoto {
     min-width: 250px;
     border-radius: 50%;
+    overflow: hidden;
     display: flex;
     img {
       margin: auto;

@@ -29,6 +29,7 @@ main {
     .presentationPhoto {
       grid-area: photo;
       margin: 25px 25px;
+      overflow: hidden;
       transform: translateY(8vw);
       z-index: 1;
       border-radius: 25%;

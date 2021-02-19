@@ -1,3 +1,5 @@
+@use "../1-helpers/media" as m;
+
 .imageModal {
   overflow: hidden;
   img {
@@ -30,6 +32,9 @@
     all: unset;
     width: 50vw;
     height: fit-content;
+    @include m.forMedium() {
+      width: 80vw;
+    }
   }
 
   transition: background-color 0.5s;
