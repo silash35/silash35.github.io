@@ -1,0 +1,50 @@
+@use "../1-helpers/variables" as v;
+@use "../1-helpers/functions" as f;
+@use "../1-helpers/shadow" as s;
+@use "../1-helpers/media" as m;
+
+.standardHeader {
+  nav {
+    .navLinks {
+      li {
+        a {
+          transition: color ease-in-out 0.1s;
+          &:hover {
+            color: v.$orange;
+          }
+        }
+      }
+    }
+
+    .screenDarkener {
+      display: block;
+      position: fixed;
+      visibility: collapse;
+
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 9;
+
+      background-color: black;
+      transition: visibility 0s, opacity v.$animeTime;
+    }
+  }
+
+  @include m.forMedium() {
+    nav {
+      .navLinks {
+        transition: left v.$animeTime;
+        li {
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
