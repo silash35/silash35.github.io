@@ -35,7 +35,7 @@
   @include m.forMedium() {
     nav {
       .navLinks {
-        transition: left v.$animeTime;
+        transition: transform v.$animeTime;
         li {
           &:hover {
             background-color: rgba(0, 0, 0, 0.3);

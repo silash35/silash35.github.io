@@ -19,13 +19,13 @@ function setHeaderActive() {
 
 function globalizeSidenavFunctions() {
   globalize("openSidenav", () => {
-    navLinks.style.left = "0px";
+    navLinks.style.transform = "translateX(300px)";
     screenDarkener.style.visibility = "visible";
     screenDarkener.style.opacity = ".2";
   });
 
   globalize("closeSidenav", () => {
-    navLinks.style.left = "-300px";
+    navLinks.style.transform = "translateX(0)";
     screenDarkener.style.opacity = "0";
 
     // waits the animation ends
@@ -35,7 +35,20 @@ function globalizeSidenavFunctions() {
   });
 }
 
+function closeSidenavOnMedia() {
+  const mediaQuery = window.matchMedia("(min-width: 800px)");
+
+  const handleScreenChange = (e) => {
+    if (e.matches) {
+      closeSidenav();
+    }
+  };
+
+  mediaQuery.addEventListener("change", handleScreenChange);
+}
+
 export default () => {
   setHeaderActive();
   globalizeSidenavFunctions();
+  closeSidenavOnMedia();
 };
