@@ -1,7 +1,4 @@
-@use "../1-helpers/variables" as v;
-@use "../1-helpers/functions" as f;
-@use "../1-helpers/shadow" as s;
-@use "../1-helpers/media" as m;
+@use "../1-helpers/glob" as h;
 
 .standardHeader {
   nav {
@@ -10,7 +7,7 @@
         a {
           transition: color ease-in-out 0.1s;
           &:hover {
-            color: v.$orange;
+            color: h.$orange;
           }
         }
       }
@@ -28,14 +25,14 @@
       z-index: 9;
 
       background-color: black;
-      transition: visibility 0s, opacity v.$animeTime;
+      transition: visibility 0s, opacity h.$animeTime;
     }
   }
 
-  @include m.forMedium() {
+  @include h.forMedium() {
     nav {
       .navLinks {
-        transition: transform v.$animeTime;
+        transition: transform h.$animeTime;
         li {
           &:hover {
             background-color: rgba(0, 0, 0, 0.3);

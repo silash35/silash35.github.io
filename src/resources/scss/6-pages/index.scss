@@ -1,6 +1,4 @@
-@use "../1-helpers/variables" as v;
-@use "../1-helpers/functions" as f;
-@use "../1-helpers/media" as m;
+@use "../1-helpers/glob" as h;
 
 @use "../5-base/default";
 
@@ -39,17 +37,17 @@
 
     h1 {
       @extend %text;
-      font-size: f.pxToEm(60);
-      color: v.$orange;
+      font-size: h.pxToEm(60);
+      color: h.$orange;
       white-space: nowrap;
-      @include m.forSmall() {
-        font-size: f.pxToEm(50);
+      @include h.forSmall() {
+        font-size: h.pxToEm(50);
         white-space: normal;
       }
     }
     p {
       @extend %text;
-      font-size: f.pxToEm(25);
+      font-size: h.pxToEm(25);
     }
   }
 }

@@ -1,7 +1,4 @@
-@use "../1-helpers/variables" as v;
-@use "../1-helpers/functions" as f;
-@use "../1-helpers/shadow" as s;
-@use "../1-helpers/media" as m;
+@use "../1-helpers/glob" as h;
 
 .standardHeader {
   display: flex;
@@ -31,7 +28,7 @@
         transition: color 0.3s;
         padding-left: 30px;
         a {
-          font-size: f.pxToEm(19);
+          font-size: h.pxToEm(19);
           font-weight: 500;
           padding: 10px;
           text-transform: uppercase;
@@ -40,7 +37,7 @@
 
         &.active {
           a {
-            color: v.$orange;
+            color: h.$orange;
           }
         }
       }
@@ -56,9 +53,9 @@
     }
   }
 
-  @include m.forMedium() {
+  @include h.forMedium() {
     background-color: black;
-    @include s.shadow(6);
+    @include h.shadow(6);
     nav {
       width: 90%;
 
@@ -73,7 +70,7 @@
         cursor: pointer;
         color: white;
         img {
-          width: f.pxToEm(30);
+          width: h.pxToEm(30);
         }
       }
 
@@ -89,7 +86,7 @@
         z-index: 10;
         left: -300px;
 
-        @include s.shadow(24);
+        @include h.shadow(24);
         background-color: #111111;
 
         li {

@@ -1,6 +1,4 @@
-@use "../1-helpers/variables" as v;
-@use "../1-helpers/functions" as f;
-@use "../1-helpers/media" as m;
+@use "../1-helpers/glob" as h;
 
 @use "../2-basics/buttons" as b;
 @use "../2-basics/cards" as c;
@@ -65,7 +63,7 @@
       }
     }
 
-    @include m.forSmall() {
+    @include h.forSmall() {
       margin: 10px;
     }
   }
