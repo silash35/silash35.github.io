@@ -7,6 +7,10 @@
 
   a {
     border-bottom: none;
+    color: white;
+    &:visited {
+      color: white;
+    }
   }
 
   nav {
@@ -32,7 +36,6 @@
           font-weight: 500;
           padding: 10px;
           text-transform: uppercase;
-          color: white;
         }
 
         &.active {

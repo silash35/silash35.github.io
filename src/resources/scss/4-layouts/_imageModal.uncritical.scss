@@ -7,3 +7,30 @@
     }
   }
 }
+
+#imageModal_opened {
+  all: unset;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  content: "";
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: hsla(0, 0%, 0%, 99%);
+
+  img {
+    all: unset;
+    width: 50vw;
+    height: fit-content;
+  }
+
+  transition: background-color 0.5s;
+}

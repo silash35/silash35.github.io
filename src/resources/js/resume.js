@@ -1,4 +1,5 @@
 import configHeader from "./modules/_configHeader";
+import configModal from "./modules/_configModal";
 import globalize from "./modules/_globalize";
 import installSW from "./modules/_installServiceWorker";
 import setCloseElement from "./modules/_setCloseElement";
@@ -7,6 +8,7 @@ window.addEventListener("load", function () {
   configHeader();
   installSW();
   setCloseElement();
+  configModal();
 });
 
 globalize("goToCurriculum", () => {
