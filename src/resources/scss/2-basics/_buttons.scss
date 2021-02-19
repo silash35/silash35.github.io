@@ -1,5 +1,3 @@
-@use "@material/ripple/mixins" as ripple;
-
 @use "../1-helpers/shadow" as s;
 
 @mixin button($type: contained, $color: #bb86fc) {
@@ -19,10 +17,6 @@
 
   border-radius: 4px;
   overflow: hidden;
-
-  @include ripple.surface;
-  @include ripple.radius-bounded;
-  @include ripple.states;
 
   img,
   svg {

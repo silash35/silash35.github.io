@@ -1,0 +1,9 @@
+@use "../2-basics/ripple.uncritical";
+
+.dialog {
+  .actions {
+    button {
+      @extend %ripple;
+    }
+  }
+}
