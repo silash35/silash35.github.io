@@ -5,11 +5,7 @@ a {
   text-decoration: none;
 
   border-bottom: solid 1px;
-  transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
 
-  &:hover {
-    border-color: transparent;
-  }
   &:visited {
     color: lighten($color: v.$orange, $amount: 10);
   }

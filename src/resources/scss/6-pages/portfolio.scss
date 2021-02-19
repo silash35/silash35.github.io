@@ -4,13 +4,10 @@
 
 @use "../2-basics/buttons" as b;
 @use "../2-basics/cards" as c;
-@use "../2-basics/title";
+
+@use "../4-layouts/title";
 
 @use "../5-base/default";
-
-.title {
-  @extend %title;
-}
 
 .portfolio {
   display: flex;

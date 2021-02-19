@@ -6,6 +6,17 @@
     <title>Resume</title>
     <link rel="stylesheet" href="resources/scss/6-pages/resume.scss" />
     <script async src="resources/js/resume.js"></script>
+
+    <!-- load non critical CSS asynchronously -->
+    <link
+      rel="preload"
+      href="./resources/scss/6-pages/resume.uncritical.scss"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./resources/scss/6-pages/resume.uncritical.scss" />
+    </noscript>
   </head>
 
   <body>

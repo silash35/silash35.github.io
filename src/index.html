@@ -6,6 +6,17 @@
     <title>Silas Henrique</title>
     <link rel="stylesheet" href="resources/scss/6-pages/index.scss" />
     <script async src="resources/js/index.js"></script>
+
+    <!-- load non critical CSS asynchronously -->
+    <link
+      rel="preload"
+      href="./resources/scss/6-pages/index.uncritical.scss"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./resources/scss/6-pages/index.uncritical.scss" />
+    </noscript>
   </head>
 
   <body>

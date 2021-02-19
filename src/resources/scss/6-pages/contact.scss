@@ -5,7 +5,8 @@
 @use "../2-basics/textField" as t;
 @use "../2-basics/buttons" as b;
 @use "../2-basics/cards" as c;
-@use "../2-basics/title";
+
+@use "../4-layouts/title";
 
 @use "../5-base/default";
 
@@ -13,10 +14,6 @@ main {
   display: flex;
   flex-direction: column;
   place-items: center;
-}
-
-.title {
-  @extend %title;
 }
 
 .contactCard {

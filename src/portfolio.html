@@ -6,7 +6,19 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="resources/scss/6-pages/portfolio.scss" />
     <script async src="resources/js/index.js"></script>
+
+    <!-- load non critical CSS asynchronously -->
+    <link
+      rel="preload"
+      href="./resources/scss/6-pages/portfolio.uncritical.scss"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./resources/scss/6-pages/portfolio.uncritical.scss" />
+    </noscript>
   </head>
+
   <body>
     <include src="resources/header.html"></include>
     <main>

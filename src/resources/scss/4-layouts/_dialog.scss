@@ -17,10 +17,7 @@
   transition: opacity v.$animeTime;
 
   h2 {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 2rem;
-    font-weight: 500;
+    @extend .cardTitle;
   }
 
   .actions {
