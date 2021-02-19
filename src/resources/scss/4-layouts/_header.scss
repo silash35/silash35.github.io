@@ -3,8 +3,6 @@
 @use "../1-helpers/shadow" as s;
 @use "../1-helpers/media" as m;
 
-$animeTime: 300ms;
-
 .standardHeader {
   display: flex;
   place-content: center;
@@ -37,6 +35,7 @@ $animeTime: 300ms;
           font-weight: 500;
           padding: 10px;
           text-transform: uppercase;
+          transition: color ease-in-out 0.1s;
           color: white;
 
           &:hover {
@@ -70,7 +69,7 @@ $animeTime: 300ms;
 
       background-color: black;
       opacity: 0;
-      transition: visibility 0s, opacity $animeTime;
+      transition: visibility 0s, opacity v.$animeTime;
     }
   }
 
@@ -109,7 +108,7 @@ $animeTime: 300ms;
 
         @include s.shadow(24);
         background-color: #111111;
-        transition: left $animeTime;
+        transition: left v.$animeTime;
 
         li {
           padding: 0;

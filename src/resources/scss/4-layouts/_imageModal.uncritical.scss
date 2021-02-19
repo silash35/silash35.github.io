@@ -1,0 +1,9 @@
+.imageModal {
+  overflow: hidden;
+  img {
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

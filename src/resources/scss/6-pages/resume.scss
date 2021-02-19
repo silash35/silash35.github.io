@@ -33,8 +33,10 @@ main {
       margin: 25px 25px;
       transform: translateY(8vw);
       z-index: 1;
+      border-radius: 25%;
+      display: flex;
       img {
-        border-radius: 25%;
+        margin: auto;
       }
     }
     ul {

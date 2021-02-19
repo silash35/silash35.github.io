@@ -25,7 +25,7 @@ Again, no file in this folder generates CSS by itself, so these files can be imp
 
 ### 3-globals
 
-This folder contains CSS selectors that point directly to HTML tags, that is, without class IDs or, etc. Here is a great place to normalize the style of the elements between different browsers, if necessary. The content of these files will be at the beginning of the generated CSS.
+This folder contains CSS selectors that point directly to HTML tags, that is, without class IDs or, etc. Here is a great place to normalize the style of the elements between different browsers, if necessary.
 
 Each file contains style for only one HTML tag.
 
