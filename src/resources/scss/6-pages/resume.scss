@@ -25,14 +25,21 @@ main {
       padding-left: 10px;
       text-align: center;
     }
+
+    &::after {
+      content: "";
+      grid-area: photo;
+    }
+
     .presentationPhoto {
       grid-area: photo;
       margin: 25px 25px;
-      overflow: hidden;
-      transform: translateY(8vw);
-      z-index: 1;
       border-radius: 25%;
+
+      z-index: 1;
       display: flex;
+      transform: translateY(8vw);
+
       img {
         width: 100%;
       }
