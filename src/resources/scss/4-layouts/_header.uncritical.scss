@@ -5,7 +5,6 @@
     .navLinks {
       li {
         a {
-          transition: color ease-in-out 0.1s;
           &:hover {
             color: h.$orange;
           }
