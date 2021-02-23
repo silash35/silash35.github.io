@@ -1,4 +1,4 @@
-import globalize from "./_globalize";
+import globalize from "../modules/_globalize";
 
 const navLinks = document.querySelector(".navLinks");
 const screenDarkener = document.querySelector(".screenDarkener");

@@ -1,13 +1,13 @@
-import configHeader from "./modules/_configHeader";
-import configModal from "./modules/_configModal";
+import configDialog from "./components/_configDialog";
+import configHeader from "./components/_configHeader";
+import configModal from "./components/_configModal";
 import globalize from "./modules/_globalize";
 import installSW from "./modules/_installServiceWorker";
-import setCloseElement from "./modules/_setCloseElement";
 
 window.addEventListener("load", function () {
   configHeader();
   installSW();
-  setCloseElement();
+  configDialog();
   configModal();
 });
 

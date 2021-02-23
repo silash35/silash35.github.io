@@ -1,5 +1,5 @@
-import configHeader from "./modules/_configHeader";
-import configModal from "./modules/_configModal";
+import configHeader from "./components/_configHeader";
+import configModal from "./components/_configModal";
 import installSW from "./modules/_installServiceWorker";
 
 window.addEventListener("load", function () {
