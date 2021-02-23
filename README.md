@@ -1,6 +1,6 @@
 # My personal website
 Go to:
-https://silash35.github.io
+[https://silash35.github.io/](https://silash35.github.io/)
 
 ## Everything here is distributed under the following license:
 
