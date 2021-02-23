@@ -4,9 +4,21 @@
     <include src="resources/head.html"></include>
 
     <title>Contact</title>
-    <link rel="stylesheet" href="resources/scss/contact.scss" />
-    <script defer src="resources/js/contact.js"></script>
+    <link rel="stylesheet" href="resources/scss/6-pages/contact.scss" />
+    <script async src="resources/js/contact.js"></script>
+
+    <!-- load non critical CSS asynchronously -->
+    <link
+      rel="preload"
+      href="./resources/scss/6-pages/contact.uncritical.scss"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./resources/scss/6-pages/contact.uncritical.scss" />
+    </noscript>
   </head>
+
   <body>
     <include src="resources/header.html"></include>
     <main>

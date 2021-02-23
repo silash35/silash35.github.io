@@ -4,16 +4,32 @@
     <include src="resources/head.html"></include>
 
     <title>Silas Henrique</title>
-    <link rel="stylesheet" href="resources/scss/index.scss" />
-    <script defer src="resources/js/index.js"></script>
+    <link rel="stylesheet" href="resources/scss/6-pages/index.scss" />
+    <script async src="resources/js/index.js"></script>
+
+    <!-- load non critical CSS asynchronously -->
+    <link
+      rel="preload"
+      href="./resources/scss/6-pages/index.uncritical.scss"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./resources/scss/6-pages/index.uncritical.scss" />
+    </noscript>
   </head>
 
   <body>
     <include src="resources/header.html"></include>
     <main>
       <article class="presentation">
-        <section class="presentationPhoto">
-          <img src="./resources/images/profile.webp" alt="Photo of silas Henrique Alves Araújo" />
+        <section class="presentationPhoto imageModal">
+          <img
+            src="./resources/images/profile.webp"
+            alt="Photo of silas Henrique Alves Araújo"
+            width="250"
+            height="250"
+          />
         </section>
         <section class="presentationText">
           <h1>Silas Henrique</h1>

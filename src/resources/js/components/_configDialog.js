@@ -1,7 +1,7 @@
-import globalize from "./_globalize";
+import globalize from "../modules/_globalize";
 
 export default () => {
-  globalize("closeElement", (id) => {
+  globalize("closeDialog", (id) => {
     const elementToClose = document.getElementById(id);
     elementToClose.style.opacity = "0";
 

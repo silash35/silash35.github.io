@@ -1,0 +1,7 @@
+@use "@material/ripple/mixins" as ripple;
+
+%ripple {
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple.states;
+}

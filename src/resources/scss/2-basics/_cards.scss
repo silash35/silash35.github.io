@@ -1,5 +1,4 @@
-@use "../1-helpers/variables" as v;
-@use "../1-helpers/shadow" as s;
+@use "../1-helpers/glob" as h;
 
 @mixin card($outlined: false, $elevation: 3, $elevate: false, $transparent: true) {
   box-sizing: border-box;
@@ -8,11 +7,11 @@
     background-color: rgba($color: white, $alpha: 0.05);
     border: 1px solid #e0e0e0;
   } @else {
-    @include s.shadow($elevation, $elevate);
+    @include h.shadow($elevation, $elevate);
     @if $transparent {
       background-color: rgba($color: white, $alpha: 0.07);
     } @else {
-      background-color: v.$darkGray;
+      background-color: h.$darkGray;
     }
     border-radius: 8px;
   }

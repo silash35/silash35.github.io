@@ -1,0 +1,41 @@
+@use "../1-helpers/media" as m;
+
+.imageModal {
+  overflow: hidden;
+  img {
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+#imageModal_opened {
+  all: unset;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  content: "";
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.9);
+
+  img {
+    all: unset;
+    width: 50vw;
+    height: fit-content;
+    @include m.forMedium() {
+      width: 80vw;
+    }
+  }
+
+  transition: background-color 0.5s;
+}

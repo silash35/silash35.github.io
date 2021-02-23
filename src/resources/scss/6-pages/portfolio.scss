@@ -1,16 +1,10 @@
-@use "1-helpers/variables" as v;
-@use "1-helpers/functions" as f;
-@use "1-helpers/media" as m;
+@use "../1-helpers/glob" as h;
 
-@use "2-basics/buttons" as b;
-@use "2-basics/cards" as c;
-@use "2-basics/title";
+@use "../2-basics/cards" as c;
 
-@use "5-base/default";
+@use "../4-layouts/title";
 
-.title {
-  @extend %title;
-}
+@use "../5-base/default";
 
 .portfolio {
   display: flex;
@@ -62,13 +56,12 @@
         text-decoration: none;
         border: none;
         img {
-          width: 35px;
           margin: 16px;
         }
       }
     }
 
-    @include m.forSmall() {
+    @include h.forSmall() {
       margin: 10px;
     }
   }

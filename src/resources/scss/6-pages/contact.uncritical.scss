@@ -1,0 +1,13 @@
+@use "../2-basics/ripple.uncritical";
+
+@use "../5-base/default.uncritical";
+
+.contactCard {
+  .message {
+    form {
+      button {
+        @extend %ripple;
+      }
+    }
+  }
+}

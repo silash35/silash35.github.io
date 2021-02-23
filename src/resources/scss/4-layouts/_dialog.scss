@@ -1,5 +1,4 @@
-@use "../1-helpers/media" as m;
-@use "../1-helpers/variables" as v;
+@use "../1-helpers/glob" as h;
 
 @use "../2-basics/cards" as c;
 @use "../2-basics/buttons" as b;
@@ -14,13 +13,10 @@
 
   width: 400px;
   padding: 16px;
-  transition: opacity v.$animeTime;
+  transition: opacity h.$animeTime;
 
   h2 {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 2rem;
-    font-weight: 500;
+    @extend .cardTitle;
   }
 
   .actions {
@@ -35,7 +31,7 @@
     }
   }
 
-  @include m.forMedium() {
+  @include h.forMedium() {
     left: 0;
     bottom: 0;
     width: 100%;
