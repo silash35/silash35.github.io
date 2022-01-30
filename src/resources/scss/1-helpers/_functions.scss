@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function pxToEm($pixels) {
-  @return #{$pixels/16}em;
+  @return math.div($pixels, 16) + em;
 }
