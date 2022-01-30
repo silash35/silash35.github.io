@@ -4,7 +4,7 @@
   },
   "ignorePatterns": ["node_modules", ".parcel-cache", "dist"],
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 12,
     "sourceType": "module",
     "ecmaFeatures": {
       "impliedStrict": true

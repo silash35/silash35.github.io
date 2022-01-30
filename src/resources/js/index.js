@@ -4,6 +4,6 @@ import installSW from "./modules/_installServiceWorker";
 
 window.addEventListener("load", function () {
   configHeader();
-  installSW();
   configModal();
+  installSW();
 });
