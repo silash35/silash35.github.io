@@ -1,17 +1,16 @@
 import configDialog from "./components/_configDialog";
 import configHeader from "./components/_configHeader";
 import configModal from "./components/_configModal";
-import globalize from "./modules/_globalize";
 import installSW from "./modules/_installServiceWorker";
 
 window.addEventListener("load", function () {
   configHeader();
-  configDialog();
+  configDialog(document.getElementById("goToCurriculumDialog"), goToCurriculum);
   configModal();
   installSW();
 });
 
-globalize("goToCurriculum", () => {
+const goToCurriculum = () => {
   const userLang = navigator.language || navigator.userLanguage;
 
   if (userLang[0] == "p" && userLang[1] == "t") {
@@ -19,4 +18,4 @@ globalize("goToCurriculum", () => {
   } else {
     window.location.pathname = "/curriculum.html";
   }
-});
+};
