@@ -5,20 +5,6 @@ const configHeader = (header) => {
 
   // Define Functions
 
-  function setHeaderActive() {
-    const links = navLinks.getElementsByTagName("li");
-    let title = document.querySelector("title").innerText;
-
-    if (title == "Silas Henrique") {
-      title = "Home";
-    }
-    for (let i = 0; i < links.length; ++i) {
-      if (title.toUpperCase() == links[i].innerText) {
-        links[i].classList.add("active");
-      }
-    }
-  }
-
   const closeSideNav = () => {
     navLinks.style.transform = "translateX(0)";
     screenDarkener.style.opacity = "0";
@@ -46,7 +32,6 @@ const configHeader = (header) => {
   };
 
   // Config Header
-  setHeaderActive();
   screenDarkener.addEventListener("click", closeSideNav);
   sidenavTrigger.addEventListener("click", openSideNav);
   closeSidenavOnMedia();
