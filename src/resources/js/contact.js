@@ -1,9 +1,9 @@
-import configHeader from "./components/_configHeader";
-import configTextFields from "./components/_configTextFields";
-import installSW from "./modules/_installServiceWorker";
+import configHeader from "./configComponents/header";
+import configTextFields from "./configComponents/textFields";
+import installSW from "./utils/installServiceWorker";
 
 window.addEventListener("load", function () {
-  configHeader();
-  configTextFields();
+  configHeader(document.querySelector(".standardHeader"));
+  configTextFields(document.querySelectorAll(".textField,.textArea"));
   installSW();
 });

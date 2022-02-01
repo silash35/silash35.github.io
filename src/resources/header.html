@@ -1,6 +1,6 @@
 <header class="standardHeader">
   <nav>
-    <button aria-label="Open Menu" onclick="openSidenav()" class="sidenavTrigger">
+    <button aria-label="Open Menu" class="sidenavTrigger">
       <img src="./resources/images/icons/white/menu.svg" alt="menu Icon" width="35" height="35" />
     </button>
 
@@ -9,12 +9,12 @@
     </a>
 
     <ul class="navLinks">
-      <li><a href="index.html" title="Home page">Home</a></li>
-      <li><a href="resume.html" title="Resume">Resume</a></li>
-      <li><a href="portfolio.html" title="Portfolio">Portfolio</a></li>
-      <li><a href="contact.html" title="Contact information">Contact</a></li>
+      <li class="{{activeHome}}"><a href="index.html" title="Home page">Home</a></li>
+      <li class="{{activeResume}}"><a href="resume.html" title="Resume">Resume</a></li>
+      <li class="{{activePortfolio}}"><a href="portfolio.html" title="Portfolio">Portfolio</a></li>
+      <li class="{{activeContact}}"><a href="contact.html" title="Contact">Contact</a></li>
     </ul>
 
-    <button aria-label="Close Menu" onclick="closeSidenav()" class="screenDarkener"></button>
+    <button aria-label="Close Menu" class="screenDarkener"></button>
   </nav>
 </header>

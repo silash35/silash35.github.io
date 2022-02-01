@@ -1,10 +1,10 @@
-@use "../1-helpers/variables" as v;
-@use "../3-globals/glob";
-@use '../4-layouts/header';
+@use "../1-utils/glob" as h;
+@use "../2-globals/glob";
+@use "../4-layouts/header";
 
 body {
   background-image: url("../../images/power.webp");
-  background-color: v.$darkGray;
+  background-color: h.$darkGray;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

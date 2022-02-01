@@ -13,23 +13,23 @@ This text will help you not only to understand the SCSS code but also to contrib
 
 ## 2. The folders
 
-### 1-helpers
+### 1-utils
 
 This folder contains functions, variables and mixins that can be used anywhere in the application, as they are very useful.
 No file on this folder generates CSS by itself, so these files can be imported as often as necessary without fear.
 
-### 2-basics
-
-This folder contains code for small components such as buttons, cards and more. As they can vary a lot, they are available as mixins to be able to make "@include" using the parameters you want.
-Again, no file in this folder generates CSS by itself, so these files can be imported as often as necessary.
-
-### 3-globals
+### 2-globals
 
 This folder contains CSS selectors that point directly to HTML tags, that is, without class IDs or, etc. Here is a great place to normalize the style of the elements between different browsers, if necessary.
 
 Each file contains style for only one HTML tag.
 
 from that folder onwards, all files generate CSS code, so it is only allowed to include them once.
+
+### 3-modules
+
+This folder contains code for small components such as buttons, cards and more. As they can vary a lot, they are available as mixins to be able to make "@include" using the parameters you want.
+Again, no file in this folder generates CSS by itself, so these files can be imported as often as necessary.
 
 ### 4-layouts
 

@@ -5,7 +5,7 @@
 
     <title>Resume</title>
     <link rel="stylesheet" href="resources/scss/6-pages/resume.scss" />
-    <script async src="resources/js/resume.js"></script>
+    <script async type="module" src="resources/js/resume.js"></script>
 
     <!-- load non critical CSS asynchronously -->
     <link
@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <include src="resources/header.html"></include>
+    <include src="resources/header.html"> { "activeResume": "active" } </include>
 
     <main>
       <article class="resumeHeader">
@@ -214,6 +214,17 @@
         </article>
 
         <article>
+          <h2>Work Experience</h2>
+          <h3>Intern at Makilab Serviços</h3>
+          <small>Aug. 2021 – Feb. 2022 </small>
+          <ul>
+            <li>Maintenance & Repair for Electromechanical Equipments</li>
+            <li>Project Development with Arduino</li>
+            <li>Costumer Service</li>
+          </ul>
+        </article>
+
+        <article>
           <h2>Languages</h2>
           <ul>
             <li>Portuguese - Native speaker</li>
@@ -311,14 +322,14 @@
         </article>
       </section>
 
-      <article class="dialog" id="curriculumTip">
+      <article id="goToCurriculumDialog" class="dialog">
         <h2>Looking for a curriculum?</h2>
         <p>
           This is a resume, if you are looking for an (almost) unstyled version go to the Curriculum
         </p>
         <div class="actions">
-          <button onclick="goToCurriculum()">Go to curriculum</button>
-          <button onclick="closeDialog('curriculumTip')">No</button>
+          <button class="yes">Go to curriculum</button>
+          <button class="no">No</button>
         </div>
       </article>
     </main>

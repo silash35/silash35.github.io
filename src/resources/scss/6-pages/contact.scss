@@ -1,8 +1,8 @@
-@use "../1-helpers/glob" as h;
+@use "../1-utils/glob" as h;
 
-@use "../2-basics/textField" as t;
-@use "../2-basics/buttons" as b;
-@use "../2-basics/cards" as c;
+@use "../3-modules/textField" as t;
+@use "../3-modules/buttons" as b;
+@use "../3-modules/cards" as c;
 
 @use "../4-layouts/title";
 

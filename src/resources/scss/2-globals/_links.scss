@@ -1,0 +1,12 @@
+@use "../1-utils/glob" as h;
+
+a {
+  color: h.$orange;
+  text-decoration: none;
+
+  border-bottom: solid 1px;
+
+  &:visited {
+    color: lighten($color: h.$orange, $amount: 10);
+  }
+}

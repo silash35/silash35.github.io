@@ -1,4 +1,4 @@
-@use "../1-helpers/media" as m;
+@use "../1-utils/glob" as h;
 
 .imageModal {
   overflow: hidden;
@@ -32,7 +32,7 @@
     all: unset;
     width: 50vw;
     height: fit-content;
-    @include m.forMedium() {
+    @include h.forMedium() {
       width: 80vw;
     }
   }
