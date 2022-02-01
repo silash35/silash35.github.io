@@ -30,6 +30,20 @@ li {
   margin-bottom: 10px;
 }
 
+.workExperience {
+  h3 {
+    margin: 0;
+  }
+
+  small {
+    font-size: 0.9em;
+  }
+
+  ul {
+    margin-top: 6px;
+  }
+}
+
 @media screen and (min-width: 600px) {
   body {
     background-color: #d1d1d1;
