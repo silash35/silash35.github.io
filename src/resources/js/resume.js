@@ -1,7 +1,7 @@
-import configDialog from "./components/_configDialog";
-import configHeader from "./components/_configHeader";
-import configModal from "./components/_configModal";
-import installSW from "./modules/_installServiceWorker";
+import configDialog from "./configComponents/dialog";
+import configHeader from "./configComponents/header";
+import configModal from "./configComponents/modal";
+import installSW from "./utils/installServiceWorker";
 
 const goToCurriculum = () => {
   const userLang = navigator.language || navigator.userLanguage;

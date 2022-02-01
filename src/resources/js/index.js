@@ -1,6 +1,6 @@
-import configHeader from "./components/_configHeader";
-import configModal from "./components/_configModal";
-import installSW from "./modules/_installServiceWorker";
+import configHeader from "./configComponents/header";
+import configModal from "./configComponents/modal";
+import installSW from "./utils/installServiceWorker";
 
 window.addEventListener("load", function () {
   configHeader(document.querySelector(".standardHeader"));
