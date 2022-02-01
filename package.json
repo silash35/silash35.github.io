@@ -9,12 +9,12 @@
     "dev": "parcel src/index.html",
     "prebuild": "parcel build src/index.html",
     "build": "cp -r static/* dist/",
-    "postbuild": "workbox generateSW",
     "lint": "eslint src"
   },
   "dependencies": {
     "@material/ripple": "^13.0.0",
     "@material/textfield": "^13.0.0",
+    "@parcel/service-worker": "^2.2.1",
     "eslint-plugin-simple-import-sort": "^7.0.0"
   },
   "devDependencies": {
@@ -30,7 +30,6 @@
     "posthtml-include": "^1.7.2",
     "prettier": "^2.5.1",
     "sass": "^1.49.0",
-    "workbox-cli": "^6.4.2",
     "yarn-upgrade-all": "^0.6.1"
   }
 }
