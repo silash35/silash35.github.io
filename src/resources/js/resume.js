@@ -3,13 +3,6 @@ import configHeader from "./components/_configHeader";
 import configModal from "./components/_configModal";
 import installSW from "./modules/_installServiceWorker";
 
-window.addEventListener("load", function () {
-  configHeader();
-  configDialog(document.getElementById("goToCurriculumDialog"), goToCurriculum);
-  configModal();
-  installSW();
-});
-
 const goToCurriculum = () => {
   const userLang = navigator.language || navigator.userLanguage;
 
@@ -19,3 +12,10 @@ const goToCurriculum = () => {
     window.location.pathname = "/curriculum.html";
   }
 };
+
+window.addEventListener("load", function () {
+  configHeader(document.querySelector(".standardHeader"));
+  configDialog(document.getElementById("goToCurriculumDialog"), goToCurriculum);
+  configModal(document.querySelectorAll(".imageModal"));
+  installSW();
+});

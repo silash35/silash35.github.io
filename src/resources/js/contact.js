@@ -3,7 +3,7 @@ import configTextFields from "./components/_configTextFields";
 import installSW from "./modules/_installServiceWorker";
 
 window.addEventListener("load", function () {
-  configHeader();
+  configHeader(document.querySelector(".standardHeader"));
   configTextFields();
   installSW();
 });

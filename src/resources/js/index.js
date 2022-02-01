@@ -3,7 +3,7 @@ import configModal from "./components/_configModal";
 import installSW from "./modules/_installServiceWorker";
 
 window.addEventListener("load", function () {
-  configHeader();
-  configModal();
+  configHeader(document.querySelector(".standardHeader"));
+  configModal(document.querySelectorAll(".imageModal"));
   installSW();
 });

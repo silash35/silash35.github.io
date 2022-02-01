@@ -1,30 +1,25 @@
-import globalize from "../modules/_globalize";
+const configHeader = (header) => {
+  const navLinks = header.querySelector(".navLinks");
+  const screenDarkener = header.querySelector(".screenDarkener");
+  const sidenavTrigger = header.querySelector(".sidenavTrigger");
 
-const navLinks = document.querySelector(".navLinks");
-const screenDarkener = document.querySelector(".screenDarkener");
+  // Define Functions
 
-function setHeaderActive() {
-  const links = navLinks.getElementsByTagName("li");
-  let title = document.querySelector("title").innerText;
+  function setHeaderActive() {
+    const links = navLinks.getElementsByTagName("li");
+    let title = document.querySelector("title").innerText;
 
-  if (title == "Silas Henrique") {
-    title = "Home";
-  }
-  for (let i = 0; i < links.length; ++i) {
-    if (title.toUpperCase() == links[i].innerText) {
-      links[i].classList.add("active");
+    if (title == "Silas Henrique") {
+      title = "Home";
+    }
+    for (let i = 0; i < links.length; ++i) {
+      if (title.toUpperCase() == links[i].innerText) {
+        links[i].classList.add("active");
+      }
     }
   }
-}
 
-function globalizeSidenavFunctions() {
-  globalize("openSidenav", () => {
-    navLinks.style.transform = "translateX(300px)";
-    screenDarkener.style.visibility = "visible";
-    screenDarkener.style.opacity = ".2";
-  });
-
-  globalize("closeSidenav", () => {
+  const closeSideNav = () => {
     navLinks.style.transform = "translateX(0)";
     screenDarkener.style.opacity = "0";
 
@@ -32,23 +27,29 @@ function globalizeSidenavFunctions() {
     setTimeout(function () {
       screenDarkener.style.visibility = "collapse";
     }, 300);
-  });
-}
-
-function closeSidenavOnMedia() {
-  const mediaQuery = window.matchMedia("(min-width: 800px)");
-
-  const handleScreenChange = (e) => {
-    if (e.matches) {
-      closeSidenav();
-    }
   };
 
-  mediaQuery.addEventListener("change", handleScreenChange);
-}
+  const openSideNav = () => {
+    navLinks.style.transform = "translateX(300px)";
+    screenDarkener.style.visibility = "visible";
+    screenDarkener.style.opacity = ".2";
+  };
 
-export default () => {
+  const closeSidenavOnMedia = () => {
+    const mediaQuery = window.matchMedia("(min-width: 800px)");
+    const handleScreenChange = (e) => {
+      if (e.matches) {
+        closeSideNav();
+      }
+    };
+    mediaQuery.addEventListener("change", handleScreenChange);
+  };
+
+  // Config Header
   setHeaderActive();
-  globalizeSidenavFunctions();
+  screenDarkener.addEventListener("click", closeSideNav);
+  sidenavTrigger.addEventListener("click", openSideNav);
   closeSidenavOnMedia();
 };
+
+export default configHeader;
