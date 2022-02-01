@@ -1,7 +1,8 @@
 export default () => {
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register(new URL("/src/service-worker.js", import.meta.url), {
-      type: "module",
+    // Use the window load event to keep the page load performant
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/service-worker.js");
     });
   }
 };
