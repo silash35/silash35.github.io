@@ -6,7 +6,7 @@
   "license": "Unlicense",
   "private": false,
   "scripts": {
-    "dev": "parcel serve src/index.html",
+    "dev": "parcel src/index.html",
     "prebuild": "parcel build src/index.html",
     "build": "cp -r static/* dist/",
     "postbuild": "workbox generateSW",
