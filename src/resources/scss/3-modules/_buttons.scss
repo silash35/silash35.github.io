@@ -1,4 +1,4 @@
-@use "../1-helpers/shadow" as s;
+@use "../1-utils/glob" as h;
 
 @mixin button($type: contained, $color: #bb86fc) {
   display: inline-flex;
@@ -34,7 +34,7 @@
     border-width: 2px;
     border: 2px solid $color;
   } @else {
-    @include s.shadow(3, true);
+    @include h.shadow(3, true);
     background-color: $color;
     color: white;
   }
