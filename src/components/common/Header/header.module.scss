@@ -1,0 +1,120 @@
+//@use "../1-utils/glob" as h;
+
+.standardHeader {
+  display: flex;
+  place-content: center;
+  height: 100px;
+
+  a {
+    border-bottom: none;
+    color: white;
+    &:visited {
+      color: white;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 85%;
+
+    .navLinks {
+      display: flex;
+      li {
+        list-style: none;
+        transition: color 0.3s;
+        padding-left: 30px;
+        a {
+          //font-size: h.pxToEm(19);
+          font-weight: 500;
+          padding: 10px;
+          text-transform: uppercase;
+        }
+
+        &.active {
+          a {
+            //color: h.$orange;
+            color: orange;
+          }
+        }
+      }
+    }
+
+    button {
+      display: none;
+    }
+
+    .screenDarkener {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+
+  /*
+  @include h.forMedium() {
+    background-color: black;
+    //@include h.shadow(6);
+    nav {
+      width: 90%;
+
+      .logoContainer {
+        margin: auto;
+        width: 60px;
+        height: 60px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .sidenavTrigger {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 35px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .navLinks {
+        display: block;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        left: -300px;
+
+        // @include h.shadow(24);
+        background-color: #111111;
+
+        li {
+          padding: 0;
+          transition: background-color 0.3s;
+
+          a {
+            display: block;
+            box-sizing: border-box;
+            padding: 20px;
+            width: 300px;
+          }
+
+          &.active {
+            // background-color: rgba(0, 0, 0, 0.2);
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  */
+}

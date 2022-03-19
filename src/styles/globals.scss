@@ -1,0 +1,23 @@
+@use "_roboto";
+@use "variables" as v;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+
+  min-width: 320px;
+
+  color: white;
+  background-color: black;
+}
+
+#__next {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
