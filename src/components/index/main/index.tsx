@@ -4,6 +4,7 @@ const Main = () => {
   return (
     <main className={styles.main}>
       <p>Teste</p>
+      <p>Teste</p>
     </main>
   );
 };
