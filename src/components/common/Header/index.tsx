@@ -5,16 +5,11 @@ export default function Header() {
     <header className={styles.standardHeader}>
       <nav>
         <button aria-label="Open Menu" className="sidenavTrigger">
-          <img
-            src="./resources/images/icons/white/menu.svg"
-            alt="menu Icon"
-            width="35"
-            height="35"
-          />
+          <img src="/images/icons/white/menu.svg" alt="menu Icon" width="35" height="35" />
         </button>
 
         <a className="logoContainer" href="index.html">
-          <img src="./resources/images/icon.svg" alt="Silas Henrique Icon" width="70" height="70" />
+          <img src="/icon.svg" alt="Silas Henrique Icon" width="70" height="70" />
         </a>
 
         <ul className="navLinks">
