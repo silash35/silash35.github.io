@@ -1,41 +1,42 @@
-import styles from "./header.module.scss";
+import Link from "next/link";
+import { useState } from "react";
 
-export default function Header() {
+import styles from "./header.module.scss";
+import Links from "./links";
+
+interface Props {
+  home?: boolean;
+  resume?: boolean;
+  portfolio?: boolean;
+  contact?: boolean;
+}
+
+export default function Header(props: Props) {
+  const [open, setOpen] = useState(false);
+  open;
+
   return (
-    <header className={styles.standardHeader}>
+    <header className={styles.header}>
       <nav>
-        <button aria-label="Open Menu" className="sidenavTrigger">
-          <img src="/images/icons/white/menu.svg" alt="menu Icon" width="35" height="35" />
+        <button
+          aria-label="Open Menu"
+          className={styles.sidenavTrigger}
+          onClick={() => setOpen(true)}
+        >
+          <img src="/images/icons/white/menu.svg" alt="menu Icon" width="32" height="32" />
         </button>
 
-        <a className="logoContainer" href="index.html">
-          <img src="/icon.svg" alt="Silas Henrique Icon" width="70" height="70" />
-        </a>
+        <Link href="/">
+          <a className={styles.logoContainer} title="Go to home page">
+            <img src="/icon.svg" alt="Silas Henrique Icon" width="64" height="64" />
+          </a>
+        </Link>
 
-        <ul className="navLinks">
-          <li className="{{activeHome}}">
-            <a href="index.html" title="Home page">
-              Home
-            </a>
-          </li>
-          <li className="{{activeResume}}">
-            <a href="resume.html" title="Resume">
-              Resume
-            </a>
-          </li>
-          <li className="{{activePortfolio}}">
-            <a href="portfolio.html" title="Portfolio">
-              Portfolio
-            </a>
-          </li>
-          <li className="{{activeContact}}">
-            <a href="contact.html" title="Contact">
-              Contact
-            </a>
-          </li>
+        <ul className={styles.navLinks}>
+          <Links activeClass={styles.active} {...props} />
         </ul>
 
-        <button aria-label="Close Menu" className="screenDarkener"></button>
+        <button aria-label="Close Menu" className={styles.screenDarkener} />
       </nav>
     </header>
   );

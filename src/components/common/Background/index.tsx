@@ -5,7 +5,13 @@ import styles from "./background.module.scss";
 export default function Background() {
   return (
     <div className={styles.bgWrap}>
-      <Image alt="Mountains" src="/images/power.webp" layout="fill" objectFit="cover" />
+      <Image
+        alt="Black background with incandescent light bulbs"
+        src="/images/power.webp"
+        layout="fill"
+        objectFit="cover"
+        aria-hidden="true"
+      />
     </div>
   );
 }
