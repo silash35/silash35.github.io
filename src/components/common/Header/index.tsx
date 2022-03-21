@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import styles from "./header.module.scss";
 import Links from "./links";
+import Sidebar from "./Sidebar";
 
 interface Props {
   home?: boolean;
@@ -13,7 +14,6 @@ interface Props {
 
 export default function Header(props: Props) {
   const [open, setOpen] = useState(false);
-  open;
 
   return (
     <header className={styles.header}>
@@ -35,9 +35,9 @@ export default function Header(props: Props) {
         <ul className={styles.navLinks}>
           <Links activeClass={styles.active} {...props} />
         </ul>
-
-        <button aria-label="Close Menu" className={styles.screenDarkener} />
       </nav>
+
+      <Sidebar open={open} setOpen={setOpen} {...props} />
     </header>
   );
 }
