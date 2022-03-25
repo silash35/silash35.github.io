@@ -1,0 +1,18 @@
+@use "variables" as v;
+
+.card {
+  display: grid;
+  grid-template-rows: (100vw * 0.3);
+  grid-template-columns: (61.8vw * 0.55) (100vw * 0.55);
+  grid-template-areas: "links form";
+  overflow: hidden;
+  //@include c.card();
+  border-radius: 24px;
+  margin: 10px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: minmax(300px, 90vw);
+    grid-template-rows: minmax(300px, 61.8vw * 0.55) minmax(300px, 100vw * 0.55);
+    grid-template-areas: "links" "message";
+  }
+}

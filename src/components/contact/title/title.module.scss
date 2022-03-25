@@ -1,0 +1,14 @@
+@use "variables" as v;
+
+.title {
+  background-color: v.$translucentBlack;
+  box-sizing: border-box;
+  padding: 80px 16px;
+  margin: 40px 0;
+  width: 100%;
+
+  font-size: calc(2em + 100% + 4vw);
+  font-weight: 300;
+  text-align: center;
+  color: white;
+}

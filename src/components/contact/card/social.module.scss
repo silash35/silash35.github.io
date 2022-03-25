@@ -1,0 +1,31 @@
+@use "variables" as v;
+
+.links {
+  grid-area: links;
+  display: grid;
+  place-content: center;
+  background-color: v.$darkGray;
+  h2 {
+    margin: 0;
+    //font-size: h.pxToEm(30);
+    font-weight: 700;
+    color: v.$orange;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      display: flex;
+      place-items: center;
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
+      img {
+        width: 24px;
+        margin: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "variables" as v;
+
+.form {
+  grid-area: form;
+  display: flex;
+  place-content: center;
+  padding: 20px;
+  background-color: v.$orange;
+
+  form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas: "t t" "a a" ". b";
+
+    place-items: center;
+    gap: 20px;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+    .textField {
+      @include t.textField();
+    }
+    */
+
+    .textArea {
+      //@include t.textField(false, true);
+      grid-area: a;
+    }
+
+    button {
+      //@include b.button(contained, white);
+      color: black;
+      grid-area: b;
+      justify-self: end;
+    }
+  }
+}
