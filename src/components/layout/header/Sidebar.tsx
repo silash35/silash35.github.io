@@ -1,19 +1,17 @@
 import { CSSTransition } from "react-transition-group";
 
+import { ActivePage } from "../activePage";
 import Links from "./links";
 import styles from "./sidebar.module.scss";
 
 interface Props {
-  home?: boolean;
-  resume?: boolean;
-  portfolio?: boolean;
-  contact?: boolean;
+  activePage: ActivePage;
 
   open: boolean;
   setOpen: (open: boolean) => void;
 }
 
-export default function Sidebar({ open, setOpen, ...props }: Props) {
+export default function Sidebar({ open, setOpen, activePage }: Props) {
   return (
     <CSSTransition
       in={open}
@@ -29,7 +27,7 @@ export default function Sidebar({ open, setOpen, ...props }: Props) {
     >
       <div>
         <ul className={styles.sideBar}>
-          <Links activeClass={styles.active} {...props} />
+          <Links activeClass={styles.active} activePage={activePage} />
         </ul>
         <button
           aria-label="Close Menu"

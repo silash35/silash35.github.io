@@ -1,14 +1,14 @@
 import Link from "next/link";
 
+import { ActivePage } from "../activePage";
+
 interface Props {
-  home?: boolean;
-  resume?: boolean;
-  portfolio?: boolean;
-  contact?: boolean;
+  activePage: ActivePage;
   activeClass: string;
 }
 
-export default function Links({ home, resume, portfolio, contact, activeClass }: Props) {
+export default function Links({ activePage, activeClass }: Props) {
+  const { home, resume, portfolio, contact } = activePage;
   return (
     <>
       <li className={home ? activeClass : undefined}>

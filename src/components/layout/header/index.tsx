@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { ActivePage } from "../activePage";
 import styles from "./header.module.scss";
 import Links from "./links";
 import Sidebar from "./Sidebar";
 
 interface Props {
-  home?: boolean;
-  resume?: boolean;
-  portfolio?: boolean;
-  contact?: boolean;
+  activePage: ActivePage;
 }
 
 export default function Header(props: Props) {
@@ -33,11 +31,11 @@ export default function Header(props: Props) {
         </Link>
 
         <ul className={styles.navLinks}>
-          <Links activeClass={styles.active} {...props} />
+          <Links activeClass={styles.active} activePage={props.activePage} />
         </ul>
       </nav>
 
-      <Sidebar open={open} setOpen={setOpen} {...props} />
+      <Sidebar open={open} setOpen={setOpen} activePage={props.activePage} />
     </header>
   );
 }
