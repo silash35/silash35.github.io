@@ -6,12 +6,27 @@
   height: 100%;
   width: 100%;
   z-index: 9;
+  left: 0;
+  top: 0;
 
   cursor: default;
   background-color: black;
 
-  opacity: 0.2;
-  transition: opacity v.$animeTime;
+  .enter & {
+    opacity: 0;
+  }
+  .enterActive & {
+    opacity: 0.2;
+    transition: opacity v.$animeTimeFunction v.$animeDuration;
+  }
+  .enterDone &,
+  .exit & {
+    opacity: 0.2;
+  }
+  .exitActive & {
+    opacity: 0;
+    transition: opacity v.$animeTimeFunction v.$animeDuration;
+  }
 }
 
 .sideBar {
@@ -20,14 +35,29 @@
   padding: 0;
   width: 300px;
 
+  left: -300px;
   top: 0;
   bottom: 0;
-  left: 0;
-  //left: -300px;
   z-index: 10;
 
   @include s.shadow(24);
   background-color: #111111;
+
+  .enter & {
+    transform: translateX(0);
+  }
+  .enterActive & {
+    transform: translateX(300px);
+    transition: transform v.$animeTimeFunction v.$animeDuration;
+  }
+  .enterDone &,
+  .exit & {
+    transform: translateX(300px);
+  }
+  .exitActive & {
+    transform: translateX(0);
+    transition: transform v.$animeTimeFunction v.$animeDuration;
+  }
 
   li {
     list-style: none;
@@ -44,7 +74,6 @@
     a {
       display: block;
       padding: 20px;
-      width: 300px;
     }
   }
 }
