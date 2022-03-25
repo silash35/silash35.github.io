@@ -43,10 +43,10 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#121212" />
 
           {/* Preload fonts*/}
-          <link rel="preload" href="./resources/fonts/roboto-v29-latin-regular.woff2" as="font" crossOrigin="anonymous" />
-          <link rel="preload" href="./resources/fonts/roboto-v29-latin-300.woff2" as="font" crossOrigin="anonymous" />
-          <link rel="preload" href="./resources/fonts/roboto-v29-latin-500.woff2" as="font" crossOrigin="anonymous" />
-          <link rel="preload" href="./resources/fonts/roboto-v29-latin-700.woff2" as="font" crossOrigin="anonymous" />
+          <link rel="preload" href="./fonts/roboto-v29-latin-regular.woff2" as="font" crossOrigin="anonymous" />
+          <link rel="preload" href="./fonts/roboto-v29-latin-300.woff2" as="font" crossOrigin="anonymous" />
+          <link rel="preload" href="./fonts/roboto-v29-latin-500.woff2" as="font" crossOrigin="anonymous" />
+          <link rel="preload" href="./fonts/roboto-v29-latin-700.woff2" as="font" crossOrigin="anonymous" />
         </Head>
         <body>
           <Main />
