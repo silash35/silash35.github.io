@@ -1,0 +1,37 @@
+@use "variables" as v;
+
+.imageModal {
+  overflow: hidden;
+  display: flex;
+
+  img {
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.OpenedImageModal {
+  width: unset;
+  height: unset;
+
+  max-width: 90%;
+  max-height: 90%;
+
+  .enter & {
+    opacity: 0;
+  }
+  .enterActive & {
+    opacity: 1;
+    transition: opacity v.$animeTimeFunction v.$animeDuration;
+  }
+  .enterDone &,
+  .exit & {
+    opacity: 1;
+  }
+  .exitActive & {
+    opacity: 0;
+    transition: opacity v.$animeTimeFunction v.$animeDuration;
+  }
+}

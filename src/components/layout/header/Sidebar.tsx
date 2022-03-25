@@ -1,4 +1,4 @@
-import { CSSTransition } from "react-transition-group";
+import ScreenDarkener from "@/components/common/screenDarkener";
 
 import { ActivePage } from "../activePage";
 import Links from "./links";
@@ -7,17 +7,17 @@ import styles from "./sidebar.module.scss";
 interface Props {
   activePage: ActivePage;
 
-  open: boolean;
-  setOpen: (open: boolean) => void;
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
-export default function Sidebar({ open, setOpen, activePage }: Props) {
+export default function Sidebar({ isOpen, setIsOpen, activePage }: Props) {
   return (
-    <CSSTransition
-      in={open}
-      timeout={300}
-      unmountOnExit
-      classNames={{
+    <ScreenDarkener
+      isOpen={isOpen}
+      setIsOpen={setIsOpen}
+      buttonProps={{ "aria-label": "Close Menu" }}
+      transitionClassNames={{
         enter: styles.enter,
         enterActive: styles.enterActive,
         enterDone: styles.enterDone,
@@ -25,16 +25,9 @@ export default function Sidebar({ open, setOpen, activePage }: Props) {
         exitActive: styles.exitActive,
       }}
     >
-      <div>
-        <ul className={styles.sideBar}>
-          <Links activeClass={styles.active} activePage={activePage} />
-        </ul>
-        <button
-          aria-label="Close Menu"
-          className={styles.screenDarkener}
-          onClick={() => setOpen(false)}
-        />
-      </div>
-    </CSSTransition>
+      <ul className={styles.sideBar}>
+        <Links activeClass={styles.active} activePage={activePage} />
+      </ul>
+    </ScreenDarkener>
   );
 }

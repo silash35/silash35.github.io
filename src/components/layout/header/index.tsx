@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function Header(props: Props) {
-  const [open, setOpen] = useState(false);
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -19,7 +19,7 @@ export default function Header(props: Props) {
         <button
           aria-label="Open Menu"
           className={styles.sidenavTrigger}
-          onClick={() => setOpen(true)}
+          onClick={() => setSidebarIsOpen(true)}
         >
           <img src="/images/icons/white/menu.svg" alt="menu Icon" width="32" height="32" />
         </button>
@@ -35,7 +35,7 @@ export default function Header(props: Props) {
         </ul>
       </nav>
 
-      <Sidebar open={open} setOpen={setOpen} activePage={props.activePage} />
+      <Sidebar isOpen={sidebarIsOpen} setIsOpen={setSidebarIsOpen} activePage={props.activePage} />
     </header>
   );
 }

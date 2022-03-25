@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import Presentation from "@/components/home/presentation";
 import Layout from "@/components/layout";
 
 const Home = () => {
@@ -9,7 +10,9 @@ const Home = () => {
         <title>Silas Henrique</title>
       </Head>
 
-      <Layout activePage={{ home: true }}>Olá Olá Olá</Layout>
+      <Layout activePage={{ home: true }}>
+        <Presentation />
+      </Layout>
     </>
   );
 };

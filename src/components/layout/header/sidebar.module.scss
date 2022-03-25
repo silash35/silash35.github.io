@@ -1,34 +1,6 @@
 @use "variables" as v;
 @use "helpers/shadow" as s;
 
-.screenDarkener {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 9;
-  left: 0;
-  top: 0;
-
-  cursor: default;
-  background-color: black;
-
-  .enter & {
-    opacity: 0;
-  }
-  .enterActive & {
-    opacity: 0.2;
-    transition: opacity v.$animeTimeFunction v.$animeDuration;
-  }
-  .enterDone &,
-  .exit & {
-    opacity: 0.2;
-  }
-  .exitActive & {
-    opacity: 0;
-    transition: opacity v.$animeTimeFunction v.$animeDuration;
-  }
-}
-
 .sideBar {
   position: fixed;
   margin: 0;
@@ -38,7 +10,6 @@
   left: -300px;
   top: 0;
   bottom: 0;
-  z-index: 10;
 
   @include s.shadow(24);
   background-color: #111111;
@@ -72,6 +43,7 @@
     }
 
     a {
+      text-align: left;
       display: block;
       padding: 20px;
     }
