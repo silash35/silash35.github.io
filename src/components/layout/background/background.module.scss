@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 .background {
   img {
     position: fixed;
@@ -9,5 +11,6 @@
     object-fit: cover;
 
     z-index: -1;
+    background-color: v.$darkGray;
   }
 }
