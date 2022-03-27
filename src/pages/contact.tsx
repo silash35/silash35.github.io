@@ -1,4 +1,5 @@
 import Head from "next/head";
+import type { ReactElement } from "react";
 
 import Card from "@/components/contact/card";
 import Title from "@/components/contact/title";
@@ -11,12 +12,14 @@ const Contact = () => {
         <title>Contact</title>
       </Head>
 
-      <Layout activePage={{ contact: true }}>
-        <Title />
-        <Card />
-      </Layout>
+      <Title />
+      <Card />
     </>
   );
+};
+
+Contact.getLayout = (page: ReactElement) => {
+  return <Layout activePage={{ contact: true }}>{page}</Layout>;
 };
 
 export default Contact;

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import type { ReactElement } from "react";
 
 import Presentation from "@/components/home/presentation";
 import Layout from "@/components/layout";
@@ -10,11 +11,13 @@ const Home = () => {
         <title>Silas Henrique</title>
       </Head>
 
-      <Layout activePage={{ home: true }}>
-        <Presentation />
-      </Layout>
+      <Presentation />
     </>
   );
+};
+
+Home.getLayout = (page: ReactElement) => {
+  return <Layout activePage={{ home: true }}>{page}</Layout>;
 };
 
 export default Home;
