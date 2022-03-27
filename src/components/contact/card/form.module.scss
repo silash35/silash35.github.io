@@ -1,40 +1,24 @@
 @use "variables" as v;
 
 .form {
-  grid-area: form;
   display: flex;
-  place-content: center;
-  padding: 20px;
-  background-color: v.$orange;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
 
-  form {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: min-content auto min-content;
-    grid-template-areas: "t t" "a a" ". b";
+  h2 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+  }
 
-    place-items: center;
-    gap: 20px;
+  div {
+    display: flex;
+    gap: 16px;
 
-    width: 100%;
-    height: 100%;
-
-    /*
-    .textField {
-      @include t.textField();
-    }
-    */
-
-    .textArea {
-      //@include t.textField(false, true);
-      grid-area: a;
-    }
-
-    button {
-      //@include b.button(contained, white);
-      color: black;
-      grid-area: b;
-      justify-self: end;
+    @media screen and (max-width: 425px) {
+      flex-direction: column;
     }
   }
 }

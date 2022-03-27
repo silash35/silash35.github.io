@@ -2,7 +2,7 @@ import styles from "./social.module.scss";
 
 const Social = () => {
   return (
-    <section className={styles.links}>
+    <div className={styles.social}>
       <h2>My social networks</h2>
       <ul>
         <li>
@@ -51,7 +51,7 @@ const Social = () => {
           </a>
         </li>
       </ul>
-    </section>
+    </div>
   );
 };
 

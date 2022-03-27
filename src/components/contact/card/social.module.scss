@@ -1,13 +1,9 @@
 @use "variables" as v;
 
-.links {
-  grid-area: links;
-  display: grid;
-  place-content: center;
-  background-color: v.$darkGray;
+.social {
   h2 {
     margin: 0;
-    //font-size: h.pxToEm(30);
+    font-size: 2em;
     font-weight: 700;
     color: v.$orange;
   }

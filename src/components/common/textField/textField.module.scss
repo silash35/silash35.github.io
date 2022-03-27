@@ -6,6 +6,8 @@
   font-size: 16px;
   line-height: 1.5;
   overflow: hidden;
+
+  width: 100%;
 }
 
 /* Input, Textarea */
@@ -29,6 +31,11 @@
   line-height: inherit;
   caret-color: white;
   transition: border-bottom 0.2s, background-color 0.2s;
+}
+
+.textfield > textarea {
+  resize: none;
+  min-height: 200px;
 }
 
 /* Span */

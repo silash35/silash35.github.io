@@ -5,8 +5,12 @@ import Social from "./social";
 const Card = () => {
   return (
     <article className={styles.card}>
-      <Social />
-      <Form />
+      <section className={styles.grey}>
+        <Social />
+      </section>
+      <section className={styles.orange}>
+        <Form />
+      </section>
     </article>
   );
 };

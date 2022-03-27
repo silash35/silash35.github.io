@@ -1,11 +1,12 @@
+import Button from "@/components/common/button";
 import TextField from "@/components/common/textField";
 
 import styles from "./form.module.scss";
 
 const Form = () => {
   return (
-    <section className={styles.form}>
-      <form action="https://formsubmit.co/silash35@gmail.com" method="POST">
+    <form className={styles.form} action="https://formsubmit.co/silash35@gmail.com" method="POST">
+      <div>
         <TextField
           text="Name"
           inputProps={{
@@ -14,7 +15,6 @@ const Form = () => {
             required: true,
           }}
         />
-
         <TextField
           text="Email"
           inputProps={{
@@ -24,21 +24,21 @@ const Form = () => {
             required: true,
           }}
         />
+      </div>
 
-        <TextField
-          text="Message"
-          textareaProps={{
-            name: "message",
-            "aria-label": "Enter your message",
-          }}
-        />
+      <TextField
+        text="Message"
+        textareaProps={{
+          name: "message",
+          "aria-label": "Enter your message",
+        }}
+      />
 
-        <button type="submit">
-          <img src="/images/icons/black/send.svg" alt="paper plane icon" />
-          Send
-        </button>
-      </form>
-    </section>
+      <Button variant="contained" buttonProps={{ type: "submit" }}>
+        <img src="/images/icons/black/send.svg" alt="paper plane icon" width="18px" height="18px" />
+        Send
+      </Button>
+    </form>
   );
 };
 
