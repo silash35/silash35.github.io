@@ -1,0 +1,83 @@
+@use "variables" as v;
+@use "helpers/shadow" as s;
+
+%card {
+  border-radius: 8px;
+  @include s.shadow(3);
+}
+
+.content {
+  @extend %card;
+  background-color: v.$darkGray;
+  margin: 5px 20px;
+
+  > header {
+    width: 100%;
+    display: grid;
+    grid: auto auto / auto 32vw;
+    grid-template-areas:
+      "title photo"
+      "contact fill";
+    place-items: center;
+
+    h1 {
+      grid-area: title;
+      font-size: clamp(3em, calc(1em + 4.5vw), 5.5vw);
+      font-weight: 300;
+      padding-left: 10px;
+      text-align: center;
+    }
+
+    &::after {
+      content: "";
+      grid-area: photo;
+    }
+
+    .photo {
+      grid-area: photo;
+      margin: 16px;
+      > div {
+        transform: translateY(80px);
+      }
+    }
+    ul {
+      grid-area: contact;
+      justify-content: center;
+      display: flex;
+      list-style: none;
+      background-color: v.$orange;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      li {
+        display: flex;
+        align-items: center;
+        margin: 5px 15px;
+
+        color: white;
+        img {
+          margin-right: 10px;
+          width: 24px;
+        }
+        a {
+          color: white;
+        }
+      }
+    }
+    .fill {
+      background-color: v.$orange;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  > section {
+    column-count: 2;
+    column-gap: 16px;
+
+    > article {
+      @extend %card;
+      background-color: rgba($color: white, $alpha: 0.07);
+    }
+  }
+}

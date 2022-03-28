@@ -16,7 +16,10 @@ const TextField = ({ text, inputProps, textareaProps }: Props) => {
       ) : (
         <input placeholder=" " {...inputProps} />
       )}
-      <span>{text}</span>
+      <span>
+        {text}
+        {(inputProps?.required || textareaProps?.required) && "*"}
+      </span>
     </label>
   );
 };
