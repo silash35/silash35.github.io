@@ -58,7 +58,7 @@
       @extend %cardContent;
 
       font-weight: 300;
-      font-size: 3em;
+      font-size: calc(0.8em + 100% + 1vw);
 
       text-align: center;
       border-bottom: 1px solid;

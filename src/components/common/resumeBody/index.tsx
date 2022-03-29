@@ -166,7 +166,7 @@ const ResumeBody = ({ className }: Props) => {
       <article>
         <h2>Work Experience</h2>
         <h3>Intern at Makilab Serviços</h3>
-        <small>Aug. 2021 – Feb. 2022 </small>
+        <small>Aug. 2021 – Feb. 2022</small>
         <ul>
           <li>Maintenance &amp; Repair for Electromechanical Equipments</li>
           <li>Project Development with Arduino</li>
@@ -193,40 +193,39 @@ const ResumeBody = ({ className }: Props) => {
 
       <article>
         <h2>Extracurricular activities</h2>
+        <h3>Monitor of the ECOIFBA project at IFBA – Campus Simões Filho</h3>
+        <small>Oct. 2019 – Sept. 2020</small>
         <ul>
           <li>
-            <a
-              href="https://silash35.gitlab.io/large-files/certificates/roboticaVoluntario.pdf"
-              title="Certificate Volunteer Robotics Monitor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Monitor of the educational robotics project at IFBA – Campus Simões Filho
-            </a>
-            <ul>
-              <li>
-                Deliver a basic robotics course, teaching automation with Arduino using sensors and
-                actuators.
-              </li>
-              <li>
-                Provide support and assistance to students who want to develop their projects,
-                including extracurriculars.
-              </li>
-              <li>
-                Clean and organize the robotics laboratory. Including performing the maintenance of
-                the local computers.
-              </li>
-            </ul>
+            Perform the physical characterization of the institute&apos;s solid waste. That is,
+            weighing and determining the gravimetric composition of dry and organic waste.
+          </li>
+          <li>Organize and promote selective garbage collection on campus.</li>
+        </ul>
+
+        <h3>
+          <a
+            href="https://silash35.gitlab.io/large-files/certificates/roboticaVoluntario.pdf"
+            title="Certificate Volunteer Robotics Monitor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Monitor of the educational robotics project at IFBA
+          </a>
+        </h3>
+        <small>May 2018 – Apr. 2019</small>
+        <ul>
+          <li>
+            Deliver a basic robotics course, teaching automation with Arduino using sensors and
+            actuators.
           </li>
           <li>
-            Monitor of the ECOIFBA project at IFBA – Campus Simões Filho
-            <ul>
-              <li>
-                Perform the physical characterization of the institute&apos;s solid waste. That is,
-                weighing and determining the gravimetric composition of dry and organic waste.
-              </li>
-              <li>Organize and promote selective garbage collection on campus.</li>
-            </ul>
+            Provide support and assistance to students who want to develop their projects, including
+            extracurriculars.
+          </li>
+          <li>
+            Clean and organize the robotics laboratory. Including performing the maintenance of the
+            local computers.
           </li>
         </ul>
       </article>
