@@ -6,10 +6,11 @@ import styles from "./imageModal.module.scss";
 
 interface Props {
   borderRadius?: string;
+  className?: string;
   imageProps: ImgHTMLAttributes<HTMLImageElement>;
 }
 
-const ImageModal = ({ borderRadius, imageProps }: Props) => {
+const ImageModal = ({ borderRadius, className, imageProps }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   imageProps.onClick = () => {
     setIsOpen(true);
@@ -17,7 +18,7 @@ const ImageModal = ({ borderRadius, imageProps }: Props) => {
 
   return (
     <>
-      <div style={{ borderRadius }} className={styles.imageModal}>
+      <div style={{ borderRadius }} className={`${styles.imageModal} ${className}`}>
         <img {...imageProps} />
       </div>
 

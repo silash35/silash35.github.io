@@ -1,0 +1,58 @@
+@use "variables" as v;
+@use "helpers/shadow" as s;
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h1 {
+    padding: 0 16px;
+    font-size: calc(0.2em + 100% + 4vw);
+    font-weight: 300;
+    text-align: center;
+
+    flex-grow: 1;
+  }
+
+  .photo {
+    margin: 16px;
+    margin-left: 0;
+
+    img {
+      max-width: 18vw;
+      max-height: 18vw;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.information {
+  padding-bottom: 16px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    list-style: none;
+    background-color: v.$orange;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      margin: 5px 15px;
+
+      img {
+        margin-right: 8px;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}

@@ -1,6 +1,10 @@
-const ResumeBody = () => {
+interface Props {
+  className?: string;
+}
+
+const ResumeBody = ({ className }: Props) => {
   return (
-    <section>
+    <section className={className}>
       <article>
         <h2>Summary</h2>
         <div>
@@ -18,8 +22,7 @@ const ResumeBody = () => {
       <article>
         <h2>Academic background</h2>
         <ul>
-          <li>High school - 2018 - 4th semester - IFBA – Campus Simões Filho</li>
-          <li>Elementary School - 2017 - Colégio Objetivo</li>
+          <li>Electromechanical technician course - IFBA (2018 - 2022)</li>
         </ul>
       </article>
 
@@ -65,7 +68,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Robotics (basics)
-            </a>
+            </a>{" "}
             - 32 hours
           </li>
           <li>
@@ -76,7 +79,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Information and communication technology
-            </a>
+            </a>{" "}
             - 14 hours
           </li>
           <li>
@@ -87,7 +90,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Entrepreneurship
-            </a>
+            </a>{" "}
             - 14 hours
           </li>
           <li>
@@ -98,7 +101,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Programming logic
-            </a>
+            </a>{" "}
             - 14 hours
           </li>
           <li>
@@ -109,7 +112,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Microcomputer maintenance
-            </a>
+            </a>{" "}
             - 48 hours
           </li>
           <li>
@@ -120,7 +123,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Administration assistant
-            </a>
+            </a>{" "}
             - 48 hours
           </li>
           <li>
@@ -131,7 +134,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Web Design (basics)
-            </a>
+            </a>{" "}
             - 48 hours
           </li>
           <li>
@@ -142,7 +145,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Microsoft Office (advanced)
-            </a>
+            </a>{" "}
             - 32 hours
           </li>
           <li>
@@ -154,7 +157,7 @@ const ResumeBody = () => {
             >
               Microsoft Windows, Typing, Multimedia, Corel Draw, Printing Techniques, Office
               Training and Internet
-            </a>
+            </a>{" "}
             - 56 hours
           </li>
         </ul>
@@ -240,7 +243,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Oportuniza 2019
-            </a>
+            </a>{" "}
             - 2 hours - listener
           </li>
           <li>
@@ -251,7 +254,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               SNCT (National Science and Technology Week) 2019
-            </a>
+            </a>{" "}
             - 16 hours - listener
           </li>
           <li>
@@ -262,7 +265,7 @@ const ResumeBody = () => {
               rel="noopener noreferrer"
             >
               Enconecta 2018
-            </a>
+            </a>{" "}
             - 8 hours - listener
           </li>
         </ul>
