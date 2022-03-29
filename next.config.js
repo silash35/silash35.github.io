@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-env node */
+const CompressionPlugin = require("compression-webpack-plugin");
 const withPWA = require("next-pwa");
 const path = require("path");
 
@@ -19,13 +20,23 @@ module.exports = () => {
     },
 
     webpack: (config, { dev, isServer }) => {
-      // Replace React with Preact only in client production build
+      // Only in client production build
       if (!dev && !isServer) {
+        // Replace React with Preact
         Object.assign(config.resolve.alias, {
           react: "preact/compat",
           "react-dom/test-utils": "preact/test-utils",
           "react-dom": "preact/compat",
         });
+
+        // Enable Compression
+        config.plugins.push(new CompressionPlugin());
+        config.plugins.push(
+          new CompressionPlugin({
+            filename: "[path][base].br",
+            algorithm: "brotliCompress",
+          })
+        );
       }
 
       return config;
