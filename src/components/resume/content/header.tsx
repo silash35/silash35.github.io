@@ -13,6 +13,7 @@ const Header = () => {
           imageProps={{
             src: "/images/profile.webp",
             alt: "Photo of silas Henrique Alves Araújo",
+            loading: "lazy",
             width: "256",
             height: "256",
           }}

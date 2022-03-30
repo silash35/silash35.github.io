@@ -3,13 +3,20 @@ import type { ButtonHTMLAttributes, MouseEventHandler } from "react";
 import styles from "./button.module.scss";
 
 interface Props {
-  variant: "contained";
-  buttonProps: ButtonHTMLAttributes<HTMLButtonElement>;
+  variant: "contained" | "text";
+  onClick?: () => void;
+  buttonProps?: ButtonHTMLAttributes<HTMLButtonElement>;
   children?: React.ReactNode;
 }
 
-const Button = ({ buttonProps, children }: Props) => {
+const Button = ({ variant, onClick, buttonProps, children }: Props) => {
+  const asyncOnClick = async () => {
+    if (typeof onClick === "function") onClick();
+  };
+
   const ripple: MouseEventHandler<HTMLButtonElement> = (event) => {
+    asyncOnClick();
+
     // Preparing HTML
     const $button = event.currentTarget;
     const $ripple = document.createElement("span");
@@ -38,7 +45,7 @@ const Button = ({ buttonProps, children }: Props) => {
   };
 
   return (
-    <button className={`${styles.button} ${styles.contained}`} {...buttonProps} onClick={ripple}>
+    <button className={`${styles.button} ${styles[variant]}`} {...buttonProps} onClick={ripple}>
       {children}
     </button>
   );

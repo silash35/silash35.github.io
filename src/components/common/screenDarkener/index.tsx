@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from "react";
+import { HTMLAttributes, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import styles from "./screenDarkener.module.scss";
@@ -19,10 +19,13 @@ interface Props {
 }
 
 const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: Props) => {
+  const nodeRef = useRef(null);
+
   return (
     <CSSTransition
       in={isOpen}
       timeout={300}
+      nodeRef={nodeRef}
       unmountOnExit
       classNames={{
         enter: `${styles.enter} ${transitionClassNames?.enter}`,
@@ -33,6 +36,7 @@ const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: P
       }}
     >
       <button
+        ref={nodeRef}
         onClick={() => setIsOpen(false)}
         className={styles.screenDarkener}
         {...props.buttonProps}
