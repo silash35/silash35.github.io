@@ -1,271 +1,246 @@
+import Link from "next/link";
+
+import en from "./locale/en.json";
+import pt from "./locale/pt.json";
+
 interface Props {
+  locale?: string;
   className?: string;
 }
 
-const ResumeBody = ({ className }: Props) => {
+const ResumeBody = ({ locale, className }: Props) => {
+  const l = locale === "pt" ? pt : en;
+
+  const defaultProps = { target: "_blank", rel: "noopener noreferrer" };
+
   return (
     <section className={className}>
       <article>
-        <h2>Summary</h2>
+        <h2>{l.summary}</h2>
         <div>
-          <p>
-            I am an electromechanical student at IFBA (Federal Institute of Education, Science and
-            Technology of Bahia), with a lot of interest in the automation area.
-          </p>
-          <p>
-            I have experience as an educational robotics monitor and I am a developer with knowledge
-            of, especially, C++ and Web programming.
-          </p>
+          <p>{l.summaryText1}</p>
+          <p>{l.summaryText2}</p>
         </div>
       </article>
 
       <article>
-        <h2>Academic background</h2>
+        <h2>{l.academicBackground}</h2>
         <ul>
-          <li>Electromechanical technician course - IFBA (2018 - 2022)</li>
+          <li>{l.electromechanicalTechnician}</li>
         </ul>
       </article>
 
       <article>
-        <h2>Skills</h2>
+        <h2>{l.work}</h2>
+        <h3>{l.internMakilabTitle}</h3>
+        <small>{l.internMakilabDate}</small>
         <ul>
-          <li>Video editing</li>
-          <li>C++ development (with Qt framework)</li>
+          <li>{l.internMakilabActivity1}</li>
+          <li>{l.internMakilabActivity2}</li>
+          <li>{l.internMakilabActivity3}</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>{l.skills}</h2>
+        <ul>
+          <li>{l.videoEditing}</li>
+          <li>{l.cPlusPlus}</li>
           <li>
-            <a
-              href="./portfolio.html"
-              title="Portfolio (which includes projects in HTML, CSS and JS)"
-            >
-              FrontEnd (HTML, CSS, JS)
-            </a>
+            <Link href="/portfolio">
+              <a title={l.frontEndLink}>{l.frontEnd}</a>
+            </Link>
           </li>
           <li>Inkscape</li>
           <li>Gimp</li>
-          <li>Libre Office Suite</li>
+          <li>{l.libreOffice}</li>
           <li>
             <a
               href="http://brorlandi.github.io/GitTrainingWall/"
               title="Git Training Wall"
-              target="_blank"
-              rel="noopener noreferrer"
+              {...defaultProps}
             >
-              Git and GitHub
+              {l.gitGithub}
             </a>
           </li>
           <li>Linux</li>
-          <li>Soldering</li>
+          <li>{l.soldering}</li>
         </ul>
       </article>
 
       <article>
-        <h2>Relevant Coursework</h2>
+        <h2>{l.coursework}</h2>
         <ul>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/cursoRobotica1.pdf"
-              title="certificate Basics Robotics"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.robotics}`}
+              {...defaultProps}
             >
-              Robotics (basics)
+              {l.robotics}
             </a>{" "}
-            - 32 hours
+            - 32 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/senaiTIC.pdf"
-              title="certificate Information and communication technology"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.tic}`}
+              {...defaultProps}
             >
-              Information and communication technology
+              {l.tic}
             </a>{" "}
-            - 14 hours
+            - 14 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/senaiEmpreendedorismo.pdf"
-              title="certificate Entrepreneurship"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.entrepreneurship}`}
+              {...defaultProps}
             >
-              Entrepreneurship
+              {l.entrepreneurship}
             </a>{" "}
-            - 14 hours
+            - 14 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/senaiLogicaDaProgramacao.pdf"
-              title="certificate programming logic"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.programmingLogic}`}
+              {...defaultProps}
             >
-              Programming logic
+              {l.programmingLogic}
             </a>{" "}
-            - 14 hours
+            - 14 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/megaCursos5.pdf"
-              title="certificate Mega cursos 5 Microcomputer maintenance"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.microcomputerMaintenance}`}
+              {...defaultProps}
             >
-              Microcomputer maintenance
+              {l.microcomputerMaintenance}
             </a>{" "}
-            - 48 hours
+            - 48 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/megaCursos4.pdf"
-              title="certificate Mega cursos 4 administration assistant"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.administrationAssistant}`}
+              {...defaultProps}
             >
-              Administration assistant
+              {l.administrationAssistant}
             </a>{" "}
-            - 48 hours
+            - 48 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/megaCursos3.pdf"
-              title="certificate Mega Cursos 3"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.webDesign}`}
+              {...defaultProps}
             >
-              Web Design (basics)
+              {l.webDesign}
             </a>{" "}
-            - 48 hours
+            - 48 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/megaCursos2.pdf"
-              title="certificate Mega Cursos 2"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.microsoftOffice}`}
+              {...defaultProps}
             >
-              Microsoft Office (advanced)
+              {l.microsoftOffice}
             </a>{" "}
-            - 32 hours
+            - 32 {l.hours}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/megaCursos1.pdf"
-              title="certificate Mega Cursos 1"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.microsoftWindows}`}
+              {...defaultProps}
             >
-              Microsoft Windows, Typing, Multimedia, Corel Draw, Printing Techniques, Office
-              Training and Internet
+              {l.microsoftWindows}
             </a>{" "}
-            - 56 hours
+            - 56 {l.hours}
           </li>
         </ul>
       </article>
 
       <article>
-        <h2>Work Experience</h2>
-        <h3>Intern at Makilab Serviços</h3>
-        <small>Aug. 2021 – Feb. 2022</small>
+        <h2>{l.languages}</h2>
         <ul>
-          <li>Maintenance &amp; Repair for Electromechanical Equipments</li>
-          <li>Project Development with Arduino</li>
-          <li>Costumer Service</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Languages</h2>
-        <ul>
-          <li>Portuguese - Native speaker</li>
+          <li>{l.portuguese}</li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/ALLingles4.pdf"
-              title="certificate Ingles ALL level 4"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.english}`}
+              {...defaultProps}
             >
-              English - Intermediate
+              {l.english}
             </a>
           </li>
         </ul>
       </article>
 
       <article>
-        <h2>Extracurricular activities</h2>
-        <h3>Monitor of the ECOIFBA project at IFBA – Campus Simões Filho</h3>
-        <small>Oct. 2019 – Sept. 2020</small>
+        <h2>{l.extracurricular}</h2>
+        <h3>{l.ecoifbaTitle}</h3>
+        <small>{l.ecoifbaDate}</small>
         <ul>
-          <li>
-            Perform the physical characterization of the institute&apos;s solid waste. That is,
-            weighing and determining the gravimetric composition of dry and organic waste.
-          </li>
-          <li>Organize and promote selective garbage collection on campus.</li>
+          <li>{l.ecoifbaActivity1}</li>
+          <li>{l.ecoifbaActivity2}</li>
         </ul>
 
         <h3>
           <a
             href="https://silash35.gitlab.io/large-files/certificates/roboticaVoluntario.pdf"
-            title="Certificate Volunteer Robotics Monitor"
-            target="_blank"
-            rel="noopener noreferrer"
+            title={`${l.certificate} ${l.roboticsTitle}`}
+            {...defaultProps}
           >
-            Monitor of the educational robotics project at IFBA
+            {l.roboticsTitle}
           </a>
         </h3>
-        <small>May 2018 – Apr. 2019</small>
+        <small>{l.roboticsDate}</small>
         <ul>
-          <li>
-            Deliver a basic robotics course, teaching automation with Arduino using sensors and
-            actuators.
-          </li>
-          <li>
-            Provide support and assistance to students who want to develop their projects, including
-            extracurriculars.
-          </li>
-          <li>
-            Clean and organize the robotics laboratory. Including performing the maintenance of the
-            local computers.
-          </li>
+          <li>{l.roboticsActivity1}</li>
+          <li>{l.roboticsActivity2}</li>
+          <li>{l.roboticsActivity3}</li>
         </ul>
       </article>
 
       <article>
-        <h2>Other Things</h2>
+        <h2>{l.other}</h2>
         <ul>
-          <li>QtCon Brasil 2020 - 12 hours - listener</li>
+          <li>
+            {l.qtCon} - 12 {l.hours} - {l.listener}
+          </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/oportuniza2019.pdf"
-              title="listener certificate at the Oportuniza event"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.listener} Oportuniza 2019`}
+              {...defaultProps}
             >
               Oportuniza 2019
             </a>{" "}
-            - 2 hours - listener
+            - 2 {l.hours} - {l.listener}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/CNCTIFBA2019.pdf"
-              title="listener certificate at the National Science and Technology Week event"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.listener} ${l.snct}`}
+              {...defaultProps}
             >
-              SNCT (National Science and Technology Week) 2019
+              {l.snct}
             </a>{" "}
-            - 16 hours - listener
+            - 16 {l.hours} - {l.listener}
           </li>
           <li>
             <a
               href="https://silash35.gitlab.io/large-files/certificates/enconecta2018.pdf"
-              title="listener certificate at the Enconecta event"
-              target="_blank"
-              rel="noopener noreferrer"
+              title={`${l.certificate} ${l.listener} Enconecta 2018`}
+              {...defaultProps}
             >
               Enconecta 2018
             </a>{" "}
-            - 8 hours - listener
+            - 8 {l.hours} - {l.listener}
           </li>
         </ul>
       </article>
