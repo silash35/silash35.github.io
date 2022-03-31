@@ -1,9 +1,0 @@
-@use "../1-utils/glob";
-
-.dialog {
-  .actions {
-    button {
-      @extend %ripple;
-    }
-  }
-}
