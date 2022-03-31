@@ -21,6 +21,12 @@ const Dialog = () => {
     }
   };
 
+  const closeDialog = () => {
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 300);
+  };
+
   return (
     <CSSTransition
       in={isOpen}
@@ -42,7 +48,7 @@ const Dialog = () => {
           <Button variant="text" onClick={goToCurriculum}>
             Go to curriculum
           </Button>
-          <Button variant="text" onClick={() => setIsOpen(false)}>
+          <Button variant="text" onClick={closeDialog}>
             No
           </Button>
         </div>

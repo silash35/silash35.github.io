@@ -1,8 +1,8 @@
 import Head from "next/head";
 import type { ReactElement } from "react";
 
-import Card from "@/components/contact/card";
-import Title from "@/components/contact/title";
+import Title from "@/components/common/title";
+import ContactCard from "@/components/contact";
 import Layout from "@/components/layout";
 
 const Contact = () => {
@@ -12,8 +12,8 @@ const Contact = () => {
         <title>Contact</title>
       </Head>
 
-      <Title />
-      <Card />
+      <Title>Where to find me?</Title>
+      <ContactCard />
     </>
   );
 };

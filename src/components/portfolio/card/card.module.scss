@@ -1,0 +1,56 @@
+@use "variables" as v;
+@use "helpers/shadow" as s;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 8px;
+  @include s.shadow(3);
+  background-color: v.$darkGray;
+  margin: 5px 20px;
+
+  width: 330px;
+  margin: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  place-content: center;
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 16px;
+
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 16px 0;
+  }
+}
+
+.actions {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  a {
+    text-decoration: none;
+    border: none;
+    img {
+      margin: 16px;
+    }
+  }
+}

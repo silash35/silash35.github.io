@@ -1,8 +1,8 @@
-import styles from "./card.module.scss";
+import styles from "./contactCard.module.scss";
 import Form from "./form";
 import Social from "./social";
 
-const Card = () => {
+const ContactCard = () => {
   return (
     <article className={styles.card}>
       <section className={styles.grey}>
@@ -15,4 +15,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default ContactCard;
