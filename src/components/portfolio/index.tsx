@@ -1,4 +1,5 @@
 import Card from "@/components/portfolio/card";
+import IconLink from "@/components/portfolio/iconLink";
 
 import styles from "./portfolioCards.module.scss";
 
@@ -18,27 +19,27 @@ const PortfolioCards = () => {
           </p>
         </Card.Content>
         <Card.Actions>
-          <a
-            href="https://github.com/silash35/qpdftools/wiki"
-            title="access the Qpdf Tools documentation on github"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              src="/images/icons/white/description.svg"
-              alt="documentation icon"
-              width="35"
-              height="35"
-            />
-          </a>
-          <a
-            href="https://github.com/silash35/qpdftools"
-            title="access the Qpdf Tools project on github"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img src="/images/icons/white/github.svg" alt="GitHub icon" width="35" height="35" />
-          </a>
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/qpdftools/wiki",
+              title: "access the Qpdf Tools documentation on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/description.svg",
+              alt: "documentation icon",
+            }}
+          />
+
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/qpdftools",
+              title: "access the Qpdf Tools project on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/github.svg",
+              alt: "GitHub icon",
+            }}
+          />
         </Card.Actions>
       </Card>
 
@@ -52,27 +53,27 @@ const PortfolioCards = () => {
           </p>
         </Card.Content>
         <Card.Actions>
-          <a
-            href="https://github.com/silash35/labrob/blob/master/qTotem/README.md"
-            title="access the QTotem documentation on github"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              src="/images/icons/white/description.svg"
-              alt="documentation icon"
-              width="35"
-              height="35"
-            />
-          </a>
-          <a
-            href="https://github.com/silash35/labrob/tree/master/qTotem"
-            title="access the QTotem project on github"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img src="/images/icons/white/github.svg" alt="GitHub icon" width="35" height="35" />
-          </a>
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/labrob/blob/master/qTotem/README.md",
+              title: "access the QTotem documentation on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/description.svg",
+              alt: "documentation icon",
+            }}
+          />
+
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/labrob/tree/master/qTotem",
+              title: "access the QTotem project on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/github.svg",
+              alt: "GitHub icon",
+            }}
+          />
         </Card.Actions>
       </Card>
 
@@ -86,22 +87,27 @@ const PortfolioCards = () => {
           </p>
         </Card.Content>
         <Card.Actions>
-          <a
-            href="https://alis.vercel.app/"
-            title="access the ALIS page"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img src="/images/icons/white/link.svg" alt="link icon" width="35" height="35" />
-          </a>
-          <a
-            href="https://github.com/silash35/ALIS"
-            title="access the ALIS project on github"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img src="/images/icons/white/github.svg" alt="GitHub icon" width="35" height="35" />
-          </a>
+          <IconLink
+            linkProps={{
+              href: "https://alis.vercel.app/",
+              title: "access the ALIS page",
+            }}
+            imgProps={{
+              src: "/images/icons/white/link.svg",
+              alt: "link icon",
+            }}
+          />
+
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/ALIS",
+              title: "access the ALIS project on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/github.svg",
+              alt: "GitHub icon",
+            }}
+          />
         </Card.Actions>
       </Card>
     </section>
