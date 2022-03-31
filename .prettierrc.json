@@ -7,7 +7,7 @@
 
   "overrides": [
     {
-      "files": ["*.xml", "head.html"],
+      "files": ["_document.tsx"],
       "options": {
         "printWidth": 999
       }

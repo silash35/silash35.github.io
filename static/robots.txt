@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://silash35.github.io/sitemap.xml

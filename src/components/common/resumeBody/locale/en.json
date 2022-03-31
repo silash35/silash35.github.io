@@ -1,0 +1,57 @@
+{
+  "summary": "Summary",
+  "summaryText1": "Technician in electromechanics from the IFBA (Federal Institute of Education, Science and Technology of Bahia), with great interest in the automation area.",
+  "summaryText2": "I have experience as an educational robotics monitor and I am a programmer in C++ and web development.",
+
+  "academicBackground": "Academic background",
+  "electromechanicalTechnician": "Electromechanical technician course - IFBA (2018 - 2022)",
+
+  "work": "Work Experience",
+  "internMakilabTitle": "Intern at Makilab Serviços",
+  "internMakilabDate": "Aug. 2021 – Feb. 2022",
+  "internMakilabActivity1": "Maintenance & Repair for Electromechanical Equipments",
+  "internMakilabActivity2": "Project Development with Arduino",
+  "internMakilabActivity3": "Costumer Service",
+
+  "skills": "Skills",
+  "videoEditing": "Video editing",
+  "cPlusPlus": "C++ development (with Qt framework)",
+  "frontEnd": "FrontEnd (HTML, CSS, JS)",
+  "frontEndLink": "My portfolio (which includes web projects)",
+  "libreOffice": "Libre Office Suite",
+  "gitGithub": "Git and GitHub",
+  "soldering": "Soldering",
+
+  "coursework": "Relevant Coursework",
+  "hours": "hours",
+  "certificate": "certificate",
+  "robotics": "Robotics (basics)",
+  "tic": "Information and communication technology",
+  "entrepreneurship": "Entrepreneurship",
+  "programmingLogic": "Programming logic",
+  "microcomputerMaintenance": "Microcomputer maintenance",
+  "administrationAssistant": "Administration assistant",
+  "webDesign": "Web Design (basics)",
+  "microsoftOffice": "Microsoft Office (advanced)",
+  "microsoftWindows": "Microsoft Windows, Typing, Multimedia, Corel Draw, Printing Techniques, Office Training and Internet",
+
+  "languages": "Languages",
+  "portuguese": "Portuguese - Native speaker",
+  "english": "English - Intermediate",
+
+  "extracurricular": "Extracurricular activities",
+  "ecoifbaTitle": "Monitor of the ECOIFBA project at IFBA – Campus Simões Filho",
+  "ecoifbaDate": "Oct. 2019 – Sept. 2020",
+  "ecoifbaActivity1": "Perform the physical characterization of the institute's solid waste. That is, weighing and determining the gravimetric composition of dry and organic waste.",
+  "ecoifbaActivity2": "Organize and promote selective garbage collection on campus.",
+  "roboticsTitle": "Monitor of the educational robotics project at IFBA",
+  "roboticsDate": "May 2018 – Apr. 2019",
+  "roboticsActivity1": "Deliver a basic robotics course, teaching automation with Arduino using sensors and actuators.",
+  "roboticsActivity2": "Provide support and assistance to students who want to develop their projects, including extracurriculars.",
+  "roboticsActivity3": "Clean and organize the robotics laboratory. Including performing the maintenance of the local computers.",
+
+  "other": "Other Things",
+  "listener": "listener",
+  "qtCon": "QtCon Brazil 2020",
+  "snct": "SNCT (National Science and Technology Week) 2019"
+}

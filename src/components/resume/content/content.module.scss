@@ -1,0 +1,90 @@
+@use "variables" as v;
+@use "helpers/shadow" as s;
+
+%card {
+  border-radius: 8px;
+  @include s.shadow(3);
+}
+
+.content {
+  @extend %card;
+  background-color: v.$darkGray;
+  max-width: 95vw;
+  margin: 5px 20px;
+
+  a {
+    text-decoration: none;
+    border-bottom: solid 1px;
+    transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+.body {
+  column-count: 2;
+  column-gap: 16px;
+  padding: 0 16px;
+
+  @media screen and (max-width: 768px) {
+    column-count: 1;
+  }
+
+  > article {
+    @extend %card;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 100%;
+
+    line-height: 1.5;
+    background-color: #313131;
+
+    a {
+      color: v.$orange;
+      &:visited {
+        color: lighten($color: v.$orange, $amount: 10);
+      }
+    }
+
+    %cardContent {
+      margin: 0;
+    }
+
+    h2 {
+      @extend %cardContent;
+
+      font-weight: 300;
+      font-size: calc(0.8em + 100% + 1vw);
+
+      text-align: center;
+      border-bottom: 1px solid;
+      padding: 8px 0;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    div {
+      padding: 16px;
+    }
+
+    p {
+      @extend %cardContent;
+      text-indent: 20px;
+      text-align: justify;
+    }
+
+    ul {
+      @extend %cardContent;
+      padding-top: 8px;
+      li {
+        padding: 4px 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@use "variables" as v;
+
+.textfield {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+
+  width: 100%;
+}
+
+/* Input, Textarea */
+.textfield > input,
+.textfield > textarea {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  border-top: solid 27px transparent;
+  border-bottom: solid 1px white;
+  border-radius: 4px 4px 0 0;
+  padding: 0 12px 10px;
+  width: 100%;
+  height: inherit;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: none; /* Firefox */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  caret-color: white;
+  transition: border-bottom 0.2s, background-color 0.2s;
+}
+
+.textfield > textarea {
+  resize: none;
+  min-height: 200px;
+}
+
+/* Span */
+.textfield > input + span,
+.textfield > textarea + span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  box-sizing: border-box;
+  padding: 7px 12px 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 75%;
+  line-height: 18px;
+  pointer-events: none;
+  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+/* Underline */
+.textfield > input + span::after,
+.textfield > textarea + span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform-origin: bottom center;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+/* Hover */
+.textfield > input:hover,
+.textfield > textarea:hover {
+  border-bottom-color: white;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Placeholder-shown */
+.textfield > input:not(:focus):placeholder-shown + span,
+.textfield > textarea:not(:focus):placeholder-shown + span {
+  font-size: inherit;
+  line-height: 48px;
+}
+
+/* Focus */
+.textfield > input:focus,
+.textfield > textarea:focus {
+  outline: none;
+}
+
+.textfield > input:focus + span,
+.textfield > textarea:focus + span {
+  color: white;
+}
+
+.textfield > input:focus + span::before,
+.textfield > textarea:focus + span::before {
+  opacity: 0.12;
+}
+
+.textfield > input:focus + span::after,
+.textfield > textarea:focus + span::after {
+  transform: scale(1);
+}
+
+/* Faster transition in Safari for less noticeable fractional font-size issue */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .textfield > input,
+    .textfield > input + span,
+    .textfield > input + span::after,
+    .textfield > textarea,
+    .textfield > textarea + span,
+    .textfield > textarea + span::after {
+      transition-duration: 0.1s;
+    }
+  }
+}
