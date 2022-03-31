@@ -15,6 +15,12 @@
   overflow: hidden;
 }
 
+.image {
+  > div {
+    justify-content: center;
+  }
+}
+
 .text {
   margin: 16px;
 

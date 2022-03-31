@@ -17,7 +17,7 @@ interface CardImageProps {
 
 Card.Image = function CardImage({ src, alt }: CardImageProps) {
   return (
-    <section>
+    <section className={styles.image}>
       <ImageModal
         imageProps={{
           src,

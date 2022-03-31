@@ -14,7 +14,7 @@ const PortfolioCards = () => {
         <Card.Content>
           <h2>Qpdf Tools</h2>
           <p>
-            Qpdf Tools is an easy-to-use Qt interface for Ghostscript and Stapler, which makes it
+            Qpdf Tools is an easy-to-use Qt interface for Ghostscript and QPDF, which makes it
             possible for normal users to manage their PDFs.
           </p>
         </Card.Content>
@@ -34,40 +34,6 @@ const PortfolioCards = () => {
             linkProps={{
               href: "https://github.com/silash35/qpdftools",
               title: "access the Qpdf Tools project on github",
-            }}
-            imgProps={{
-              src: "/images/icons/white/github.svg",
-              alt: "GitHub icon",
-            }}
-          />
-        </Card.Actions>
-      </Card>
-
-      <Card>
-        <Card.Image src="/images/projects/qtotem.webp" alt="Screenshot of a QTotem question" />
-        <Card.Content>
-          <h2>QTotem</h2>
-          <p>
-            An interface written in Python and Qml for an automated screening totem for hospitals.
-            In order to speed up patient care.
-          </p>
-        </Card.Content>
-        <Card.Actions>
-          <IconLink
-            linkProps={{
-              href: "https://github.com/silash35/labrob/blob/master/qTotem/README.md",
-              title: "access the QTotem documentation on github",
-            }}
-            imgProps={{
-              src: "/images/icons/white/description.svg",
-              alt: "documentation icon",
-            }}
-          />
-
-          <IconLink
-            linkProps={{
-              href: "https://github.com/silash35/labrob/tree/master/qTotem",
-              title: "access the QTotem project on github",
             }}
             imgProps={{
               src: "/images/icons/white/github.svg",
@@ -102,6 +68,40 @@ const PortfolioCards = () => {
             linkProps={{
               href: "https://github.com/silash35/ALIS",
               title: "access the ALIS project on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/github.svg",
+              alt: "GitHub icon",
+            }}
+          />
+        </Card.Actions>
+      </Card>
+
+      <Card>
+        <Card.Image src="/images/projects/qtotem.webp" alt="Screenshot of a QTotem question" />
+        <Card.Content>
+          <h2>QTotem</h2>
+          <p>
+            An interface written in Python and Qml for an automated screening totem for hospitals.
+            In order to speed up patient care.
+          </p>
+        </Card.Content>
+        <Card.Actions>
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/labrob/blob/master/qTotem/README.md",
+              title: "access the QTotem documentation on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/description.svg",
+              alt: "documentation icon",
+            }}
+          />
+
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/labrob/tree/master/qTotem",
+              title: "access the QTotem project on github",
             }}
             imgProps={{
               src: "/images/icons/white/github.svg",
