@@ -22,7 +22,7 @@ module.exports = () => {
       includePaths: [path.join(__dirname, "src/styles")],
     },
     env: {
-      SITE_URL: "https://silash35.github.io",
+      SITE_URL: process.env.SITE_URL,
     },
 
     webpack: (config, { dev, isServer }) => {
