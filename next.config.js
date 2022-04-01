@@ -21,6 +21,9 @@ module.exports = () => {
     sassOptions: {
       includePaths: [path.join(__dirname, "src/styles")],
     },
+    env: {
+      SITE_URL: "https://silash35.github.io",
+    },
 
     webpack: (config, { dev, isServer }) => {
       // Only in client production build
