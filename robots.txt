@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://silash35.github.io
+Host: undefined
 
 # Sitemaps
-Sitemap: https://silash35.github.io/sitemap.xml
+Sitemap: undefined/sitemap.xml
