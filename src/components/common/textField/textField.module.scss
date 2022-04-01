@@ -24,7 +24,7 @@
   width: 100%;
   height: inherit;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   box-shadow: none; /* Firefox */
   font-family: inherit;
   font-size: inherit;
@@ -49,7 +49,7 @@
   display: block;
   box-sizing: border-box;
   padding: 7px 12px 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 75%;
   line-height: 18px;
   pointer-events: none;
@@ -76,7 +76,7 @@
 .textfield > input:hover,
 .textfield > textarea:hover {
   border-bottom-color: white;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Placeholder-shown */
