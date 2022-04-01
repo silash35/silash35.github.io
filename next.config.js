@@ -3,13 +3,16 @@
 const CompressionPlugin = require("compression-webpack-plugin");
 const withPWA = require("next-pwa");
 const path = require("path");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 module.exports = () => {
   /**
    * @type {import('next').NextConfig}
    */
 
-  return withPWA({
+  const nextConfig = {
     reactStrictMode: true,
     pwa: {
       dest: "public",
@@ -41,5 +44,7 @@ module.exports = () => {
 
       return config;
     },
-  });
+  };
+
+  return withBundleAnalyzer(withPWA(nextConfig));
 };
