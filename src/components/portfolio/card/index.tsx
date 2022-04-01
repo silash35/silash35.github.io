@@ -22,8 +22,8 @@ Card.Image = function CardImage({ src, alt }: CardImageProps) {
         imageProps={{
           src,
           alt,
-          width: "330",
-          height: "200",
+          width: "384",
+          height: "216",
         }}
       />
     </section>
