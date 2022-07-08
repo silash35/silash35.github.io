@@ -1,6 +1,6 @@
 import styles from "./contactCard.module.scss";
-import Form from "./form";
-import Social from "./social";
+import Form from "./Form";
+import Social from "./Social";
 
 const ContactCard = () => {
   return (

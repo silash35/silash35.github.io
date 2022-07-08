@@ -1,5 +1,5 @@
-import ResumeBody from "@/components/common/resumeBody";
-import Header from "@/components/curriculum/header";
+import ResumeBody from "@/components/common/ResumeBody";
+import Header from "@/components/Curriculum/Header";
 
 import styles from "./curriculum.module.scss";
 

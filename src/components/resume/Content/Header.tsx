@@ -1,4 +1,4 @@
-import ImageModal from "@/components/common/imageModal";
+import ImageModal from "@/components/common/ImageModal";
 
 import styles from "./header.module.scss";
 

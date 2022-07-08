@@ -1,5 +1,5 @@
-import Button from "@/components/common/button";
-import TextField from "@/components/common/textField";
+import Button from "@/components/common/Button";
+import TextField from "@/components/common/TextField";
 
 import styles from "./form.module.scss";
 

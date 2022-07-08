@@ -1,5 +1,5 @@
-import Card from "@/components/portfolio/card";
-import IconLink from "@/components/portfolio/iconLink";
+import Card from "@/components/Portfolio/Card";
+import IconLink from "@/components/Portfolio/IconLink";
 
 import styles from "./portfolioCards.module.scss";
 

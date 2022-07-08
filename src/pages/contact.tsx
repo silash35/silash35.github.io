@@ -1,9 +1,9 @@
 import Head from "next/head";
 import type { ReactElement } from "react";
 
-import Title from "@/components/common/title";
-import ContactCard from "@/components/contact";
-import Layout from "@/components/layout";
+import Title from "@/components/common/Title";
+import ContactCard from "@/components/Contact";
+import Layout from "@/components/Layout";
 
 const Contact = () => {
   return (

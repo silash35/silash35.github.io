@@ -1,7 +1,7 @@
 import { ActivePage } from "./activePage";
-import Background from "./background";
-import Header from "./header";
-import Main from "./main";
+import Background from "./Background";
+import Header from "./Header";
+import Main from "./Main";
 
 interface Props {
   children: React.ReactNode;

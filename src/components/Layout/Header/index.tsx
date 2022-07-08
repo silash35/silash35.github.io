@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { ActivePage } from "../activePage";
 import styles from "./header.module.scss";
-import Links from "./links";
+import Links from "./Links";
 import Sidebar from "./Sidebar";
 
 interface Props {

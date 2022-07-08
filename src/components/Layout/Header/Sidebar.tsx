@@ -1,7 +1,7 @@
-import ScreenDarkener from "@/components/common/screenDarkener";
+import ScreenDarkener from "@/components/common/ScreenDarkener";
 
 import { ActivePage } from "../activePage";
-import Links from "./links";
+import Links from "./Links";
 import styles from "./sidebar.module.scss";
 
 interface Props {

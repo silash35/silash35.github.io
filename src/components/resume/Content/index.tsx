@@ -1,7 +1,7 @@
-import ResumeBody from "@/components/common/resumeBody";
+import ResumeBody from "@/components/common/ResumeBody";
 
 import styles from "./content.module.scss";
-import Header from "./header";
+import Header from "./Header";
 
 const Content = () => {
   return (
