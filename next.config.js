@@ -10,7 +10,7 @@ module.exports = () => {
    * @type {import('next').NextConfig}
    */
 
-  const nextConfig = {
+  let nextConfig = {
     reactStrictMode: true,
     pwa: {
       dest: "public",
@@ -40,17 +40,19 @@ module.exports = () => {
     },
   };
 
+  nextConfig = withPWA(nextConfig);
+
   if (process.env.ANALYZE === "true") {
     const withBundleAnalyzer = require("@next/bundle-analyzer")({
       enabled: true,
     });
 
-    return withBundleAnalyzer(withPWA(nextConfig));
+    nextConfig = withBundleAnalyzer(nextConfig);
   }
 
-  if (process.env.NODE_ENV === "development") {
-    return nextConfig;
+  if (process.env.NODE_ENV === "production") {
+    nextConfig = withPreact(nextConfig);
   }
 
-  return withPreact(withPWA(nextConfig));
+  return nextConfig;
 };
