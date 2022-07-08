@@ -26,10 +26,13 @@
   "dependencies": {
     "@swc/helpers": "^0.4.3",
     "next": "^12.2.1",
+    "next-plugin-preact": "^3.0.7",
     "next-pwa": "^5.5.4",
     "preact": "^10.9.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "preact-render-to-string": "^5.2.0",
+    "react": "npm:@preact/compat@^17.1.1",
+    "react-dom": "npm:@preact/compat@^17.1.1",
+    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.2.0",
     "react-transition-group": "^4.4.2"
   }
 }
