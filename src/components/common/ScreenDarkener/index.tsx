@@ -1,5 +1,4 @@
-import { HTMLAttributes, useRef } from "react";
-import CSSTransition from "react-transition-group/CSSTransition";
+import { HTMLAttributes, useEffect, useState } from "react";
 
 import styles from "./screenDarkener.module.scss";
 
@@ -10,40 +9,53 @@ interface Props {
   children: React.ReactNode;
 
   transitionClassNames?: {
-    enter: string;
-    enterActive: string;
-    enterDone: string;
-    exit: string;
-    exitActive: string;
+    show: string;
+    hide: string;
+    none: string;
   };
 }
 
 const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: Props) => {
-  const nodeRef = useRef(null);
+  const [isAnimeIn, setIsAnimeIn] = useState(false);
+  const [transitionStyle, setTransitionStyle] = useState(
+    `${styles.none} ${transitionClassNames?.none}`
+  );
+
+  const animeIn = () => {
+    setTransitionStyle(`${styles.hide} ${transitionClassNames?.hide}`);
+    setIsAnimeIn(true);
+  };
+
+  useEffect(() => {
+    if (isAnimeIn) {
+      setTransitionStyle(`${styles.show} ${transitionClassNames?.show}`);
+      setIsAnimeIn(false);
+    }
+  }, [isAnimeIn]);
+
+  const animeOut = () => {
+    setTransitionStyle(`${styles.hide} ${transitionClassNames?.hide}`);
+    setTimeout(() => {
+      setTransitionStyle(`${styles.none} ${transitionClassNames?.none}`);
+    }, 300);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      animeIn();
+    } else {
+      animeOut();
+    }
+  }, [isOpen]);
 
   return (
-    <CSSTransition
-      in={isOpen}
-      timeout={300}
-      nodeRef={nodeRef}
-      unmountOnExit
-      classNames={{
-        enter: `${styles.enter} ${transitionClassNames?.enter}`,
-        enterActive: `${styles.enterActive} ${transitionClassNames?.enterActive}`,
-        enterDone: `${styles.enterDone} ${transitionClassNames?.enterDone}`,
-        exit: `${styles.exit} ${transitionClassNames?.exit}`,
-        exitActive: `${styles.exitActive} ${transitionClassNames?.exitActive}`,
-      }}
+    <button
+      onClick={() => setIsOpen(false)}
+      className={`${styles.screenDarkener} ${transitionStyle}`}
+      {...props.buttonProps}
     >
-      <button
-        ref={nodeRef}
-        onClick={() => setIsOpen(false)}
-        className={styles.screenDarkener}
-        {...props.buttonProps}
-      >
-        {props.children}
-      </button>
-    </CSSTransition>
+      {props.children}
+    </button>
   );
 };
 

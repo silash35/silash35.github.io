@@ -19,19 +19,15 @@
   max-width: 90%;
   max-height: 90%;
 
-  .enter & {
-    opacity: 0;
-  }
-  .enterActive & {
-    opacity: 1;
-    transition: opacity v.$animeTimeFunction v.$animeDuration;
-  }
-  .enterDone &,
-  .exit & {
+  transition: opacity v.$animeTimeFunction v.$animeDuration;
+
+  .show & {
     opacity: 1;
   }
-  .exitActive & {
+  .hide & {
     opacity: 0;
-    transition: opacity v.$animeTimeFunction v.$animeDuration;
+  }
+  .none & {
+    display: none;
   }
 }

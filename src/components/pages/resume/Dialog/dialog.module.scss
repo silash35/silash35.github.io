@@ -30,12 +30,14 @@
     border-radius: 10px 10px 0 0;
   }
 
-  &.enterDone,
-  &.exit {
+  &.show {
     opacity: 1;
   }
-  &.exitActive {
+  &.hide {
     opacity: 0;
     transition: opacity v.$animeTimeFunction v.$animeDuration;
+  }
+  &.none {
+    display: none;
   }
 }

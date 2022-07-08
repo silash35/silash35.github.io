@@ -16,7 +16,6 @@
     "@next/bundle-analyzer": "^12.2.1",
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
-    "@types/react-transition-group": "^4.4.5",
     "compression-webpack-plugin": "^10.0.0",
     "eslint-config-silash35": "^1.0.0",
     "next-sitemap": "^3.1.10",
@@ -32,7 +31,6 @@
     "preact-render-to-string": "^5.2.0",
     "react": "npm:@preact/compat@^17.1.1",
     "react-dom": "npm:@preact/compat@^17.1.1",
-    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.2.0",
-    "react-transition-group": "^4.4.2"
+    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.2.0"
   }
 }

@@ -27,11 +27,9 @@ const ImageModal = ({ borderRadius, className, imageProps }: Props) => {
         setIsOpen={setIsOpen}
         buttonProps={{ "aria-label": "Close Image" }}
         transitionClassNames={{
-          enter: styles.enter,
-          enterActive: styles.enterActive,
-          enterDone: styles.enterDone,
-          exit: styles.exit,
-          exitActive: styles.exitActive,
+          show: styles.show,
+          hide: styles.hide,
+          none: styles.none,
         }}
       >
         <img className={styles.OpenedImageModal} {...imageProps} />

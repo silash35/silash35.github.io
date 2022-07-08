@@ -10,19 +10,14 @@
 
   cursor: default;
 
-  &.enter {
-    background-color: transparent;
-  }
-  &.enterActive {
-    background-color: hsla(0, 0%, 0%, 0.8);
-    transition: background-color v.$animeTimeFunction v.$animeDuration;
-  }
-  &.enterDone,
-  &.exit {
+  transition: background-color v.$animeTimeFunction v.$animeDuration;
+  &.show {
     background-color: hsla(0, 0%, 0%, 0.8);
   }
-  &.exitActive {
+  &.hide {
     background-color: transparent;
-    transition: background-color v.$animeTimeFunction v.$animeDuration;
+  }
+  &.none {
+    display: none;
   }
 }

@@ -18,11 +18,9 @@ export default function Sidebar({ isOpen, setIsOpen, activePage }: Props) {
       setIsOpen={setIsOpen}
       buttonProps={{ "aria-label": "Close Menu" }}
       transitionClassNames={{
-        enter: styles.enter,
-        enterActive: styles.enterActive,
-        enterDone: styles.enterDone,
-        exit: styles.exit,
-        exitActive: styles.exitActive,
+        show: styles.show,
+        hide: styles.hide,
+        none: styles.none,
       }}
     >
       <ul className={styles.sideBar}>
