@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useRef, useState } from "react";
-import { CSSTransition } from "react-transition-group";
+import CSSTransition from "react-transition-group/CSSTransition";
 
 import Button from "@/components/common/button";
 
