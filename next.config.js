@@ -3,9 +3,6 @@
 const CompressionPlugin = require("compression-webpack-plugin");
 const withPWA = require("next-pwa");
 const path = require("path");
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
 
 module.exports = () => {
   /**
@@ -49,5 +46,13 @@ module.exports = () => {
     },
   };
 
-  return withBundleAnalyzer(withPWA(nextConfig));
+  if (process.env.ANALYZE === "true") {
+    const withBundleAnalyzer = require("@next/bundle-analyzer")({
+      enabled: true,
+    });
+
+    return withBundleAnalyzer(withPWA(nextConfig));
+  }
+
+  return withPWA(nextConfig);
 };

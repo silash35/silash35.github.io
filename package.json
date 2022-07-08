@@ -13,9 +13,9 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^12.2.0",
-    "@types/node": "^18.0.1",
-    "@types/react": "^18.0.14",
+    "@next/bundle-analyzer": "^12.2.1",
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
     "@types/react-transition-group": "^4.4.5",
     "compression-webpack-plugin": "^10.0.0",
     "eslint-config-silash35": "^1.0.0",
@@ -24,11 +24,10 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^12.2.0",
     "@swc/helpers": "^0.4.3",
-    "next": "^12.2.0",
+    "next": "^12.2.1",
     "next-pwa": "^5.5.4",
-    "preact": "^10.8.2",
+    "preact": "^10.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.2"
