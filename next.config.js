@@ -48,5 +48,9 @@ module.exports = () => {
     return withBundleAnalyzer(withPWA(nextConfig));
   }
 
+  if (process.env.NODE_ENV === "development") {
+    return nextConfig;
+  }
+
   return withPreact(withPWA(nextConfig));
 };

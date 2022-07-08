@@ -7,6 +7,42 @@ const PortfolioCards = () => {
     <section className={styles.cards}>
       <Card>
         <Card.Image
+          src="/images/projects/opensom.webp"
+          alt="Screenshot the OpenSOM demo instance"
+        />
+        <Card.Content>
+          <h2>OpenSOM</h2>
+          <p>
+            An open source, self-hosted Service Order manager. It is possible to register customers,
+            budgets, send emails and much more.
+          </p>
+        </Card.Content>
+        <Card.Actions>
+          <IconLink
+            linkProps={{
+              href: "https://opensom.herokuapp.com/",
+              title: "access the OpenSOM demo instance",
+            }}
+            imgProps={{
+              src: "/images/icons/white/link.svg",
+              alt: "link icon",
+            }}
+          />
+
+          <IconLink
+            linkProps={{
+              href: "https://github.com/silash35/opensom",
+              title: "access the OpenSOM project on github",
+            }}
+            imgProps={{
+              src: "/images/icons/white/github.svg",
+              alt: "GitHub icon",
+            }}
+          />
+        </Card.Actions>
+      </Card>
+      <Card>
+        <Card.Image
           src="/images/projects/qpdftools.webp"
           alt="Picture of the Qpdf Tools program home screen"
         />
@@ -67,40 +103,6 @@ const PortfolioCards = () => {
             linkProps={{
               href: "https://github.com/silash35/ALIS",
               title: "access the ALIS project on github",
-            }}
-            imgProps={{
-              src: "/images/icons/white/github.svg",
-              alt: "GitHub icon",
-            }}
-          />
-        </Card.Actions>
-      </Card>
-
-      <Card>
-        <Card.Image src="/images/projects/qtotem.webp" alt="Screenshot of a QTotem question" />
-        <Card.Content>
-          <h2>QTotem</h2>
-          <p>
-            An interface written in Python and Qml for an automated screening totem for hospitals.
-            In order to speed up patient care.
-          </p>
-        </Card.Content>
-        <Card.Actions>
-          <IconLink
-            linkProps={{
-              href: "https://github.com/silash35/labrob/blob/master/qTotem/README.md",
-              title: "access the QTotem documentation on github",
-            }}
-            imgProps={{
-              src: "/images/icons/white/description.svg",
-              alt: "documentation icon",
-            }}
-          />
-
-          <IconLink
-            linkProps={{
-              href: "https://github.com/silash35/labrob/tree/master/qTotem",
-              title: "access the QTotem project on github",
             }}
             imgProps={{
               src: "/images/icons/white/github.svg",
