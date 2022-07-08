@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 
 import Title from "@/components/common/Title";
 import Layout from "@/components/Layout";
-import PortfolioCards from "@/components/Portfolio";
+import PortfolioCards from "@/components/pages/Portfolio";
 
 const Portfolio = () => {
   return (

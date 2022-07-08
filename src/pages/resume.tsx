@@ -2,8 +2,8 @@ import Head from "next/head";
 import type { ReactElement } from "react";
 
 import Layout from "@/components/Layout";
-import Content from "@/components/resume/Content";
-import Dialog from "@/components/resume/Dialog";
+import Content from "@/components/pages/resume/Content";
+import Dialog from "@/components/pages/resume/Dialog";
 
 const Resume = () => {
   return (

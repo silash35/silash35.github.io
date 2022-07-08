@@ -1,7 +1,7 @@
 import ResumeBody from "@/components/common/ResumeBody";
-import Header from "@/components/Curriculum/Header";
 
 import styles from "./curriculum.module.scss";
+import Header from "./Header";
 
 interface Props {
   locale?: string;

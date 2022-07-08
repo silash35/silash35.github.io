@@ -1,6 +1,5 @@
-import Card from "@/components/Portfolio/Card";
-import IconLink from "@/components/Portfolio/IconLink";
-
+import Card from "./Card";
+import IconLink from "./IconLink";
 import styles from "./portfolioCards.module.scss";
 
 const PortfolioCards = () => {

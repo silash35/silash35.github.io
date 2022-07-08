@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Curriculum from "@/components/Curriculum";
+import Curriculum from "@/components/pages/Curriculum";
 
 const Curriculo = () => {
   return (

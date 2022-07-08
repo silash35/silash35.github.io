@@ -2,8 +2,8 @@ import Head from "next/head";
 import type { ReactElement } from "react";
 
 import Title from "@/components/common/Title";
-import ContactCard from "@/components/Contact";
 import Layout from "@/components/Layout";
+import ContactCard from "@/components/pages/Contact";
 
 const Contact = () => {
   return (
