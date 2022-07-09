@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@next/bundle-analyzer': ^12.2.1
-  '@swc/helpers': ^0.4.3
   '@types/node': ^18.0.3
   '@types/react': ^18.0.15
   compression-webpack-plugin: ^10.0.0
@@ -20,7 +19,6 @@ specifiers:
   typescript: ^4.7.4
 
 dependencies:
-  '@swc/helpers': 0.4.3
   next: 12.2.1_fq6qtyvuzj7wzizluknp3nxma4
   next-plugin-preact: 3.0.7_6uubypv5u4b3hryunk6klpc6e4
   next-pwa: 5.5.4_next@12.2.1
@@ -1552,12 +1550,6 @@ packages:
     resolution: {integrity: sha512-556Az0VX7WR6UdoTn4htt/l3zPQ7bsQWK+HqdG4swV7beUCxo/BqmvbOpUkTIm/9ih86LIf1qsUnywNL3obGHw==}
     dependencies:
       tslib: 2.4.0
-
-  /@swc/helpers/0.4.3:
-    resolution: {integrity: sha512-6JrF+fdUK2zbGpJIlN7G3v966PQjyx/dPt1T9km2wj+EUBqgrxCk3uX4Kct16MIm9gGxfKRcfax2hVf5jvlTzA==}
-    dependencies:
-      tslib: 2.4.0
-    dev: false
 
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
