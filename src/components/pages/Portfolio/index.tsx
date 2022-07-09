@@ -13,8 +13,8 @@ const PortfolioCards = () => {
         <Card.Content>
           <h2>OpenSOM</h2>
           <p>
-            An open source, self-hosted Service Order manager. It is possible to register customers,
-            budgets, send emails and much more.
+            A self-hosted, open source service order manager. With it you can register customers,
+            create budgets, send emails and much more.
           </p>
         </Card.Content>
         <Card.Actions>
@@ -83,7 +83,7 @@ const PortfolioCards = () => {
         <Card.Content>
           <h2>ALIS</h2>
           <p>
-            An aggregator of accessible places for the deaf. For example, stores with attendants who
+            An aggregator of accessible places for the deaf, such as stores with attendants who can
             speak ASL (American Sign Language).
           </p>
         </Card.Content>
