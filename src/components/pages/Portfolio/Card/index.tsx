@@ -1,3 +1,5 @@
+import type { ImgHTMLAttributes } from "react";
+
 import ImageModal from "@/components/common/ImageModal";
 
 import styles from "./card.module.scss";
@@ -10,20 +12,14 @@ const Card = ({ children }: Props) => {
   return <article className={styles.card}>{children}</article>;
 };
 
-interface CardImageProps {
-  src: string;
-  alt: string;
-}
-
-Card.Image = function CardImage({ src, alt }: CardImageProps) {
+Card.Image = function CardImage(props: ImgHTMLAttributes<HTMLImageElement>) {
   return (
     <section className={styles.image}>
       <ImageModal
         imageProps={{
-          src,
-          alt,
           width: "384",
           height: "216",
+          ...props,
         }}
       />
     </section>
@@ -34,7 +30,7 @@ Card.Content = function CardContent({ children }: Props) {
   return <section className={styles.text}>{children}</section>;
 };
 
-Card.Actions = function CardImage({ children }: Props) {
+Card.Actions = function CardActions({ children }: Props) {
   return <section className={styles.actions}>{children}</section>;
 };
 
