@@ -1,8 +1,8 @@
 import Head from "next/head";
 import type { ReactElement } from "react";
 
-import Presentation from "@/components/home/presentation";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout";
+import Presentation from "@/components/pages/home/Presentation";
 
 const Home = () => {
   return (

@@ -1,0 +1,33 @@
+@use "variables" as v;
+
+.imageModal {
+  overflow: hidden;
+  display: flex;
+
+  img {
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.OpenedImageModal {
+  width: unset;
+  height: unset;
+
+  max-width: 90%;
+  max-height: 90%;
+
+  transition: opacity v.$animeTimeFunction v.$animeDuration;
+
+  .show & {
+    opacity: 1;
+  }
+  .hide & {
+    opacity: 0;
+  }
+  .none & {
+    display: none;
+  }
+}

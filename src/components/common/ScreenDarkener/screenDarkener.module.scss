@@ -1,0 +1,23 @@
+@use "variables" as v;
+
+.screenDarkener {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  left: 0;
+  top: 0;
+
+  cursor: default;
+
+  transition: background-color v.$animeTimeFunction v.$animeDuration;
+  &.show {
+    background-color: hsla(0, 0%, 0%, 0.8);
+  }
+  &.hide {
+    background-color: transparent;
+  }
+  &.none {
+    display: none;
+  }
+}

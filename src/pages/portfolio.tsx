@@ -1,9 +1,9 @@
 import Head from "next/head";
 import type { ReactElement } from "react";
 
-import Title from "@/components/common/title";
-import Layout from "@/components/layout";
-import PortfolioCards from "@/components/portfolio";
+import Title from "@/components/common/Title";
+import Layout from "@/components/Layout";
+import PortfolioCards from "@/components/pages/Portfolio";
 
 const Portfolio = () => {
   return (
