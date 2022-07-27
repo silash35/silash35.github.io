@@ -26,7 +26,15 @@ const ResumeBody = ({ locale, className }: Props) => {
       <article>
         <h2>{l.academicBackground}</h2>
         <ul>
-          <li>{l.electromechanicalTechnician}</li>
+          <li>
+            <a
+              href="https://silash35.gitlab.io/large-files/certificates/eletromecanica.pdf"
+              title={`${l.certificate} ${l.electromechanicalTechnician}`}
+              {...defaultProps}
+            >
+              {l.electromechanicalTechnician}
+            </a>
+          </li>
         </ul>
       </article>
 
