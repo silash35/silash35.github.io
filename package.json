@@ -13,21 +13,21 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^12.2.1",
-    "@types/node": "^18.0.3",
+    "@next/bundle-analyzer": "^12.2.3",
+    "@types/node": "^18.6.1",
     "@types/react": "^18.0.15",
     "compression-webpack-plugin": "^10.0.0",
-    "eslint-config-silash35": "^1.0.0",
-    "next-sitemap": "^3.1.10",
-    "sass": "^1.53.0",
+    "eslint-config-silash35": "^1.0.1",
+    "next-sitemap": "^3.1.15",
+    "sass": "^1.54.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "next": "^12.2.1",
+    "next": "^12.2.3",
     "next-plugin-preact": "^3.0.7",
     "next-pwa": "^5.5.4",
-    "preact": "^10.9.0",
-    "preact-render-to-string": "^5.2.0",
+    "preact": "^10.10.0",
+    "preact-render-to-string": "^5.2.1",
     "react": "npm:@preact/compat@^17.1.1",
     "react-dom": "npm:@preact/compat@^17.1.1",
     "react-ssr-prepass": "npm:preact-ssr-prepass@^1.2.0"
