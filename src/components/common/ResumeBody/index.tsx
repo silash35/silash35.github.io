@@ -28,7 +28,7 @@ const ResumeBody = ({ locale, className }: Props) => {
         <ul>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/eletromecanica.pdf"
+              href="https://silash35.gitlab.io/certificates/eletromecanica.pdf"
               title={`${l.certificate} ${l.electromechanicalTechnician}`}
               {...defaultProps}
             >
@@ -81,7 +81,7 @@ const ResumeBody = ({ locale, className }: Props) => {
         <ul>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/cursoRobotica1.pdf"
+              href="https://silash35.gitlab.io/certificates/cursoRobotica1.pdf"
               title={`${l.certificate} ${l.robotics}`}
               {...defaultProps}
             >
@@ -91,7 +91,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/senaiTIC.pdf"
+              href="https://silash35.gitlab.io/certificates/senaiTIC.pdf"
               title={`${l.certificate} ${l.tic}`}
               {...defaultProps}
             >
@@ -101,7 +101,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/senaiEmpreendedorismo.pdf"
+              href="https://silash35.gitlab.io/certificates/senaiEmpreendedorismo.pdf"
               title={`${l.certificate} ${l.entrepreneurship}`}
               {...defaultProps}
             >
@@ -111,7 +111,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/senaiLogicaDaProgramacao.pdf"
+              href="https://silash35.gitlab.io/certificates/senaiLogicaDaProgramacao.pdf"
               title={`${l.certificate} ${l.programmingLogic}`}
               {...defaultProps}
             >
@@ -121,7 +121,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/megaCursos5.pdf"
+              href="https://silash35.gitlab.io/certificates/megaCursos5.pdf"
               title={`${l.certificate} ${l.microcomputerMaintenance}`}
               {...defaultProps}
             >
@@ -131,7 +131,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/megaCursos4.pdf"
+              href="https://silash35.gitlab.io/certificates/megaCursos4.pdf"
               title={`${l.certificate} ${l.administrationAssistant}`}
               {...defaultProps}
             >
@@ -141,7 +141,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/megaCursos3.pdf"
+              href="https://silash35.gitlab.io/certificates/megaCursos3.pdf"
               title={`${l.certificate} ${l.webDesign}`}
               {...defaultProps}
             >
@@ -151,7 +151,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/megaCursos2.pdf"
+              href="https://silash35.gitlab.io/certificates/megaCursos2.pdf"
               title={`${l.certificate} ${l.microsoftOffice}`}
               {...defaultProps}
             >
@@ -161,7 +161,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/megaCursos1.pdf"
+              href="https://silash35.gitlab.io/certificates/megaCursos1.pdf"
               title={`${l.certificate} ${l.microsoftWindows}`}
               {...defaultProps}
             >
@@ -178,7 +178,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           <li>{l.portuguese}</li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/ALLingles4.pdf"
+              href="https://silash35.gitlab.io/certificates/ALLingles4.pdf"
               title={`${l.certificate} ${l.english}`}
               {...defaultProps}
             >
@@ -199,7 +199,7 @@ const ResumeBody = ({ locale, className }: Props) => {
 
         <h3>
           <a
-            href="https://silash35.gitlab.io/large-files/certificates/roboticaVoluntario.pdf"
+            href="https://silash35.gitlab.io/certificates/roboticaVoluntario.pdf"
             title={`${l.certificate} ${l.roboticsTitle}`}
             {...defaultProps}
           >
@@ -222,7 +222,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/oportuniza2019.pdf"
+              href="https://silash35.gitlab.io/certificates/oportuniza2019.pdf"
               title={`${l.certificate} ${l.listener} Oportuniza 2019`}
               {...defaultProps}
             >
@@ -232,7 +232,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/CNCTIFBA2019.pdf"
+              href="https://silash35.gitlab.io/certificates/CNCTIFBA2019.pdf"
               title={`${l.certificate} ${l.listener} ${l.snct}`}
               {...defaultProps}
             >
@@ -242,7 +242,7 @@ const ResumeBody = ({ locale, className }: Props) => {
           </li>
           <li>
             <a
-              href="https://silash35.gitlab.io/large-files/certificates/enconecta2018.pdf"
+              href="https://silash35.gitlab.io/certificates/enconecta2018.pdf"
               title={`${l.certificate} ${l.listener} Enconecta 2018`}
               {...defaultProps}
             >
