@@ -20,7 +20,7 @@ const PortfolioCards = () => {
         <Card.Actions>
           <IconLink
             linkProps={{
-              href: "https://opensom.herokuapp.com/",
+              href: "https://opensom.vercel.app/",
               title: "access the OpenSOM demo instance",
             }}
             imgProps={{
