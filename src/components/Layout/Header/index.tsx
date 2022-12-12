@@ -24,10 +24,8 @@ export default function Header(props: Props) {
           <img src="/images/icons/white/menu.svg" alt="menu Icon" width="32" height="32" />
         </button>
 
-        <Link href="/">
-          <a className={styles.logoContainer} title="Go to home page">
-            <img src="/icon.svg" alt="Silas Henrique Icon" width="64" height="64" />
-          </a>
+        <Link href="/" className={styles.logoContainer} title="Go to home page">
+          <img src="/icon.svg" alt="Silas Henrique Icon" width="64" height="64" />
         </Link>
 
         <ul className={styles.navLinks}>

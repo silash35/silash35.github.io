@@ -12,24 +12,16 @@ export default function Links({ activePage, activeClass }: Props) {
   return (
     <>
       <li className={home ? activeClass : undefined}>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
+        <Link href="/">Home</Link>
       </li>
       <li className={resume ? activeClass : undefined}>
-        <Link href="/resume">
-          <a>Resume</a>
-        </Link>
+        <Link href="/resume">Resume</Link>
       </li>
       <li className={portfolio ? activeClass : undefined}>
-        <Link href="/portfolio">
-          <a>Portfolio</a>
-        </Link>
+        <Link href="/portfolio">Portfolio</Link>
       </li>
       <li className={contact ? activeClass : undefined}>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
+        <Link href="/contact">Contact</Link>
       </li>
     </>
   );

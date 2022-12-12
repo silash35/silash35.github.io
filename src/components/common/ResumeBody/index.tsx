@@ -55,8 +55,8 @@ const ResumeBody = ({ locale, className }: Props) => {
           <li>{l.videoEditing}</li>
           <li>{l.cPlusPlus}</li>
           <li>
-            <Link href="/portfolio">
-              <a title={l.frontEndLink}>{l.frontEnd}</a>
+            <Link href="/portfolio" title={l.frontEndLink}>
+              {l.frontEnd}
             </Link>
           </li>
           <li>Inkscape</li>

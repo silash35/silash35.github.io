@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-env node */
 const CompressionPlugin = require("compression-webpack-plugin");
-const withPreact = require("next-plugin-preact");
-const withPWA = require("next-pwa");
 const path = require("path");
+
+const withPWA = require("next-pwa")({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+});
 
 module.exports = () => {
   /**
@@ -12,10 +15,6 @@ module.exports = () => {
 
   let nextConfig = {
     reactStrictMode: true,
-    pwa: {
-      dest: "public",
-      disable: process.env.NODE_ENV === "development",
-    },
     sassOptions: {
       includePaths: [path.join(__dirname, "src/styles")],
     },
@@ -48,10 +47,6 @@ module.exports = () => {
     });
 
     nextConfig = withBundleAnalyzer(nextConfig);
-  }
-
-  if (process.env.NODE_ENV === "production") {
-    nextConfig = withPreact(nextConfig);
   }
 
   return nextConfig;
