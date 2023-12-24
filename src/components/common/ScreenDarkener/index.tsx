@@ -1,4 +1,4 @@
-import { HTMLAttributes, useEffect, useState } from "react";
+import { HTMLAttributes, useEffect, useRef, useState } from "react";
 
 import styles from "./screenDarkener.module.scss";
 
@@ -16,22 +16,19 @@ interface Props {
 }
 
 const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: Props) => {
-  const [isAnimeIn, setIsAnimeIn] = useState(false);
+  const ref = useRef<HTMLButtonElement>(null);
+
   const [transitionStyle, setTransitionStyle] = useState(
     `${styles.none} ${transitionClassNames?.none}`,
   );
 
   const animeIn = () => {
-    setTransitionStyle(`${styles.hide} ${transitionClassNames?.hide}`);
-    setIsAnimeIn(true);
-  };
-
-  useEffect(() => {
-    if (isAnimeIn) {
-      setTransitionStyle(`${styles.show} ${transitionClassNames?.show}`);
-      setIsAnimeIn(false);
+    if (ref.current !== null) {
+      ref.current.className = `${styles.hide} ${transitionClassNames?.hide}`;
     }
-  }, [isAnimeIn]);
+
+    setTransitionStyle(`${styles.show} ${transitionClassNames?.show}`);
+  };
 
   const animeOut = () => {
     setTransitionStyle(`${styles.hide} ${transitionClassNames?.hide}`);
@@ -53,6 +50,7 @@ const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: P
       className={`${styles.screenDarkener} ${transitionStyle}`}
       onClick={() => setIsOpen(false)}
       {...props.buttonProps}
+      ref={ref}
     >
       {props.children}
     </button>
