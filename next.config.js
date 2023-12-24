@@ -1,18 +1,21 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-env node */
-const CompressionPlugin = require("compression-webpack-plugin");
-const path = require("path");
+import CompressionPlugin from "compression-webpack-plugin";
+import nextPWA from "next-pwa";
+import * as path from "path";
+import { fileURLToPath } from "url";
 
-const withPWA = require("next-pwa")({
+/**
+ * @type {import('next').NextConfig}
+ */
+
+const withPWA = nextPWA({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
 });
 
-module.exports = () => {
-  /**
-   * @type {import('next').NextConfig}
-   */
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+export default async () => {
   let nextConfig = {
     reactStrictMode: true,
     sassOptions: {
@@ -31,7 +34,7 @@ module.exports = () => {
           new CompressionPlugin({
             filename: "[path][base].br",
             algorithm: "brotliCompress",
-          })
+          }),
         );
       }
 
@@ -42,7 +45,7 @@ module.exports = () => {
   nextConfig = withPWA(nextConfig);
 
   if (process.env.ANALYZE === "true") {
-    const withBundleAnalyzer = require("@next/bundle-analyzer")({
+    const withBundleAnalyzer = await import("@next/bundle-analyzer")({
       enabled: true,
     });
 

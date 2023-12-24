@@ -10,7 +10,7 @@ interface Props {
 const IconLink = ({ linkProps, imgProps }: Props) => {
   return (
     <a className={styles.iconLink} rel="noopener noreferrer" target="_blank" {...linkProps}>
-      <img width="35" height="35" {...imgProps} />
+      <img height="35" width="35" {...imgProps} />
     </a>
   );
 };

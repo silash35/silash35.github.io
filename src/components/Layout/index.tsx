@@ -8,14 +8,12 @@ interface Props {
   activePage: ActivePage;
 }
 
-const Layout = ({ children, activePage }: Props) => {
-  return (
-    <>
-      <Header activePage={activePage} />
-      <Main>{children}</Main>
-      <Background />
-    </>
-  );
-};
+const Layout = ({ children, activePage }: Props) => (
+  <>
+    <Header activePage={activePage} />
+    <Main>{children}</Main>
+    <Background />
+  </>
+);
 
 export default Layout;

@@ -19,11 +19,11 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     <>
       <Head>
         {/* Viewport meta tag should not be used in _document.tsx. That's why it's in this file */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </Head>
 
       <Component {...pageProps} />
-    </>
+    </>,
   );
 }
 

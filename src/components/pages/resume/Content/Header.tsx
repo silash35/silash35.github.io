@@ -8,8 +8,6 @@ const Header = () => {
       <section className={styles.title}>
         <h1>Silas Henrique Alves Araújo</h1>
         <ImageModal
-          borderRadius="25%"
-          className={styles.photo}
           imageProps={{
             src: "/images/profile.webp",
             alt: "Photo of silas Henrique Alves Araújo",
@@ -17,33 +15,35 @@ const Header = () => {
             width: "256",
             height: "256",
           }}
+          borderRadius="25%"
+          className={styles.photo}
         />
       </section>
       <section className={styles.information}>
         <ul>
           <li>
             <img
-              width="24"
+              alt="cake Icon"
               height="24"
               src="/images/icons/white/cake-variant.svg"
-              alt="cake Icon"
+              width="24"
             />
             February 2, 2003
           </li>
           <li>
-            <img width="24" height="24" src="/images/icons/white/email.svg" alt="email Icon" />
+            <img alt="email Icon" height="24" src="/images/icons/white/email.svg" width="24" />
             <a href="mailto:silash35@gmail.com" title="Silas Henrique's e-mail address">
               silash35@gmail.com
             </a>
           </li>
           <li>
-            <img width="24" height="24" src="/images/icons/white/phone.svg" alt="phone Icon" />
+            <img alt="phone Icon" height="24" src="/images/icons/white/phone.svg" width="24" />
             <a href="tel:+5571987529296" title="Phone number of Silas Henrique">
               +55 71 98752-9296
             </a>
           </li>
           <li>
-            <img width="24" height="24" src="/images/icons/white/map-marker.svg" alt="local Icon" />
+            <img alt="local Icon" height="24" src="/images/icons/white/map-marker.svg" width="24" />
             Simões Filho, Bahia, Brazil
           </li>
         </ul>

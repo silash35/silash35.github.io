@@ -11,21 +11,21 @@ interface Props {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-export default function Sidebar({ isOpen, setIsOpen, activePage }: Props) {
-  return (
-    <ScreenDarkener
-      isOpen={isOpen}
-      setIsOpen={setIsOpen}
-      buttonProps={{ "aria-label": "Close Menu" }}
-      transitionClassNames={{
-        show: styles.show,
-        hide: styles.hide,
-        none: styles.none,
-      }}
-    >
-      <ul className={styles.sideBar}>
-        <Links activeClass={styles.active} activePage={activePage} />
-      </ul>
-    </ScreenDarkener>
-  );
-}
+const Sidebar = ({ isOpen, setIsOpen, activePage }: Props) => (
+  <ScreenDarkener
+    transitionClassNames={{
+      show: styles.show,
+      hide: styles.hide,
+      none: styles.none,
+    }}
+    buttonProps={{ "aria-label": "Close Menu" }}
+    isOpen={isOpen}
+    setIsOpen={setIsOpen}
+  >
+    <ul className={styles.sideBar}>
+      <Links activeClass={styles.active} activePage={activePage} />
+    </ul>
+  </ScreenDarkener>
+);
+
+export default Sidebar;

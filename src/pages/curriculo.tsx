@@ -8,9 +8,9 @@ const Curriculo = () => {
       <Head>
         <title>Currículo</title>
 
-        <link rel="alternate" href={`${process.env.SITE_URL}/curriculum`} hrefLang="x-default" />
-        <link rel="alternate" href={`${process.env.SITE_URL}/curriculum`} hrefLang="en" />
-        <link rel="alternate" href={`${process.env.SITE_URL}/curriculo`} hrefLang="pt-br" />
+        <link href={`${process.env.SITE_URL}/curriculum`} hrefLang="x-default" rel="alternate" />
+        <link href={`${process.env.SITE_URL}/curriculum`} hrefLang="en" rel="alternate" />
+        <link href={`${process.env.SITE_URL}/curriculo`} hrefLang="pt-br" rel="alternate" />
       </Head>
       <Curriculum locale="pt" />
     </>

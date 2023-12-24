@@ -8,20 +8,18 @@ interface Props {
   inputProps?: InputHTMLAttributes<HTMLInputElement>;
 }
 
-const TextField = ({ text, inputProps, textareaProps }: Props) => {
-  return (
-    <label className={styles.textfield}>
-      {textareaProps ? (
-        <textarea placeholder=" " {...textareaProps} />
-      ) : (
-        <input placeholder=" " {...inputProps} />
-      )}
-      <span>
-        {text}
-        {(inputProps?.required || textareaProps?.required) && "*"}
-      </span>
-    </label>
-  );
-};
+const TextField = ({ text, inputProps, textareaProps }: Props) => (
+  <label className={styles.textfield}>
+    {textareaProps ? (
+      <textarea placeholder=" " {...textareaProps} />
+    ) : (
+      <input placeholder=" " {...inputProps} />
+    )}
+    <span>
+      {text}
+      {(inputProps?.required || textareaProps?.required) && "*"}
+    </span>
+  </label>
+);
 
 export default TextField;

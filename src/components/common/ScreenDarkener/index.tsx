@@ -18,7 +18,7 @@ interface Props {
 const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: Props) => {
   const [isAnimeIn, setIsAnimeIn] = useState(false);
   const [transitionStyle, setTransitionStyle] = useState(
-    `${styles.none} ${transitionClassNames?.none}`
+    `${styles.none} ${transitionClassNames?.none}`,
   );
 
   const animeIn = () => {
@@ -50,8 +50,8 @@ const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: P
 
   return (
     <button
-      onClick={() => setIsOpen(false)}
       className={`${styles.screenDarkener} ${transitionStyle}`}
+      onClick={() => setIsOpen(false)}
       {...props.buttonProps}
     >
       {props.children}

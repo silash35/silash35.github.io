@@ -7,8 +7,9 @@ interface Props {
   activeClass: string;
 }
 
-export default function Links({ activePage, activeClass }: Props) {
+const Links = ({ activePage, activeClass }: Props) => {
   const { home, resume, portfolio, contact } = activePage;
+
   return (
     <>
       <li className={home ? activeClass : undefined}>
@@ -25,4 +26,6 @@ export default function Links({ activePage, activeClass }: Props) {
       </li>
     </>
   );
-}
+};
+
+export default Links;

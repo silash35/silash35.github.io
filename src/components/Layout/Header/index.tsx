@@ -10,7 +10,7 @@ interface Props {
   activePage: ActivePage;
 }
 
-export default function Header(props: Props) {
+const Header = (props: Props) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
   return (
@@ -21,11 +21,11 @@ export default function Header(props: Props) {
           className={styles.sidenavTrigger}
           onClick={() => setSidebarIsOpen(true)}
         >
-          <img src="/images/icons/white/menu.svg" alt="menu Icon" width="32" height="32" />
+          <img alt="menu Icon" height="32" src="/images/icons/white/menu.svg" width="32" />
         </button>
 
-        <Link href="/" className={styles.logoContainer} title="Go to home page">
-          <img src="/icon.svg" alt="Silas Henrique Icon" width="64" height="64" />
+        <Link className={styles.logoContainer} href="/" title="Go to home page">
+          <img alt="Silas Henrique Icon" height="64" src="/icon.svg" width="64" />
         </Link>
 
         <ul className={styles.navLinks}>
@@ -33,7 +33,9 @@ export default function Header(props: Props) {
         </ul>
       </nav>
 
-      <Sidebar isOpen={sidebarIsOpen} setIsOpen={setSidebarIsOpen} activePage={props.activePage} />
+      <Sidebar activePage={props.activePage} isOpen={sidebarIsOpen} setIsOpen={setSidebarIsOpen} />
     </header>
   );
-}
+};
+
+export default Header;

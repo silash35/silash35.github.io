@@ -35,10 +35,10 @@ const Dialog = () => {
         This is a resume, if you are looking for an (almost) unstyled version go to the Curriculum
       </p>
       <div>
-        <Button variant="text" onClick={goToCurriculum}>
+        <Button onClick={goToCurriculum} variant="text">
           Go to curriculum
         </Button>
-        <Button variant="text" onClick={closeDialog}>
+        <Button onClick={closeDialog} variant="text">
           No
         </Button>
       </div>

@@ -5,6 +5,11 @@
   "author": "Silas Henrique <silash35@gmail.com>",
   "license": "Unlicense",
   "private": false,
+  "type": "module",
+  "engines": {
+    "node": "^20.10.0",
+    "pnpm": "^8.12.1"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build && next-sitemap",
@@ -13,17 +18,17 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.0.6",
-    "@types/node": "^18.11.13",
-    "@types/react": "^18.0.26",
+    "@next/bundle-analyzer": "^14.0.4",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
     "compression-webpack-plugin": "^10.0.0",
-    "eslint-config-silash35": "^1.2.1",
-    "next-sitemap": "^3.1.32",
-    "sass": "^1.56.2",
-    "typescript": "^4.9.4"
+    "eslint-config-silash35": "^3.2.0",
+    "next-sitemap": "^4.2.3",
+    "sass": "^1.69.5",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "next": "^13.0.6",
+    "next": "^14.0.4",
     "next-pwa": "^5.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

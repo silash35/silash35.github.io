@@ -1,13 +1,13 @@
 import styles from "./background.module.scss";
 
-export default function Background() {
-  return (
-    <div className={styles.background}>
-      <img
-        alt="Black background with incandescent light bulbs"
-        src="/images/power.webp"
-        aria-hidden="true"
-      />
-    </div>
-  );
-}
+const Background = () => (
+  <div className={styles.background}>
+    <img
+      alt="Black background with incandescent light bulbs"
+      aria-hidden="true"
+      src="/images/power.webp"
+    />
+  </div>
+);
+
+export default Background;

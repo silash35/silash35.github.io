@@ -8,30 +8,22 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Card = ({ children }: Props) => {
-  return <article className={styles.card}>{children}</article>;
-};
+const Card = ({ children }: Props) => <article className={styles.card}>{children}</article>;
 
-Card.Image = function CardImage(props: ImgHTMLAttributes<HTMLImageElement>) {
-  return (
-    <section className={styles.image}>
-      <ImageModal
-        imageProps={{
-          width: "384",
-          height: "216",
-          ...props,
-        }}
-      />
-    </section>
-  );
-};
+Card.image = (props: ImgHTMLAttributes<HTMLImageElement>) => (
+  <section className={styles.image}>
+    <ImageModal
+      imageProps={{
+        width: "384",
+        height: "216",
+        ...props,
+      }}
+    />
+  </section>
+);
 
-Card.Content = function CardContent({ children }: Props) {
-  return <section className={styles.text}>{children}</section>;
-};
+Card.content = ({ children }: Props) => <section className={styles.text}>{children}</section>;
 
-Card.Actions = function CardActions({ children }: Props) {
-  return <section className={styles.actions}>{children}</section>;
-};
+Card.actions = ({ children }: Props) => <section className={styles.actions}>{children}</section>;
 
 export default Card;
