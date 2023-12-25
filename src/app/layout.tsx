@@ -48,16 +48,12 @@ export const metadata: Metadata = {
   },
 };
 
-import Layout from "@/components/Layout";
-
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html className={roboto.className} dir="ltr" lang="en">
     <head>
       <meta content="text/html" httpEquiv="content-type" />
     </head>
-    <body>
-      <Layout>{children}</Layout>
-    </body>
+    <body>{children}</body>
   </html>
 );
 
