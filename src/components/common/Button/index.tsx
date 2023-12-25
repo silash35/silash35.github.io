@@ -1,3 +1,5 @@
+"use client";
+
 import type { ButtonHTMLAttributes, MouseEventHandler } from "react";
 
 import styles from "./button.module.scss";

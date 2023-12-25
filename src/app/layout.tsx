@@ -38,6 +38,14 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    shortcut: `${process.env.SITE_URL}/favicon.ico`,
+    other: {
+      rel: "mask-icon",
+      color: "#f45d22",
+      url: `${process.env.SITE_URL}/icons/safari-pinned-tab.svg`,
+    },
+  },
 };
 
 import Layout from "@/components/Layout";
@@ -46,10 +54,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html className={roboto.className} dir="ltr" lang="en">
     <head>
       <meta content="text/html" httpEquiv="content-type" />
-      <meta
-        content={`${process.env.SITE_URL}/icons/browserconfig.xml`}
-        name="msapplication-config"
-      />
     </head>
     <body>
       <Layout>{children}</Layout>
