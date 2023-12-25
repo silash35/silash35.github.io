@@ -2,14 +2,14 @@
 @use "helpers/shadow" as s;
 
 .dialog {
-  box-sizing: border-box;
   position: fixed;
-  left: 64px;
   bottom: 32px;
+  left: 64px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 16px;
 
   width: 400px;
-  padding: 16px;
-  border-radius: 8px;
   @include s.shadow(3);
   background-color: #424242;
 
@@ -24,20 +24,16 @@
   }
 
   @media screen and (max-width: 768px) {
-    left: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
     border-radius: 10px 10px 0 0;
+    width: 100%;
   }
+
+  opacity: 0;
+  transition: opacity v.$animeTimeFunction v.$animeDuration;
 
   &.show {
     opacity: 1;
-  }
-  &.hide {
-    opacity: 0;
-    transition: opacity v.$animeTimeFunction v.$animeDuration;
-  }
-  &.none {
-    display: none;
   }
 }

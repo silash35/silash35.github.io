@@ -12,14 +12,10 @@ interface Props {
 
 const Sidebar = ({ isOpen, setIsOpen, pathname }: Props) => (
   <ScreenDarkener
-    transitionClassNames={{
-      show: styles.show,
-      hide: styles.hide,
-      none: styles.none,
-    }}
     buttonProps={{ "aria-label": "Close Menu" }}
     isOpen={isOpen}
     setIsOpen={setIsOpen}
+    showClassName={styles.show}
   >
     <ul className={styles.sideBar}>
       <Links activeClass={styles.active} pathname={pathname} />

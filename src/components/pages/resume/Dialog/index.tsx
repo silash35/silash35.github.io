@@ -1,14 +1,17 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import Button from "@/components/common/Button";
 
 import styles from "./dialog.module.scss";
 
 const Dialog = () => {
-  const [transitionStyle, setTransitionStyle] = useState(styles.show);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const [isOpen, setIsOpen] = useState(true);
   const router = useRouter();
 
   const goToCurriculum = () => {
@@ -21,30 +24,32 @@ const Dialog = () => {
     }
   };
 
-  const closeDialog = () => {
-    setTimeout(() => {
-      setTransitionStyle(styles.hide);
-      setTimeout(() => {
-        setTransitionStyle(styles.none);
-      }, 300);
-    }, 300);
-  };
-
   return (
-    <article className={`${styles.dialog} ${transitionStyle}`}>
-      <h2>Looking for a curriculum?</h2>
-      <p>
-        This is a resume, if you are looking for an (almost) unstyled version go to the Curriculum
-      </p>
-      <div>
-        <Button onClick={goToCurriculum} variant="text">
-          Go to curriculum
-        </Button>
-        <Button onClick={closeDialog} variant="text">
-          No
-        </Button>
-      </div>
-    </article>
+    <CSSTransition
+      classNames={{
+        enterActive: styles.show,
+        enterDone: styles.show,
+      }}
+      in={isOpen}
+      timeout={300}
+      appear
+      unmountOnExit
+    >
+      <article className={styles.dialog} ref={ref}>
+        <h2>Looking for a curriculum?</h2>
+        <p>
+          This is a resume, if you are looking for an (almost) unstyled version go to the Curriculum
+        </p>
+        <div>
+          <Button onClick={goToCurriculum} variant="text">
+            Go to curriculum
+          </Button>
+          <Button onClick={() => setIsOpen(false)} variant="text">
+            No
+          </Button>
+        </div>
+      </article>
+    </CSSTransition>
   );
 };
 

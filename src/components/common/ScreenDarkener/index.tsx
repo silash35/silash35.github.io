@@ -1,6 +1,7 @@
 "use client";
 
-import { HTMLAttributes, useEffect, useRef, useState } from "react";
+import { HTMLAttributes, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import styles from "./screenDarkener.module.scss";
 
@@ -10,52 +11,32 @@ interface Props {
   buttonProps: HTMLAttributes<HTMLButtonElement>;
   children: React.ReactNode;
 
-  transitionClassNames?: {
-    show: string;
-    hide: string;
-    none: string;
-  };
+  showClassName?: string;
 }
 
-const ScreenDarkener = ({ isOpen, setIsOpen, transitionClassNames, ...props }: Props) => {
+const ScreenDarkener = ({ isOpen, setIsOpen, showClassName, ...props }: Props) => {
   const ref = useRef<HTMLButtonElement>(null);
 
-  const [transitionStyle, setTransitionStyle] = useState(
-    `${styles.none} ${transitionClassNames?.none}`,
-  );
-
-  const animeIn = () => {
-    if (ref.current !== null) {
-      ref.current.className = `${styles.hide} ${transitionClassNames?.hide}`;
-    }
-
-    setTransitionStyle(`${styles.show} ${transitionClassNames?.show}`);
-  };
-
-  const animeOut = () => {
-    setTransitionStyle(`${styles.hide} ${transitionClassNames?.hide}`);
-    setTimeout(() => {
-      setTransitionStyle(`${styles.none} ${transitionClassNames?.none}`);
-    }, 300);
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      animeIn();
-    } else {
-      animeOut();
-    }
-  }, [isOpen]);
-
   return (
-    <button
-      className={`${styles.screenDarkener} ${transitionStyle}`}
-      onClick={() => setIsOpen(false)}
-      {...props.buttonProps}
-      ref={ref}
+    <CSSTransition
+      classNames={{
+        enterActive: `${styles.show} ${showClassName}`,
+        enterDone: `${styles.show} ${showClassName}`,
+      }}
+      in={isOpen}
+      nodeRef={ref}
+      timeout={300}
+      unmountOnExit
     >
-      {props.children}
-    </button>
+      <button
+        onClick={() => setIsOpen(false)}
+        {...props.buttonProps}
+        className={styles.screenDarkener}
+        ref={ref}
+      >
+        {props.children}
+      </button>
+    </CSSTransition>
   );
 };
 

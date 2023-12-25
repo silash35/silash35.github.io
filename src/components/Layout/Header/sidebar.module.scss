@@ -3,33 +3,28 @@
 
 .sideBar {
   position: fixed;
+  top: 0;
+  bottom: 0;
+
+  left: -300px;
   margin: 0;
   padding: 0;
   width: 300px;
 
-  left: -300px;
-  top: 0;
-  bottom: 0;
-
   @include s.shadow(24);
-  background-color: #111111;
+
+  transform: translateX(0);
 
   transition: transform v.$animeTimeFunction v.$animeDuration;
+  background-color: #111111;
 
   .show & {
     transform: translateX(300px);
   }
-  .hide & {
-    transform: translateX(0);
-  }
-  .none & {
-    display: none;
-  }
 
   li {
-    list-style: none;
-
     transition: background-color 0.3s;
+    list-style: none;
     &.active {
       background-color: rgba(0, 0, 0, 0.2);
     }
@@ -39,9 +34,9 @@
     }
 
     a {
-      text-align: left;
       display: block;
       padding: 20px;
+      text-align: left;
     }
   }
 }

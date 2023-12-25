@@ -25,14 +25,10 @@ const ImageModal = ({ borderRadius, className, imageProps }: Props) => {
       </div>
 
       <ScreenDarkener
-        transitionClassNames={{
-          show: styles.show,
-          hide: styles.hide,
-          none: styles.none,
-        }}
         buttonProps={{ "aria-label": "Close Image" }}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
+        showClassName={styles.show}
       >
         <img className={styles.OpenedImageModal} {...imageProps} />
       </ScreenDarkener>
