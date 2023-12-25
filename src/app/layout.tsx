@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     "My personal website. Here you will find my resume, contact information and some of my projects",
   authors: [{ name: "Silas Henrique Alves Araújo" }],
   metadataBase: new URL(process.env.SITE_URL as string),
-  manifest: `${process.env.SITE_URL}/icons/site.webmanifest`,
 
   twitter: {
     creator: "@silash35",

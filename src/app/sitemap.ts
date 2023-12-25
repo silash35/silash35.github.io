@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const mediumPriorityPaths = ["/contact", "/contact"];
   const lowPriorityPaths = ["/curriculo", "/curriculum"];
 
-  const createSitemapEntry = (path: string, priority: number): MetadataRoute.Sitemap[0] => ({
+  const createSitemapEntry = (path: string, priority: number): MetadataRoute.Sitemap[number] => ({
     url: `${process.env.SITE_URL}${path}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
