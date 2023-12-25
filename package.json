@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-sitemap",
+    "build": "next build",
     "export": "next export",
     "start": "next start",
     "lint": "next lint"
@@ -25,7 +25,6 @@
     "@types/react-transition-group": "^4.4.10",
     "compression-webpack-plugin": "^10.0.0",
     "eslint-config-silash35": "^3.2.0",
-    "next-sitemap": "^4.2.3",
     "sass": "^1.69.5",
     "typescript": "^5.3.3"
   },
