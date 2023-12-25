@@ -1,17 +1,16 @@
 import ScreenDarkener from "@/components/common/ScreenDarkener";
 
-import { ActivePage } from "../activePage";
 import Links from "./Links";
 import styles from "./sidebar.module.scss";
 
 interface Props {
-  activePage: ActivePage;
+  pathname: string;
 
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const Sidebar = ({ isOpen, setIsOpen, activePage }: Props) => (
+const Sidebar = ({ isOpen, setIsOpen, pathname }: Props) => (
   <ScreenDarkener
     transitionClassNames={{
       show: styles.show,
@@ -23,7 +22,7 @@ const Sidebar = ({ isOpen, setIsOpen, activePage }: Props) => (
     setIsOpen={setIsOpen}
   >
     <ul className={styles.sideBar}>
-      <Links activeClass={styles.active} activePage={activePage} />
+      <Links activeClass={styles.active} pathname={pathname} />
     </ul>
   </ScreenDarkener>
 );

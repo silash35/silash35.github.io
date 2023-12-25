@@ -1,27 +1,23 @@
 import Link from "next/link";
 
-import { ActivePage } from "../activePage";
-
 interface Props {
-  activePage: ActivePage;
+  pathname: string;
   activeClass: string;
 }
 
-const Links = ({ activePage, activeClass }: Props) => {
-  const { home, resume, portfolio, contact } = activePage;
-
+const Links = ({ pathname, activeClass }: Props) => {
   return (
     <>
-      <li className={home ? activeClass : undefined}>
+      <li className={pathname === "/" ? activeClass : undefined}>
         <Link href="/">Home</Link>
       </li>
-      <li className={resume ? activeClass : undefined}>
+      <li className={pathname === "/resume" ? activeClass : undefined}>
         <Link href="/resume">Resume</Link>
       </li>
-      <li className={portfolio ? activeClass : undefined}>
+      <li className={pathname === "/portfolio" ? activeClass : undefined}>
         <Link href="/portfolio">Portfolio</Link>
       </li>
-      <li className={contact ? activeClass : undefined}>
+      <li className={pathname === "/contact" ? activeClass : undefined}>
         <Link href="/contact">Contact</Link>
       </li>
     </>

@@ -1,17 +1,19 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { ActivePage } from "../activePage";
 import styles from "./header.module.scss";
 import Links from "./Links";
 import Sidebar from "./Sidebar";
 
-interface Props {
-  activePage: ActivePage;
-}
-
-const Header = (props: Props) => {
+const Header = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  let pathname = usePathname();
+  if (pathname === null) {
+    pathname = "";
+  }
 
   return (
     <header className={styles.header}>
@@ -29,11 +31,11 @@ const Header = (props: Props) => {
         </Link>
 
         <ul className={styles.navLinks}>
-          <Links activeClass={styles.active} activePage={props.activePage} />
+          <Links activeClass={styles.active} pathname={pathname} />
         </ul>
       </nav>
 
-      <Sidebar activePage={props.activePage} isOpen={sidebarIsOpen} setIsOpen={setSidebarIsOpen} />
+      <Sidebar isOpen={sidebarIsOpen} pathname={pathname} setIsOpen={setSidebarIsOpen} />
     </header>
   );
 };

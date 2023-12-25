@@ -1,16 +1,14 @@
-import { ActivePage } from "./activePage";
 import Background from "./Background";
 import Header from "./Header";
 import Main from "./Main";
 
 interface Props {
   children: React.ReactNode;
-  activePage: ActivePage;
 }
 
-const Layout = ({ children, activePage }: Props) => (
+const Layout = ({ children }: Props) => (
   <>
-    <Header activePage={activePage} />
+    <Header />
     <Main>{children}</Main>
     <Background />
   </>

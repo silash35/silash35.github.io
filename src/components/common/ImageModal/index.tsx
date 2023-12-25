@@ -1,3 +1,5 @@
+"use client";
+
 import { ImgHTMLAttributes, useState } from "react";
 
 import ScreenDarkener from "@/components/common/ScreenDarkener";

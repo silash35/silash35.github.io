@@ -1,3 +1,5 @@
+"use client";
+
 import { HTMLAttributes, useEffect, useRef, useState } from "react";
 
 import styles from "./screenDarkener.module.scss";

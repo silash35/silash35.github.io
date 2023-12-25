@@ -18,6 +18,7 @@ const __dirname = path.dirname(__filename);
 export default async () => {
   let nextConfig = {
     reactStrictMode: true,
+    output: "export",
     sassOptions: {
       includePaths: [path.join(__dirname, "src/styles")],
     },
