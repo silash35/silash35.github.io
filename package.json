@@ -5,31 +5,35 @@
   "author": "Silas Henrique <silash35@gmail.com>",
   "license": "Unlicense",
   "private": false,
+  "type": "module",
+  "engines": {
+    "node": "^20.10.0",
+    "pnpm": "^8.12.1"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-sitemap",
+    "build": "next build",
     "export": "next export",
+    "analyze": "ANALYZE=true pnpm build",
     "start": "next start",
     "lint": "next lint"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^12.2.3",
-    "@types/node": "^18.6.1",
-    "@types/react": "^18.0.15",
+    "@next/bundle-analyzer": "^14.0.4",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-transition-group": "^4.4.10",
     "compression-webpack-plugin": "^10.0.0",
-    "eslint-config-silash35": "^1.0.1",
-    "next-sitemap": "^3.1.15",
-    "sass": "^1.54.0",
-    "typescript": "^4.7.4"
+    "eslint-config-silash35": "^3.2.0",
+    "sass": "^1.69.5",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "next": "^12.2.3",
-    "next-plugin-preact": "^3.0.7",
-    "next-pwa": "^5.5.4",
-    "preact": "^10.10.0",
-    "preact-render-to-string": "^5.2.1",
-    "react": "npm:@preact/compat@^17.1.1",
-    "react-dom": "npm:@preact/compat@^17.1.1",
-    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.2.0"
+    "next": "^14.0.4",
+    "next-pwa": "^5.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-transition-group": "^4.4.5"
   }
 }

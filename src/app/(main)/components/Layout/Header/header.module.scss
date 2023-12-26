@@ -1,0 +1,70 @@
+@use "helpers/shadow" as s;
+@use "variables" as v;
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+
+  a {
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-decoration: none;
+
+    text-transform: uppercase;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 85%;
+
+    button {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    background-color: black;
+    @include s.shadow(6);
+
+    nav {
+      justify-content: center;
+      width: 90%;
+
+      .sidenavTrigger {
+        display: block;
+        position: absolute;
+        left: 5%;
+      }
+    }
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+  li {
+    transition: color 0.3s;
+    list-style: none;
+    a {
+      &:hover {
+        color: v.$orange;
+      }
+    }
+
+    &.active {
+      a {
+        color: v.$orange;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

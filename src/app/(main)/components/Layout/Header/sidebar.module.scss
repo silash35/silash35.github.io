@@ -1,0 +1,42 @@
+@use "variables" as v;
+@use "helpers/shadow" as s;
+
+.sideBar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  left: -300px;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+
+  @include s.shadow(24);
+
+  transform: translateX(0);
+
+  transition: transform v.$animeTimeFunction v.$animeDuration;
+  background-color: #111111;
+
+  .show & {
+    transform: translateX(300px);
+  }
+
+  li {
+    transition: background-color 0.3s;
+    list-style: none;
+    &.active {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    a {
+      display: block;
+      padding: 20px;
+      text-align: left;
+    }
+  }
+}
