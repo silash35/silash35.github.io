@@ -218,6 +218,16 @@ const ResumeBody = ({ locale, className }: Props) => {
         <h2>{l.other}</h2>
         <ul>
           <li>
+            <a
+              href="https://silash35.gitlab.io/certificates/UFBAMostraSuaCara.pdf"
+              title={`${l.certificate} ${l.monitor} UFBA: Mostra a Sua Cara 2023`}
+              {...defaultProps}
+            >
+              UFBA: Mostra a Sua Cara 2023
+            </a>{" "}
+            - 10 {l.hours} - {l.monitor}
+          </li>
+          <li>
             {l.qtCon} - 12 {l.hours} - {l.listener}
           </li>
           <li>
