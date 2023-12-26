@@ -1,6 +1,6 @@
 import Card from "./Card";
 import IconLink from "./IconLink";
-import styles from "./portfolioCards.module.scss";
+import styles from "./portfolio.module.scss";
 
 const PortfolioCards = () => {
   return (

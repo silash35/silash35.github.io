@@ -1,4 +1,4 @@
-import ImageModal from "@/components/common/ImageModal";
+import ImageModal from "@/components/ImageModal";
 
 import styles from "./presentation.module.scss";
 

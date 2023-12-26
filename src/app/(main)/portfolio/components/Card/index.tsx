@@ -1,6 +1,6 @@
 import type { ImgHTMLAttributes } from "react";
 
-import ImageModal from "@/components/common/ImageModal";
+import ImageModal from "@/components/ImageModal";
 
 import styles from "./card.module.scss";
 

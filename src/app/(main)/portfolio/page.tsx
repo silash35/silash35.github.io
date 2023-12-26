@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 
-import Title from "@/components/common/Title";
-import PortfolioCards from "@/components/pages/Portfolio";
+import Title from "@/components/Title";
+
+import PortfolioCards from "./components";
 
 export const metadata: Metadata = {
   title: "Portfolio",

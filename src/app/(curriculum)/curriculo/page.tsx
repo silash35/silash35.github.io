@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import Curriculum from "@/components/pages/Curriculum";
+import Curriculum from "../components";
 
 export const metadata: Metadata = {
   title: "Currículo",

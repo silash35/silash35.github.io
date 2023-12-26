@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import Button from "@/components/common/Button";
+import Button from "@/components/Button";
 
 import styles from "./dialog.module.scss";
 

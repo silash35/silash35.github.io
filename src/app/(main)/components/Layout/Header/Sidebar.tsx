@@ -1,4 +1,4 @@
-import ScreenDarkener from "@/components/common/ScreenDarkener";
+import ScreenDarkener from "@/components/ScreenDarkener";
 
 import Links from "./Links";
 import styles from "./sidebar.module.scss";

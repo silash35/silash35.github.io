@@ -1,4 +1,4 @@
-import ResumeBody from "@/components/common/ResumeBody";
+import ResumeBody from "@/components/ResumeBody";
 
 import styles from "./content.module.scss";
 import Header from "./Header";
