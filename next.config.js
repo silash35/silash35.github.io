@@ -1,3 +1,4 @@
+import BundleAnalyzer from "@next/bundle-analyzer";
 import CompressionPlugin from "compression-webpack-plugin";
 import nextPWA from "next-pwa";
 import * as path from "path";
@@ -15,7 +16,7 @@ const withPWA = nextPWA({
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default async () => {
+export default () => {
   let nextConfig = {
     reactStrictMode: true,
     output: "export",
@@ -46,7 +47,7 @@ export default async () => {
   nextConfig = withPWA(nextConfig);
 
   if (process.env.ANALYZE === "true") {
-    const withBundleAnalyzer = await import("@next/bundle-analyzer")({
+    const withBundleAnalyzer = BundleAnalyzer({
       enabled: true,
     });
 
