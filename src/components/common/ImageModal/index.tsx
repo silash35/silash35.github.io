@@ -3,6 +3,7 @@
 import { ImgHTMLAttributes, useState } from "react";
 
 import ScreenDarkener from "@/components/common/ScreenDarkener";
+import cn from "@/utils/cn";
 
 import styles from "./imageModal.module.scss";
 
@@ -20,7 +21,7 @@ const ImageModal = ({ borderRadius, className, imageProps }: Props) => {
 
   return (
     <>
-      <div className={`${styles.imageModal} ${className}`} style={{ borderRadius }}>
+      <div className={cn(styles.imageModal, className)} style={{ borderRadius }}>
         <img {...imageProps} />
       </div>
 

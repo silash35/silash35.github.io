@@ -2,6 +2,8 @@
 
 import type { ButtonHTMLAttributes, MouseEventHandler } from "react";
 
+import cn from "@/utils/cn";
+
 import styles from "./button.module.scss";
 
 interface Props {
@@ -47,7 +49,7 @@ const Button = ({ variant, onClick, buttonProps, children }: Props) => {
   };
 
   return (
-    <button className={`${styles.button} ${styles[variant]}`} {...buttonProps} onClick={ripple}>
+    <button className={cn(styles.button, styles[variant])} {...buttonProps} onClick={ripple}>
       {children}
     </button>
   );

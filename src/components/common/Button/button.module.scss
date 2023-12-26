@@ -3,22 +3,22 @@
 
 .button {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
   position: relative;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
 
   padding: 0 16px;
   height: 36px;
 
-  text-transform: uppercase;
+  overflow: hidden;
+  font-weight: 500;
   font-size: 0.875rem;
   line-height: 2.25rem;
-  font-weight: 500;
   letter-spacing: 0.0892857143em;
 
-  border-radius: 4px;
+  text-transform: uppercase;
 
   img {
     margin-right: 8px;
@@ -26,8 +26,8 @@
 }
 
 .contained {
-  color: black;
   background-color: white;
+  color: black;
   @include s.shadow(3, true);
   &:hover {
     background-color: #ececec;
@@ -50,31 +50,33 @@
 .ripple {
   --scale: 0;
   --opacity: 0;
+  display: block;
 
   position: absolute;
   top: 0;
   left: 0;
 
-  pointer-events: none;
+  will-change: transform;
+  background: transparent;
   width: 1px;
   height: 1px;
-  background: transparent;
-  display: block;
 
-  will-change: transform;
+  pointer-events: none;
 
   &:after {
-    content: "";
     display: block;
-    width: 100%;
-    border-radius: 50%;
-    width: 2px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.4);
-
-    will-change: transform;
     transform: scale(var(--scale));
     opacity: var(--opacity);
-    transition: transform 0.5s, opacity 0.3s;
+    transition:
+      transform 0.5s,
+      opacity 0.3s;
+
+    will-change: transform;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    width: 2px;
+    height: 2px;
+    content: "";
   }
 }

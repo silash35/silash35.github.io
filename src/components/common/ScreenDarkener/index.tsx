@@ -3,6 +3,8 @@
 import { HTMLAttributes, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
+import cn from "@/utils/cn";
+
 import styles from "./screenDarkener.module.scss";
 
 interface Props {
@@ -20,8 +22,8 @@ const ScreenDarkener = ({ isOpen, setIsOpen, showClassName, ...props }: Props) =
   return (
     <CSSTransition
       classNames={{
-        enterActive: `${styles.show} ${showClassName}`,
-        enterDone: `${styles.show} ${showClassName}`,
+        enterActive: cn(styles.show, showClassName),
+        enterDone: cn(styles.show, showClassName),
       }}
       in={isOpen}
       nodeRef={ref}

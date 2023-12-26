@@ -4,17 +4,17 @@
 .card {
   display: flex;
   flex-wrap: wrap-reverse;
-  align-items: flex-end;
   justify-content: center;
+  align-items: flex-end;
 
   > section {
     display: flex;
     flex-grow: 1;
-
-    height: fit-content;
+    margin: 32px;
     border-radius: 24px;
     padding: 32px;
-    margin: 32px;
+
+    height: fit-content;
 
     @include s.shadow(3);
   }
