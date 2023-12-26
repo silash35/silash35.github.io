@@ -1,9 +1,5 @@
-# *
-User-agent: *
+User-Agent: *
 Allow: /
 
-# Host
 Host: https://silash35.github.io
-
-# Sitemaps
 Sitemap: https://silash35.github.io/sitemap.xml
