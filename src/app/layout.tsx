@@ -16,8 +16,9 @@ const roboto = Roboto({
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: { template: "%s | Silas Henrique", default: "Silas Henrique" },
   description:
-    "My personal website. Here you will find my resume, contact information and some of my projects",
+    "Silas Henrique, Electromechanical Technician, developer and Engineering student. Explore my resume, contacts, projects and more.",
   authors: [{ name: "Silas Henrique Alves Araújo" }],
   metadataBase: new URL(process.env.SITE_URL as string),
 
