@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: {
     canonical: "/curriculum",
-    languages: { "pt-BR": "/curriculo", "x-default": "/curriculum" },
+    languages: { "pt-BR": "/curriculo" },
   },
 };
 

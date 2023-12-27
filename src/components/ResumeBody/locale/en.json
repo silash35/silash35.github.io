@@ -7,11 +7,22 @@
   "electromechanicalTechnician": "Electromechanical technician course - IFBA (2018 - 2022)",
 
   "work": "Work Experience",
-  "internMakilabTitle": "Intern at Makilab Serviços",
-  "internMakilabDate": "Aug. 2021 – Feb. 2022",
-  "internMakilabActivity1": "Maintenance & Repair for Electromechanical Equipments",
-  "internMakilabActivity2": "Project Development with Arduino",
-  "internMakilabActivity3": "Costumer Service",
+
+  "directorOPTIMUS": "Marketing Director",
+  "directorOPTIMUSDate": "Feb. 2023 to Dec. 2023",
+  "performanceManagerOPTIMUS": "Performance Manager",
+  "performanceManagerOPTIMUSDate": "Nov. 2022 to Feb. 2023",
+  "traineeOPTIMUS": "Trainee",
+  "traineeOPTIMUSDate": "Sept. 2022 to Nov. 2022",
+  "OPTIMUSActivity1": "Leadership and management of the Marketing Department",
+  "OPTIMUSActivity2": "Development of the company's new website",
+  "OPTIMUSActivity3": "Design of corporate and promotional materials, including artwork for social media",
+
+  "internMakilab": "Intern",
+  "internMakilabDate": "Aug. 2021 to Feb. 2022",
+  "MakilabActivity1": "Maintenance & Repair for Electromechanical Equipments",
+  "MakilabActivity2": "Project Development with Arduino",
+  "MakilabActivity3": "Costumer Service",
 
   "skills": "Skills",
   "videoEditing": "Video editing",
@@ -52,6 +63,7 @@
 
   "other": "Other Things",
   "listener": "listener",
+  "monitor": "monitor",
   "qtCon": "QtCon Brazil 2020",
   "snct": "SNCT (National Science and Technology Week) 2019"
 }

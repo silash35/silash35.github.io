@@ -7,11 +7,22 @@
   "electromechanicalTechnician": "Técnico em Eletromecânica - IFBA (2018 - 2022)",
 
   "work": "Experiencia Profissional",
-  "internMakilabTitle": "Estagiário na Makilab Serviços",
+
+  "directorOPTIMUS": "Diretor de Marketing",
+  "directorOPTIMUSDate": "Fevereiro de 2023 a Dezembro de 2023",
+  "performanceManagerOPTIMUS": "Gerente de Performance",
+  "performanceManagerOPTIMUSDate": "Novembro de 2022 a Fevereiro de 2023",
+  "traineeOPTIMUS": "Trainee",
+  "traineeOPTIMUSDate": "Setembro de 2022 a Novembro de 2022",
+  "OPTIMUSActivity1": "Liderança e gestão da Diretoria de Marketing",
+  "OPTIMUSActivity2": "Desenvolvimento do novo website da empresa",
+  "OPTIMUSActivity3": "Design de materiais corporativos e promocionais, incluindo artes para redes sociais",
+
+  "internMakilab": "Estagiário",
   "internMakilabDate": "Agosto de 2021 a Fevereiro de 2022",
-  "internMakilabActivity1": "Reparo e Manutenção de equipamentos e ferramentas eletromecânicas",
-  "internMakilabActivity2": "Desenvolvimento de projetos com Arduino",
-  "internMakilabActivity3": "Atendimento ao Cliente",
+  "MakilabActivity1": "Reparo e Manutenção de equipamentos e ferramentas eletromecânicas",
+  "MakilabActivity2": "Desenvolvimento de projetos com Arduino",
+  "MakilabActivity3": "Atendimento ao Cliente",
 
   "skills": "Habilidades",
   "videoEditing": "Edição de Vídeo",
@@ -52,6 +63,7 @@
 
   "other": "Outras Informações",
   "listener": "ouvinte",
+  "monitor": "monitor",
   "qtCon": "QtCon Brasil 2020",
   "snct": "SNCT (Semana Nacional de Ciência e Tecnologia) 2019"
 }

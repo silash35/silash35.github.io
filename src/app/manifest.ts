@@ -13,6 +13,7 @@ export default function manifest(): MetadataRoute.Manifest {
     }${size}.png`,
     sizes: size,
     type: "image/png",
+    purpose: maskable ? "maskable" : undefined,
   });
 
   const normalIcons = ["192x192", "512x512"];
