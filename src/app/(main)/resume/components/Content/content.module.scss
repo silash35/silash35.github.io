@@ -79,6 +79,11 @@
       text-indent: 20px;
     }
 
+    small {
+      display: block;
+      font-size: 0.9em;
+    }
+
     ul {
       @extend %cardContent;
       padding-top: 8px;

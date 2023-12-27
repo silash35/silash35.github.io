@@ -40,13 +40,41 @@ const ResumeBody = ({ locale, className }: Props) => {
 
       <article>
         <h2>{l.work}</h2>
-        <h3>{l.internMakilabTitle}</h3>
-        <small>{l.internMakilabDate}</small>
-        <ul>
-          <li>{l.internMakilabActivity1}</li>
-          <li>{l.internMakilabActivity2}</li>
-          <li>{l.internMakilabActivity3}</li>
-        </ul>
+        <section>
+          <h3>
+            <a href="https://optimusjr.com.br/" title="OPTIMUS Jr. Website" {...defaultProps}>
+              OPTIMUS Jr. Controle e Automação
+            </a>
+          </h3>
+          <small>
+            {l.directorOPTIMUS} - {l.directorOPTIMUSDate}
+          </small>
+          <small>
+            {l.performanceManagerOPTIMUS} - {l.performanceManagerOPTIMUSDate}
+          </small>
+          <small>
+            {l.traineeOPTIMUS} - {l.traineeOPTIMUSDate}
+          </small>
+
+          <ul>
+            <li>{l.OPTIMUSActivity1}</li>
+            <li>{l.OPTIMUSActivity2}</li>
+            <li>{l.OPTIMUSActivity3}</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>MakiLab Serviços</h3>
+          <small>
+            {l.internMakilab} - {l.internMakilabDate}
+          </small>
+
+          <ul>
+            <li>{l.MakilabActivity1}</li>
+            <li>{l.MakilabActivity2}</li>
+            <li>{l.MakilabActivity3}</li>
+          </ul>
+        </section>
       </article>
 
       <article>
