@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const highPriorityPaths = ["/"];
-  const mediumPriorityPaths = ["/contact", "/contact"];
+  const mediumPriorityPaths = ["/contact", "/portfolio", "/resume"];
   const lowPriorityPaths = ["/curriculo", "/curriculum"];
 
   const createSitemapEntry = (path: string, priority: number): MetadataRoute.Sitemap[number] => ({
