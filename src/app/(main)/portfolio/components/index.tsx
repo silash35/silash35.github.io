@@ -24,7 +24,7 @@ const PortfolioCards = () => {
               alt: "link icon",
             }}
             linkProps={{
-              href: "https://opensom.vercel.app/",
+              href: "https://opensom-frontend.silas.eng.br/",
               title: "access the OpenSOM demo instance",
             }}
           />
