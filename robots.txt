@@ -1,5 +1,5 @@
 User-Agent: *
 Allow: /
 
-Host: https://silash35.github.io
-Sitemap: https://silash35.github.io/sitemap.xml
+Host: https://silas.eng.br
+Sitemap: https://silas.eng.br/sitemap.xml
