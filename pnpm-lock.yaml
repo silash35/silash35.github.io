@@ -43,8 +43,8 @@ importers:
         specifier: ^11.1.0
         version: 11.1.0(webpack@5.91.0)
       eslint-config-silash35:
-        specifier: ^4.0.0
-        version: 4.0.0(postcss@8.4.38)(typescript@5.4.5)
+        specifier: ^4.0.1
+        version: 4.0.1(postcss@8.4.38)(typescript@5.4.5)
       sass:
         specifier: ^1.77.2
         version: 1.77.2
@@ -1352,8 +1352,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.4.777:
-    resolution: {integrity: sha512-n02NCwLJ3wexLfK/yQeqfywCblZqLcXphzmid5e8yVPdtEcida7li0A5WQKghHNG0FeOMCzeFOzEbtAh5riXFw==}
+  electron-to-chromium@1.4.778:
+    resolution: {integrity: sha512-C6q/xcUJf/2yODRxAVCfIk4j3y3LMsD0ehiE2RQNV2cxc8XU62gR6vvYh3+etSUzlgTfil+qDHI1vubpdf0TOA==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1421,8 +1421,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-config-silash35@4.0.0:
-    resolution: {integrity: sha512-5OKqXDzq1GVC0eGxgYtLnnf0YBKw8a0xv7ZYO3essXCLq4JNTxwXuDUVhY7A7VAFyptMxGSdECqSDj6aARth/A==}
+  eslint-config-silash35@4.0.1:
+    resolution: {integrity: sha512-VtK6ZYJC8pSORgFUwk3PBAnrp+gQEOSP3ia7Gnj5A2iJDCwo+cn/L5BG995pwByFD8x3aZ2gC8B1khhKSjQ2OA==}
     engines: {node: ^20.10.0}
 
   eslint-plugin-react@7.34.1:
@@ -4184,7 +4184,7 @@ snapshots:
   browserslist@4.23.0:
     dependencies:
       caniuse-lite: 1.0.30001621
-      electron-to-chromium: 1.4.777
+      electron-to-chromium: 1.4.778
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
 
@@ -4359,7 +4359,7 @@ snapshots:
     dependencies:
       jake: 10.9.1
 
-  electron-to-chromium@1.4.777: {}
+  electron-to-chromium@1.4.778: {}
 
   emoji-regex@8.0.0: {}
 
@@ -4476,7 +4476,7 @@ snapshots:
     dependencies:
       eslint: 9.3.0
 
-  eslint-config-silash35@4.0.0(postcss@8.4.38)(typescript@5.4.5):
+  eslint-config-silash35@4.0.1(postcss@8.4.38)(typescript@5.4.5):
     dependencies:
       '@eslint/compat': 1.0.1
       '@eslint/eslintrc': 3.1.0
