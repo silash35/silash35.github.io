@@ -6,9 +6,9 @@
   "license": "Unlicense",
   "private": false,
   "type": "module",
+  "packageManager": "pnpm@9.1.2+sha512.127dc83b9ea10c32be65d22a8efb4a65fb952e8fefbdfded39bdc3c97efc32d31b48b00420df2c1187ace28c921c902f0cb5a134a4d032b8b5295cbfa2c681e2",
   "engines": {
-    "node": "^20.10.0",
-    "pnpm": "^8.12.1"
+    "node": "^20.10.0"
   },
   "scripts": {
     "dev": "next dev",
@@ -16,24 +16,24 @@
     "export": "next export",
     "analyze": "ANALYZE=true pnpm build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ./next.config.js ./src && prettier --check ."
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^14.0.4",
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
+    "@next/bundle-analyzer": "^14.2.3",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
     "@types/react-transition-group": "^4.4.10",
-    "compression-webpack-plugin": "^10.0.0",
-    "eslint-config-silash35": "^3.2.0",
-    "sass": "^1.69.5",
-    "typescript": "^5.3.3"
+    "compression-webpack-plugin": "^11.1.0",
+    "eslint-config-silash35": "^4.0.0",
+    "sass": "^1.77.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "next": "^14.0.4",
+    "next": "^14.2.3",
     "next-pwa": "^5.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-transition-group": "^4.4.5"
   }
 }
