@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[536,225],{2972:function(e,n,u){Promise.resolve().then(u.t.bind(u,4829,23)),Promise.resolve().then(u.t.bind(u,4533,23))},4533:function(e){e.exports={page:"curriculum_page__xI57D",background:"curriculum_background__DedSH"}}},function(e){e.O(0,[31,829,365,373,744],function(){return e(e.s=2972)}),_N_E=e.O()}]);
