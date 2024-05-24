@@ -35,8 +35,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "My personal website. Here you will find my resume, contact information and some of my projects",
     start_url: "/",
     display: "standalone",
-    background_color: "#121212",
-    theme_color: "#121212",
+    background_color: "#000",
+    theme_color: "#000",
     icons: [
       ...normalIcons.map((size) => createIconEntry(size)),
       ...maskableIcons.map((size) => createIconEntry(size, true)),

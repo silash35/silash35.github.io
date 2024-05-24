@@ -5,12 +5,12 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  background-color: #000;
 
   min-width: 320px;
   min-height: 100vh;
-  color: white;
+  color: #fff;
   font-weight: 400;
-  font-family: Roboto, sans-serif;
 }
 
 button {

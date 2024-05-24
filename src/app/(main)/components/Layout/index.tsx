@@ -1,4 +1,3 @@
-import Background from "./Background";
 import Header from "./Header";
 import Main from "./Main";
 
@@ -10,7 +9,6 @@ const Layout = ({ children }: Props) => (
   <>
     <Header />
     <Main>{children}</Main>
-    <Background />
   </>
 );
 

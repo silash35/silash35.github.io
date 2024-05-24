@@ -2,7 +2,7 @@ import "@/styles/globals.scss";
 
 import { Viewport } from "next";
 export const viewport: Viewport = {
-  themeColor: "#121212",
+  themeColor: "#000",
 };
 
 import { Roboto } from "next/font/google";
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     "Silas Henrique, Electromechanical Technician, developer and Engineering student. Explore my resume, contacts, projects and more.",
   authors: [{ name: "Silas Henrique Alves Araújo" }],
   metadataBase: new URL(process.env.SITE_URL as string),
-
   twitter: {
     creator: "@silash35",
   },
@@ -39,11 +38,11 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    shortcut: `${process.env.SITE_URL}/favicon.ico`,
+    shortcut: "/favicon.ico",
     other: {
       rel: "mask-icon",
+      url: "/icons/safari-pinned-tab.svg",
       color: "#f45d22",
-      url: `${process.env.SITE_URL}/icons/safari-pinned-tab.svg`,
     },
   },
 };
