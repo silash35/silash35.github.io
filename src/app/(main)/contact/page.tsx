@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import Title from "@/components/Title";
 
-import ContactCard from "./components";
+import ContactCard from "./_components";
 
 export const metadata: Metadata = {
   title: "Contact",
