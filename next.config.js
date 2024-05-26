@@ -1,5 +1,4 @@
 import BundleAnalyzer from "@next/bundle-analyzer";
-import CompressionPlugin from "compression-webpack-plugin";
 import nextPWA from "next-pwa";
 import * as path from "path";
 import { fileURLToPath } from "url";
@@ -25,22 +24,6 @@ export default () => {
     },
     env: {
       SITE_URL: process.env.SITE_URL,
-    },
-
-    webpack: (config, { dev, isServer }) => {
-      // Only in client production build
-      if (!dev && !isServer) {
-        // Enable Compression
-        config.plugins.push(new CompressionPlugin());
-        config.plugins.push(
-          new CompressionPlugin({
-            filename: "[path][base].br",
-            algorithm: "brotliCompress",
-          }),
-        );
-      }
-
-      return config;
     },
   };
 
