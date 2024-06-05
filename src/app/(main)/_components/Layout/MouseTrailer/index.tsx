@@ -11,7 +11,7 @@ const MouseTrailer = () => {
     const blob = trailerRef.current;
     if (!blob) return;
 
-    const pointerMoveHandler = (event: PointerEvent) => {
+    const pointerHandler = (event: PointerEvent) => {
       const { clientX, clientY } = event;
 
       blob.animate(
@@ -23,9 +23,11 @@ const MouseTrailer = () => {
       );
     };
 
-    window.addEventListener("pointermove", pointerMoveHandler);
+    window.addEventListener("pointermove", pointerHandler);
+    window.addEventListener("pointerdown", pointerHandler);
     return () => {
-      window.removeEventListener("pointermove", pointerMoveHandler);
+      window.removeEventListener("pointermove", pointerHandler);
+      window.removeEventListener("pointerdown", pointerHandler);
     };
   }, [trailerRef]);
 

@@ -24,20 +24,20 @@ $animation: 0.2s v.$animeTimeFunction;
     height: 2px;
   }
 
-  &.top > .line {
+  &.top .line {
     top: 13px;
   }
 
-  &.middle > .line {
+  &.middle .line {
     top: 23px;
   }
 
-  &.bottom > .line {
+  &.bottom .line {
     top: 33px;
   }
 }
 
-.open > .lineWrapper {
+.open .lineWrapper {
   transition:
     transform $animation 0s,
     opacity $animation 0s;

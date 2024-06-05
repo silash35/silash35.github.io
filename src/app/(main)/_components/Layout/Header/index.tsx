@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
-import useToggle from "@/utils/hooks/useToggle";
+import { useState } from "react";
 
 import styles from "./header.module.scss";
 import Links from "./Links";
@@ -10,7 +9,18 @@ import MenuIcon from "./MenuIcon";
 import Sidebar from "./Sidebar";
 
 const Header = () => {
-  const [showSidebar, toggleSidebar] = useToggle(false);
+  const [sidebarOpen, setSidebar] = useState(false);
+
+  const clickHandler = () => {
+    if (sidebarOpen) {
+      document.body.style.overflow = "unset";
+      setSidebar(false);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.body.style.overflow = "hidden";
+      setSidebar(true);
+    }
+  };
 
   return (
     <header className={styles.header}>
@@ -27,11 +37,11 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button aria-label="Open menu" className={styles.sidebarButton} onClick={toggleSidebar}>
-        <MenuIcon isOpen={showSidebar} />
+      <button aria-label="Open menu" className={styles.sidebarButton} onClick={clickHandler}>
+        <MenuIcon isOpen={sidebarOpen} />
       </button>
 
-      <Sidebar isOpen={showSidebar} />
+      <Sidebar isOpen={sidebarOpen} />
     </header>
   );
 };
