@@ -1,41 +1,37 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+
+// import Sidebar from "./Sidebar";
+import useToggle from "@/utils/hooks/useToggle";
 
 import styles from "./header.module.scss";
 import Links from "./Links";
-import Sidebar from "./Sidebar";
+import MenuIcon from "./MenuIcon";
 
 const Header = () => {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
-  let pathname = usePathname();
-  if (pathname === null) {
-    pathname = "";
-  }
+  const [showSidebar, toggleSidebar] = useToggle(false);
 
   return (
     <header className={styles.header}>
-      <nav>
-        <button
-          aria-label="Open Menu"
-          className={styles.sidenavTrigger}
-          onClick={() => setSidebarIsOpen(true)}
-        >
-          <img alt="menu Icon" height="32" src="/images/icons/white/menu.svg" width="32" />
-        </button>
+      <Link className={styles.logoContainer} href="/" title="Home page">
+        <picture>
+          <source media="(min-width: 425px)" srcSet="/logo.svg" />
+          <img alt="Silas Henrique logo" height="48" src="/silas-icon.svg" />
+        </picture>
+      </Link>
 
-        <Link className={styles.logoContainer} href="/" title="Go to home page">
-          <img alt="Silas Henrique Icon" height="64" src="/icon.svg" width="64" />
-        </Link>
-
-        <ul className={styles.navLinks}>
-          <Links activeClass={styles.active} pathname={pathname} />
+      <nav className={styles.desktopNav}>
+        <ul>
+          <Links activeClass={styles.active} />
         </ul>
       </nav>
 
-      <Sidebar isOpen={sidebarIsOpen} pathname={pathname} setIsOpen={setSidebarIsOpen} />
+      <button aria-label="Open Menu" className={styles.sidebarButton} onClick={toggleSidebar}>
+        <MenuIcon isOpen={showSidebar} />
+      </button>
+
+      {/* <Sidebar isOpen={showSidebar} setIsOpen={setSidebar} /> */}
     </header>
   );
 };

@@ -1,0 +1,66 @@
+.iconWrapper {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+}
+
+$animation: 0.2s cubic-bezier(0, 0, 0, 1);
+
+.lineWrapper {
+  transition:
+    transform $animation 0.2s,
+    opacity $animation 0.2s;
+
+  .line {
+    position: absolute;
+    left: 8px;
+
+    transition: transform $animation 0s;
+    background: currentcolor;
+    width: 32px;
+    height: 2px;
+  }
+
+  &.top > .line {
+    top: 13px;
+  }
+
+  &.middle > .line {
+    top: 23px;
+  }
+
+  &.bottom > .line {
+    top: 33px;
+  }
+}
+
+.open > .lineWrapper {
+  transition:
+    transform $animation 0s,
+    opacity $animation 0s;
+
+  .line {
+    transition: transform $animation 0.2s;
+  }
+
+  &.top {
+    transform: translateY(10px);
+
+    .line {
+      transform: rotate(45deg);
+    }
+  }
+
+  &.middle {
+    opacity: 0;
+  }
+
+  &.bottom {
+    transform: translateY(-10px);
+
+    .line {
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -4,13 +4,11 @@ import Links from "./Links";
 import styles from "./sidebar.module.scss";
 
 interface Props {
-  pathname: string;
-
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const Sidebar = ({ isOpen, setIsOpen, pathname }: Props) => (
+const Sidebar = ({ isOpen, setIsOpen }: Props) => (
   <ScreenDarkener
     buttonProps={{ "aria-label": "Close Menu" }}
     isOpen={isOpen}
@@ -18,7 +16,7 @@ const Sidebar = ({ isOpen, setIsOpen, pathname }: Props) => (
     showClassName={styles.show}
   >
     <ul className={styles.sideBar}>
-      <Links activeClass={styles.active} pathname={pathname} />
+      <Links activeClass={styles.active} />
     </ul>
   </ScreenDarkener>
 );
