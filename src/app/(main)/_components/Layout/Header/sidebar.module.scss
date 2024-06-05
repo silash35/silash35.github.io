@@ -2,41 +2,54 @@
 @use "helpers/shadow" as s;
 
 .sideBar {
+  display: none;
   position: fixed;
-  top: 0;
+
+  top: 96px;
   bottom: 0;
-
-  left: -300px;
-  margin: 0;
-  padding: 0;
-  width: 300px;
-
-  @include s.shadow(24);
+  left: -100%;
 
   transform: translateX(0);
-
   transition: transform v.$animeTimeFunction v.$animeDuration;
-  background-color: #111111;
 
-  .show & {
-    transform: translateX(300px);
+  margin: 0;
+  background-color: black;
+  padding: 0;
+
+  width: 100%;
+
+  &.open {
+    transform: translateX(100%);
   }
 
   li {
-    transition: background-color 0.3s;
+    transition: color v.$animeTimeFunction v.$animeDuration;
     list-style: none;
     &.active {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
+      a {
+        color: v.$orange;
+      }
     }
 
     a {
       display: block;
       padding: 20px;
+
+      color: white;
+      font-weight: 500;
+      font-size: 1.2rem;
       text-align: left;
+      text-decoration: none;
+
+      text-transform: uppercase;
+
+      &:hover {
+        color: v.$orange;
+      }
     }
+  }
+
+  @media (max-width: 1023px) {
+    display: block;
   }
 }

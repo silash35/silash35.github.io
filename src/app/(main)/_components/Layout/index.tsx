@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Main from "./Main";
+import MouseTrailer from "./MouseTrailer";
 
 interface Props {
   children: React.ReactNode;
@@ -7,6 +8,7 @@ interface Props {
 
 const Layout = ({ children }: Props) => (
   <>
+    <MouseTrailer />
     <Header />
     <Main>{children}</Main>
   </>

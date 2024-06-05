@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 .iconWrapper {
   position: relative;
 
@@ -5,7 +7,7 @@
   height: 48px;
 }
 
-$animation: 0.2s cubic-bezier(0, 0, 0, 1);
+$animation: 0.2s v.$animeTimeFunction;
 
 .lineWrapper {
   transition:

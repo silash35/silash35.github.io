@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 
-// import Sidebar from "./Sidebar";
 import useToggle from "@/utils/hooks/useToggle";
 
 import styles from "./header.module.scss";
 import Links from "./Links";
 import MenuIcon from "./MenuIcon";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const [showSidebar, toggleSidebar] = useToggle(false);
@@ -27,11 +27,11 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button aria-label="Open Menu" className={styles.sidebarButton} onClick={toggleSidebar}>
+      <button aria-label="Open menu" className={styles.sidebarButton} onClick={toggleSidebar}>
         <MenuIcon isOpen={showSidebar} />
       </button>
 
-      {/* <Sidebar isOpen={showSidebar} setIsOpen={setSidebar} /> */}
+      <Sidebar isOpen={showSidebar} />
     </header>
   );
 };
