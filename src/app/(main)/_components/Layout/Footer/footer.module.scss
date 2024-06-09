@@ -1,0 +1,29 @@
+@use "variables" as v;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 32px;
+
+  p,
+  button {
+    margin: 0;
+    line-height: 1rem;
+    text-align: center;
+  }
+
+  p svg {
+    display: inline;
+    vertical-align: top;
+    height: 1rem;
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    padding: 16px;
+  }
+}

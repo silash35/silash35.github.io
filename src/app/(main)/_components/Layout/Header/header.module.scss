@@ -15,6 +15,7 @@
 
   @media (max-width: 1023px) {
     background-color: black;
+    @include s.shadow(3);
   }
 }
 
