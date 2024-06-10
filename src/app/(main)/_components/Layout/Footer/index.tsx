@@ -27,19 +27,17 @@ const sentences = [
 const getRandomSentence = () => sentences[Math.floor(Math.random() * sentences.length)];
 
 const Footer = () => {
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [sentence, setSentence] = useState("Checking notes...");
 
   useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-    setSentence(getRandomSentence);
+    setSentence(getRandomSentence());
   }, []);
 
   return (
     <footer className={styles.footer}>
       <p suppressHydrationWarning>
         <PublicDomainIcon />
-        {currentYear} Silas Henrique. No rights reserved.
+        {new Date().getFullYear()} Silas Henrique. No rights reserved.
       </p>
 
       <p>{sentence}</p>
