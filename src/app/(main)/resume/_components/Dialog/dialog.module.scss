@@ -11,7 +11,8 @@
 
   width: 400px;
   @include s.shadow(3);
-  background-color: #424242;
+  border: 1px solid #ffffff29;
+  background-color: #101012;
 
   h2 {
     margin: 0;
