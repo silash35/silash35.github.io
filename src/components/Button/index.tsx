@@ -2,7 +2,7 @@
 
 import { PropsWithChildren } from "react";
 
-import cn from "@/utils/cn";
+import cn from "@/others/cn";
 
 import styles from "./button.module.scss";
 

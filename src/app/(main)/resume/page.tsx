@@ -1,17 +1,17 @@
 import { Metadata } from "next";
 
-import Content from "./_components/Content";
 import Dialog from "./_components/Dialog";
+import Resume from "./_components/Resume";
 
 export const metadata: Metadata = {
   title: "Resume",
 };
 
-const Resume = () => (
+const ResumePage = () => (
   <>
-    <Content />
+    <Resume />
     <Dialog />
   </>
 );
 
-export default Resume;
+export default ResumePage;

@@ -3,7 +3,7 @@
 import { HTMLAttributes, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import cn from "@/utils/cn";
+import cn from "@/others/cn";
 
 import styles from "./screenDarkener.module.scss";
 

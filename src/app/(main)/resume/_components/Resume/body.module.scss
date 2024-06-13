@@ -6,28 +6,6 @@
   background-color: #141414;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 80%;
-
-  a {
-    transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-    border-bottom: solid 1px;
-    text-decoration: none;
-
-    &:hover {
-      border-color: transparent;
-    }
-  }
-
-  @media screen and (max-width: 425px) {
-    gap: 16px;
-    width: 90%;
-  }
-}
-
 .body {
   column-gap: 1.5rem;
   column-count: 2;

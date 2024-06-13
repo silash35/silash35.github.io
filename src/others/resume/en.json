@@ -1,0 +1,197 @@
+[
+  {
+    "title": "Summary",
+    "paragraphs": [
+      "Technician in electromechanics from the IFBA (Federal Institute of Education, Science and Technology of Bahia), with great interest in the automation area.",
+      "I have experience as an educational robotics monitor and I am a programmer in C++ and web development."
+    ]
+  },
+  {
+    "title": "Academic background",
+    "topics": [
+      {
+        "text": "Electromechanical technician course - IFBA (2018 - 2022)",
+        "href": "https://silash35.gitlab.io/certificates/eletromecanica.pdf",
+        "title": "Electromechanical Technician Certificate"
+      }
+    ]
+  },
+  {
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "company": {
+          "text": "OPTIMUS Jr. Controle e Automação",
+          "title": "Website of OPTIMUS Jr.",
+          "href": "https://optimusjr.com.br/"
+        },
+        "positions": [
+          "Marketing Director - Feb. 2023 to Dec. 2023",
+          "Performance Manager - Nov. 2022 to Feb. 2023",
+          "Trainee - Sept. 2022 to Nov. 2022"
+        ],
+        "activities": [
+          "Leadership and management of the Marketing Department",
+          "Development of the company's new website",
+          "Design of corporate and promotional materials, including artwork for social media"
+        ]
+      },
+      {
+        "company": "Makilab Serviços",
+        "positions": ["Intern - Aug. 2021 to Feb. 2022"],
+        "activities": [
+          "Maintenance & Repair for Electromechanical Equipments",
+          "Project Development with Arduino",
+          "Costumer Service"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Skills",
+    "topics": [
+      "Video editing",
+      "C++ development (with Qt framework)",
+      {
+        "text": "FrontEnd (HTML, CSS, JS)",
+        "href": "/portfolio",
+        "title": "My portfolio (which includes web projects)"
+      },
+      "Inkscape",
+      "Gimp",
+      "Libre Office Suite",
+      {
+        "text": "Git and GitHub",
+        "href": "http://brorlandi.github.io/GitTrainingWall/",
+        "title": "Git Training Wall"
+      },
+      "Linux"
+    ]
+  },
+  {
+    "title": "Relevant Coursework",
+    "topics": [
+      {
+        "text": "Robotics (basics)",
+        "href": "https://silash35.gitlab.io/certificates/cursoRobotica1.pdf",
+        "title": "Robotics Certificate",
+        "outsideText": "- 32 hours"
+      },
+      {
+        "text": "Information and communication technology",
+        "href": "https://silash35.gitlab.io/certificates/senaiTIC.pdf",
+        "title": "Information and communication technology Certificate",
+        "outsideText": "- 14 hours"
+      },
+      {
+        "text": "Entrepreneurship",
+        "href": "https://silash35.gitlab.io/certificates/senaiEmpreendedorismo.pdf",
+        "title": "Entrepreneurship Certificate",
+        "outsideText": "- 14 hours"
+      },
+      {
+        "text": "Programming logic",
+        "href": "https://silash35.gitlab.io/certificates/senaiLogicaDaProgramacao.pdf",
+        "title": "Programming logic Certificate",
+        "outsideText": "- 14 hours"
+      },
+      {
+        "text": "Microcomputer maintenance",
+        "href": "https://silash35.gitlab.io/certificates/megaCursos5.pdf",
+        "title": "Microcomputer maintenance Certificate",
+        "outsideText": "- 48 hours"
+      },
+      {
+        "text": "Administration assistant",
+        "href": "https://silash35.gitlab.io/certificates/megaCursos4.pdf",
+        "title": "Administration assistant Certificate",
+        "outsideText": "- 48 hours"
+      },
+      {
+        "text": "Web Design (basics)",
+        "href": "https://silash35.gitlab.io/certificates/megaCursos3.pdf",
+        "title": "Web Design Certificate",
+        "outsideText": "- 48 hours"
+      },
+      {
+        "text": "Microsoft Office (advanced)",
+        "href": "https://silash35.gitlab.io/certificates/megaCursos2.pdf",
+        "title": "Microsoft Office Certificate",
+        "outsideText": "- 32 hours"
+      },
+      {
+        "text": "Microsoft Windows, Typing, Multimedia, Corel Draw, Printing Techniques, Office Training and Internet",
+        "href": "https://silash35.gitlab.io/certificates/megaCursos1.pdf",
+        "title": "Microsoft Windows, Typing, Multimedia, Corel Draw, Printing Techniques, Office Training and Internet Certificate",
+        "outsideText": "- 56 hours"
+      }
+    ]
+  },
+  {
+    "title": "Languages",
+    "topics": [
+      "Portuguese - Native speaker",
+      {
+        "text": "English - Intermediate",
+        "href": "https://silash35.gitlab.io/certificates/ALLingles4.pdf",
+        "title": "English Certificate"
+      }
+    ]
+  },
+  {
+    "title": "Extracurricular activities",
+    "activities": [
+      {
+        "name": "Monitor of the ECOIFBA project at IFBA – Campus Simões Filho",
+        "period": "Oct. 2019 – Sept. 2020",
+        "tasks": [
+          "Perform the physical characterization of the institute's solid waste. That is, weighing and determining the gravimetric composition of dry and organic waste.",
+          "Organize and promote selective garbage collection on campus."
+        ]
+      },
+      {
+        "name": {
+          "text": "Monitor of the educational robotics project at IFBA",
+          "href": "https://silash35.gitlab.io/certificates/roboticaVoluntario.pdf",
+          "title": "Monitor in the educational robotics project certificate"
+        },
+        "period": "May 2018 – Apr. 2019",
+        "tasks": [
+          "Deliver a basic robotics course, teaching automation with Arduino using sensors and actuators.",
+          "Provide support and assistance to students who want to develop their projects, including extracurriculars.",
+          "Clean and organize the robotics laboratory. Including performing the maintenance of the local computers."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Other Things",
+    "topics": [
+      {
+        "text": "UFBA: Mostra a Sua Cara 2023",
+        "href": "https://silash35.gitlab.io/certificates/UFBAMostraSuaCara.pdf",
+        "title": "Monitor at UFBA: Mostra a Sua Cara 2023 Event Certificate",
+        "outsideText": "- 10 hours - monitor"
+      },
+      "QtCon Brazil 2020 - 12 hours - listener",
+      {
+        "text": "Oportuniza 2019",
+        "href": "https://silash35.gitlab.io/certificates/oportuniza2019.pdf",
+        "title": "listener at Oportuniza 2019 Event Certificate",
+        "outsideText": "- 2 hours - listener"
+      },
+      {
+        "text": "SNCT (National Science and Technology Week) 2019",
+        "href": "https://silash35.gitlab.io/certificates/CNCTIFBA2019.pdf",
+        "title": "listener at National Science and Technology Week 2019 Event Certificate",
+        "outsideText": "- 16 hours - listener"
+      },
+      {
+        "text": "Enconecta 2018",
+        "href": "https://silash35.gitlab.io/certificates/enconecta2018.pdf",
+        "title": "listener at Enconecta 2018 Event Certificate",
+        "outsideText": "- 8 hours - listener"
+      }
+    ]
+  }
+]

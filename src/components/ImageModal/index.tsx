@@ -3,7 +3,7 @@
 import { ImgHTMLAttributes, useState } from "react";
 
 import ScreenDarkener from "@/components/ScreenDarkener";
-import cn from "@/utils/cn";
+import cn from "@/others/cn";
 
 import styles from "./imageModal.module.scss";
 
