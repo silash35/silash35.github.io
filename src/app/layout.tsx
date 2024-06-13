@@ -5,9 +5,9 @@ export const viewport: Viewport = {
   themeColor: "#000",
 };
 
-import { Roboto } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 
-const roboto = Roboto({
+const ubuntu = Ubuntu({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "700"],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html className={roboto.className} dir="ltr" lang="en">
+  <html className={ubuntu.className} dir="ltr" lang="en">
     <head>
       <meta content="text/html" httpEquiv="content-type" />
     </head>
