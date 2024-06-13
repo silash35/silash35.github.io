@@ -13,6 +13,10 @@
     font-weight: 300;
     font-size: calc(0.2em + 100% + 4vw);
     text-align: center;
+
+    @media screen and (max-width: 425px) {
+      padding: 16px;
+    }
   }
 
   .photo {

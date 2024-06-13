@@ -38,14 +38,15 @@ const Dialog = () => {
       <article className={styles.dialog} ref={ref}>
         <h2>Looking for a curriculum?</h2>
         <p>
-          This is a resume, if you are looking for an (almost) unstyled version go to the Curriculum
+          This is a resume, if you are looking for an (almost) unstyled version, go to the
+          curriculum page.
         </p>
         <div>
           <Button onClick={goToCurriculum} variant="text">
-            Go to curriculum
+            Check curriculum
           </Button>
           <Button onClick={() => setIsOpen(false)} variant="text">
-            No
+            Maybe later
           </Button>
         </div>
       </article>

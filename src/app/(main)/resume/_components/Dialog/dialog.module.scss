@@ -3,11 +3,11 @@
 
 .dialog {
   position: fixed;
-  bottom: 32px;
-  left: 64px;
+  bottom: 2rem;
+  left: 4rem;
   box-sizing: border-box;
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 1rem;
+  padding: 1rem;
 
   width: 400px;
   @include s.shadow(3);
@@ -22,12 +22,13 @@
 
   div {
     display: flex;
+    justify-content: flex-end;
   }
 
   @media screen and (max-width: 768px) {
     bottom: 0;
     left: 0;
-    border-radius: 10px 10px 0 0;
+    border-radius: 1rem 1rem 0 0;
     width: 100%;
   }
 

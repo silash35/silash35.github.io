@@ -21,6 +21,11 @@
       border-color: transparent;
     }
   }
+
+  @media screen and (max-width: 425px) {
+    gap: 16px;
+    width: 90%;
+  }
 }
 
 .body {
@@ -29,6 +34,10 @@
 
   @media screen and (max-width: 768px) {
     column-count: 1;
+  }
+
+  @media screen and (max-width: 425px) {
+    column-gap: 16px;
   }
 
   > article {
