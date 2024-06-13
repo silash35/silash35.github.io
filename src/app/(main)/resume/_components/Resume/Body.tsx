@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import Link from "@/components/Link";
 import resume from "@/others/resume/en.json";
 
 import styles from "./body.module.scss";
@@ -13,7 +12,7 @@ interface BodyLinkProps {
 
 const BodyLink = ({ href, text, title, outsideText }: BodyLinkProps) => (
   <>
-    <Link href={href} rel="noopener noreferrer" target="_blank" title={title}>
+    <Link href={href} title={title}>
       {text}
     </Link>
     {outsideText ? <> {outsideText}</> : null}

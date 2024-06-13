@@ -1,16 +1,18 @@
-import type { AnchorHTMLAttributes, ImgHTMLAttributes } from "react";
+import type { ComponentPropsWithoutRef, ImgHTMLAttributes } from "react";
+
+import Link from "@/components/Link";
 
 import styles from "./iconLink.module.scss";
 
 interface Props {
-  linkProps: AnchorHTMLAttributes<HTMLAnchorElement>;
+  linkProps: ComponentPropsWithoutRef<typeof Link>;
   imgProps: ImgHTMLAttributes<HTMLImageElement>;
 }
 
 const IconLink = ({ linkProps, imgProps }: Props) => (
-  <a className={styles.iconLink} rel="noopener noreferrer" target="_blank" {...linkProps}>
+  <Link className={styles.iconLink} {...linkProps}>
     <img height="35" width="35" {...imgProps} />
-  </a>
+  </Link>
 );
 
 export default IconLink;

@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+
+import Link from "@/components/Link";
 
 import styles from "./header.module.scss";
 import Links from "./Links";
