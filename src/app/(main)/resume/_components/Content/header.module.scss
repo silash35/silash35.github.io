@@ -9,19 +9,25 @@
   h1 {
     flex-grow: 1;
     margin: 0;
-    padding: 32px;
+    padding: 1.5rem;
     font-weight: 300;
-    font-size: calc(0.2em + 100% + 4vw);
+    font-size: calc(1rem + 3.5vw);
     text-align: center;
+
+    @media screen and (max-width: 1024px) {
+      padding: 16px;
+      font-size: calc(1rem + 3vw);
+    }
 
     @media screen and (max-width: 425px) {
       padding: 16px;
+      font-size: calc(2rem + 2vw);
     }
   }
 
   .photo {
     flex-shrink: 0;
-    margin: 32px 0;
+    margin: 1.5rem 0;
 
     img {
       max-width: 18vw;

@@ -2,14 +2,14 @@
 @use "helpers/shadow" as s;
 
 %card {
-  border-radius: 16px;
+  border-radius: v.$borderRadius;
   background-color: #141414;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 1.5rem;
   width: 80%;
 
   a {
@@ -29,26 +29,26 @@
 }
 
 .body {
-  column-gap: 32px;
+  column-gap: 1.5rem;
   column-count: 2;
 
   @media screen and (max-width: 768px) {
     column-count: 1;
   }
 
-  @media screen and (max-width: 425px) {
-    column-gap: 16px;
-  }
-
   > article {
     @extend %card;
     display: inline-block;
     box-sizing: border-box;
-    margin-bottom: 32px;
+    margin-bottom: 1.5rem;
     padding: 32px;
     width: 100%;
 
     line-height: 1.5;
+
+    @media screen and (max-width: 425px) {
+      margin-bottom: 1rem;
+    }
 
     h2,
     p,
@@ -57,13 +57,8 @@
     }
 
     h2 {
-      // border-bottom: 1px solid;
-      // padding: 8px 0;
-
       font-weight: 400;
-      font-size: calc(0.8em + 100% + 1vw);
-
-      // text-align: center;
+      font-size: calc(1.8rem + 1vw);
     }
 
     h3 {
@@ -86,7 +81,7 @@
 
     small {
       display: block;
-      font-size: 0.9em;
+      font-size: 0.9rem;
     }
   }
 }
