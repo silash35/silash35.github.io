@@ -1,11 +1,6 @@
 @use "variables" as v;
 @use "helpers/shadow" as s;
 
-%card {
-  border-radius: v.$borderRadius;
-  background-color: #141414;
-}
-
 .body {
   column-gap: 1.5rem;
   column-count: 2;
@@ -13,53 +8,52 @@
   @media screen and (max-width: 768px) {
     column-count: 1;
   }
+}
 
-  > article {
-    @extend %card;
-    display: inline-block;
-    box-sizing: border-box;
-    margin-bottom: 1.5rem;
-    padding: 32px;
-    width: 100%;
+.card {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  padding: 32px;
+  width: 100%;
 
-    line-height: 1.5;
+  line-height: 1.5;
 
-    @media screen and (max-width: 425px) {
-      margin-bottom: 1rem;
+  @media screen and (max-width: 425px) {
+    margin-bottom: 1rem;
+  }
+
+  h2,
+  p,
+  ul {
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: calc(1.8rem + 1vw);
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  ul {
+    padding-top: 8px;
+    li {
+      padding: 4px 16px;
     }
+  }
 
-    h2,
-    p,
-    ul {
-      margin: 0;
+  a {
+    color: v.$orange;
+    &:visited {
+      color: lighten($color: v.$orange, $amount: 10);
     }
+  }
 
-    h2 {
-      font-weight: 400;
-      font-size: calc(1.8rem + 1vw);
-    }
-
-    h3 {
-      margin-bottom: 0;
-    }
-
-    ul {
-      padding-top: 8px;
-      li {
-        padding: 4px 16px;
-      }
-    }
-
-    a {
-      color: v.$orange;
-      &:visited {
-        color: lighten($color: v.$orange, $amount: 10);
-      }
-    }
-
-    small {
-      display: block;
-      font-size: 0.9rem;
-    }
+  small {
+    display: block;
+    font-size: 0.9rem;
   }
 }

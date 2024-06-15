@@ -1,15 +1,11 @@
 @use "variables" as v;
 @use "helpers/shadow" as s;
 
-%card {
-  border-radius: v.$borderRadius;
-  background-color: #141414;
-}
-
 .resume {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-top: 2rem;
   width: 80%;
 
   a {

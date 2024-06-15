@@ -1,0 +1,16 @@
+@use "variables" as v;
+@use "helpers/shadow" as s;
+
+.card {
+  border-radius: v.$borderRadius;
+}
+
+.filled {
+  background-color: #141414;
+}
+
+.outlined {
+  @include s.shadow(3);
+  border: 1px solid #ffffff29;
+  background-color: #101012;
+}

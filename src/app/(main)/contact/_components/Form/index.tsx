@@ -33,7 +33,7 @@ const Form = () => (
       text="Message"
     />
 
-    <Button buttonProps={{ type: "submit" }} variant="contained">
+    <Button type="submit" variant="contained">
       <img alt="paper plane icon" height="18px" src="/images/icons/black/send.svg" width="18px" />
       Send
     </Button>

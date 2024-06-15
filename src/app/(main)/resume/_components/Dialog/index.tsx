@@ -5,11 +5,12 @@ import { useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import Button from "@/components/Button";
+import Card from "@/components/Card";
 
 import styles from "./dialog.module.scss";
 
 const Dialog = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement>(null);
 
   const [isOpen, setIsOpen] = useState(true);
   const router = useRouter();
@@ -31,25 +32,28 @@ const Dialog = () => {
         enterDone: styles.show,
       }}
       in={isOpen}
+      nodeRef={ref}
       timeout={300}
       appear
       unmountOnExit
     >
-      <article className={styles.dialog} ref={ref}>
-        <h2>Looking for a curriculum?</h2>
-        <p>
-          This is a resume, if you are looking for an (almost) unstyled version, go to the
-          curriculum page.
-        </p>
-        <div>
-          <Button onClick={goToCurriculum} variant="text">
-            Check curriculum
-          </Button>
-          <Button onClick={() => setIsOpen(false)} variant="text">
-            Maybe later
-          </Button>
-        </div>
-      </article>
+      <Card className={styles.dialog} variant="outlined" asChild>
+        <article ref={ref}>
+          <h2>Looking for a curriculum?</h2>
+          <p>
+            This is a resume, if you are looking for an (almost) unstyled version, go to the
+            curriculum page.
+          </p>
+          <div>
+            <Button onClick={goToCurriculum} variant="text">
+              Check curriculum
+            </Button>
+            <Button onClick={() => setIsOpen(false)} variant="text">
+              Maybe later
+            </Button>
+          </div>
+        </article>
+      </Card>
     </CSSTransition>
   );
 };

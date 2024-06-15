@@ -7,7 +7,7 @@ import ImageModal from "@/components/ImageModal";
 import styles from "./header.module.scss";
 
 const Header = () => (
-  <header>
+  <header className={styles.wrapper}>
     <div className={styles.title}>
       <h1>Silas Henrique Alves Araújo</h1>
 
