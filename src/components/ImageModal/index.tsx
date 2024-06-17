@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Image from "@/components/Image";
 import ScreenDarkener from "@/components/ScreenDarkener";
-import cn from "@/others/cn";
+import cn from "@/utils/cn";
 
 import styles from "./imageModal.module.scss";
 

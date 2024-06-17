@@ -5,11 +5,13 @@ interface Props {
   locale?: string;
 }
 
+import styles from "./header.module.scss";
+
 const Header = ({ locale }: Props) => {
   const l = locale === "pt" ? pt : en;
 
   return (
-    <header>
+    <header className={styles.header}>
       <h1>Silas Henrique Alves Araújo</h1>
 
       <p>{l.dateOfBirth}</p>

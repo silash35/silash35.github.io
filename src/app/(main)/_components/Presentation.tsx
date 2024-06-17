@@ -10,7 +10,7 @@ const Presentation = () => (
         imageProps={{
           src: profileImage,
           alt: "Photo of silas Henrique Alves Araújo",
-          sizes: "256px",
+          sizes: "282px",
           width: 256,
         }}
         className={styles.image}

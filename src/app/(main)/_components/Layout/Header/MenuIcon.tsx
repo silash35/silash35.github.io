@@ -1,4 +1,4 @@
-import cn from "@/others/cn";
+import cn from "@/utils/cn";
 
 import styles from "./menuIcon.module.scss";
 

@@ -1,43 +1,17 @@
 .page {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 32px;
   color: #0e0e0e;
 
-  h1 {
-    margin-top: 0;
-  }
-
-  h3 {
-    margin: 0;
-  }
-
-  %text {
+  p {
+    margin: 8px 0;
     font-size: large;
   }
 
-  p {
-    @extend %text;
-    margin: 5px;
-  }
-
-  li {
-    @extend %text;
-    margin-bottom: 10px;
-  }
-
-  small {
-    display: block;
-    font-size: 0.9rem;
-  }
-
-  ul {
-    margin-top: 6px;
-  }
-
   @media screen and (min-width: 768px) {
-    margin: 50px;
+    margin: 48px;
     box-shadow: rgb(60 64 67 / 15%) 0px 1px 3px 1px;
-    padding: 90px;
+    padding: 96px;
   }
 }
 

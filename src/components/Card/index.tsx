@@ -1,7 +1,7 @@
 import { Slot } from "@radix-ui/react-slot";
 import type { HTMLProps } from "react";
 
-import cn from "@/others/cn";
+import cn from "@/utils/cn";
 
 import styles from "./card.module.scss";
 
