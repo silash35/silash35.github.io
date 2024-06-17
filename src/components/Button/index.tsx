@@ -7,7 +7,7 @@ import styles from "./button.module.scss";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
-  variant: "contained" | "text";
+  variant: "contained" | "outlined" | "text";
 }
 
 const Button = ({ asChild, variant, className, ...componentProps }: Props) => {

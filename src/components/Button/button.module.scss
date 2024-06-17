@@ -8,27 +8,30 @@
   justify-content: center;
   align-items: center;
 
-  border-radius: v.$borderRadius;
+  gap: 0.5rem;
 
+  border-radius: v.$borderRadius * 2;
   padding: 0.5rem 1rem;
   font-weight: 700;
 
-  img,
-  svg {
-    margin-right: 0.5rem;
-  }
+  text-wrap: nowrap;
 }
 
 .contained {
-  background-color: white;
+  background-color: v.$white;
   color: black;
   @include s.shadow(3, true);
   &:hover {
-    background-color: #ececec;
+    background-color: color.adjust(v.$white, $lightness: -10%);
   }
   &:active {
-    background-color: #e0e0e0;
+    background-color: color.adjust(v.$white, $lightness: -20%);
   }
+}
+
+.outlined {
+  @extend .text;
+  border: 2px solid rgba(160, 160, 160, 0.2);
 }
 
 .text {

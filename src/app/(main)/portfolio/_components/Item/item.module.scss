@@ -1,0 +1,60 @@
+@use "variables" as v;
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  flex-shrink: 0;
+  border-radius: v.$borderRadius;
+
+  img {
+    width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  padding: 32px;
+  height: 100%;
+
+  p,
+  h2 {
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+
+  container-type: inline-size;
+
+  margin-top: auto;
+  padding-top: 8px;
+
+  a {
+    color: v.$white;
+    text-decoration: none;
+  }
+
+  @container (max-width: 400px) {
+    span {
+      display: none;
+    }
+  }
+}

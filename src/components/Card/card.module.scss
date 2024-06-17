@@ -1,8 +1,14 @@
 @use "variables" as v;
 @use "helpers/shadow" as s;
+@use "sass:color";
 
 .card {
   border-radius: v.$borderRadius;
+
+  p,
+  li {
+    color: color.adjust(v.$white, $lightness: -10%);
+  }
 }
 
 .filled {

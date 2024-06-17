@@ -8,12 +8,11 @@ import cn from "@/others/cn";
 import styles from "./imageModal.module.scss";
 
 interface Props {
-  borderRadius?: string;
   className?: string;
   imageProps: ImgHTMLAttributes<HTMLImageElement>;
 }
 
-const ImageModal = ({ borderRadius, className, imageProps }: Props) => {
+const ImageModal = ({ className, imageProps }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   imageProps.onClick = () => {
     setIsOpen(true);
@@ -21,7 +20,7 @@ const ImageModal = ({ borderRadius, className, imageProps }: Props) => {
 
   return (
     <>
-      <div className={cn(styles.imageModal, className)} style={{ borderRadius }}>
+      <div className={cn(styles.imageModal, className)}>
         <img {...imageProps} />
       </div>
 
