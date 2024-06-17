@@ -1,7 +1,8 @@
 "use client";
 
-import { ImgHTMLAttributes, useState } from "react";
+import { useState } from "react";
 
+import Image from "@/components/Image";
 import ScreenDarkener from "@/components/ScreenDarkener";
 import cn from "@/others/cn";
 
@@ -9,7 +10,7 @@ import styles from "./imageModal.module.scss";
 
 interface Props {
   className?: string;
-  imageProps: ImgHTMLAttributes<HTMLImageElement>;
+  imageProps: React.ComponentProps<typeof Image>;
 }
 
 const ImageModal = ({ className, imageProps }: Props) => {
@@ -21,7 +22,7 @@ const ImageModal = ({ className, imageProps }: Props) => {
   return (
     <>
       <div className={cn(styles.imageModal, className)}>
-        <img {...imageProps} />
+        <Image {...imageProps} />
       </div>
 
       <ScreenDarkener
@@ -30,7 +31,7 @@ const ImageModal = ({ className, imageProps }: Props) => {
         setIsOpen={setIsOpen}
         showClassName={styles.show}
       >
-        <img className={styles.OpenedImageModal} {...imageProps} />
+        <Image className={styles.OpenedImageModal} {...imageProps} sizes="90vw" />
       </ScreenDarkener>
     </>
   );

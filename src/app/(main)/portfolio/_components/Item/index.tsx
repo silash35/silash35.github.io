@@ -1,14 +1,15 @@
-import { ImgHTMLAttributes, PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
 import Button from "@/components/Button";
 import Card from "@/components/Card";
+import Image from "@/components/Image";
 import ImageModal from "@/components/ImageModal";
 import Link from "@/components/Link";
 
 import styles from "./item.module.scss";
 
 interface ItemProps extends PropsWithChildren {
-  imageProps: ImgHTMLAttributes<HTMLImageElement>;
+  imageProps: React.ComponentProps<typeof Image>;
 }
 
 const Item = ({ imageProps, children }: ItemProps) => (

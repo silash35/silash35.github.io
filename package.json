@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-image-export-optimizer",
     "export": "next export",
     "analyze": "ANALYZE=true pnpm build",
     "start": "next start",
@@ -25,6 +25,7 @@
     "@types/react-dom": "^18.3.0",
     "@types/react-transition-group": "^4.4.10",
     "eslint-config-silash35": "^4.0.1",
+    "next-image-export-optimizer": "^1.14.1",
     "sass": "^1.77.5",
     "typescript": "^5.4.5"
   },

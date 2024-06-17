@@ -1,6 +1,10 @@
 import DocumentIcon from "@/components/icons/Description";
 import GitHubIcon from "@/components/icons/GitHub";
 import LinkIcon from "@/components/icons/Link";
+import alis from "@/images/projects/alis.png";
+import opensom from "@/images/projects/opensom.png";
+import optimusjr from "@/images/projects/optimusjr.png";
+import qpdftools from "@/images/projects/qpdftools.png";
 
 import Item from "./Item";
 import styles from "./portfolio.module.scss";
@@ -10,7 +14,7 @@ const PortfolioCards = () => (
     <Item
       imageProps={{
         alt: "Screenshot the ALIS Website",
-        src: "/images/projects/optimusjr.png",
+        src: optimusjr,
       }}
     >
       <h2>OPTIMUS Jr.</h2>
@@ -37,7 +41,7 @@ const PortfolioCards = () => (
     <Item
       imageProps={{
         alt: "Screenshot the OpenSOM demo instance",
-        src: "/images/projects/opensom.webp",
+        src: opensom,
       }}
     >
       <h2>OpenSOM</h2>
@@ -64,7 +68,7 @@ const PortfolioCards = () => (
     <Item
       imageProps={{
         alt: "Picture of the Qpdf Tools program home screen",
-        src: "/images/projects/qpdftools.webp",
+        src: qpdftools,
       }}
     >
       <h2>Qpdf Tools</h2>
@@ -94,7 +98,7 @@ const PortfolioCards = () => (
     <Item
       imageProps={{
         alt: "Screenshot the ALIS Website",
-        src: "/images/projects/alis.webp",
+        src: alis,
       }}
     >
       <h2>ALIS</h2>

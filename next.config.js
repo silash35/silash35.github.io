@@ -9,8 +9,13 @@ let nextConfig = {
   sassOptions: {
     includePaths: ["./src/styles"],
   },
+  images: {
+    loader: "custom",
+  },
+  transpilePackages: ["next-image-export-optimizer"],
   env: {
     SITE_URL: process.env.SITE_URL,
+    nextImageExportOptimizer_generateAndUseBlurImages: "true",
   },
 };
 

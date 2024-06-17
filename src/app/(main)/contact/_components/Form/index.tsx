@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import SendIcon from "@/components/icons/Send";
 import TextField from "@/components/TextField";
 
 import styles from "./form.module.scss";
@@ -34,7 +35,7 @@ const Form = () => (
     />
 
     <Button type="submit" variant="contained">
-      <img alt="paper plane icon" height="18px" src="/images/icons/black/send.svg" width="18px" />
+      <SendIcon />
       Send
     </Button>
   </form>

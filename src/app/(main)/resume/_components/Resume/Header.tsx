@@ -3,6 +3,7 @@ import EmailIcon from "@/components/icons/Email";
 import MarkerIcon from "@/components/icons/Marker";
 import PhoneIcon from "@/components/icons/Phone";
 import ImageModal from "@/components/ImageModal";
+import profileImage from "@/images/profile.png";
 
 import styles from "./header.module.scss";
 
@@ -13,13 +14,11 @@ const Header = () => (
 
       <ImageModal
         imageProps={{
-          src: "/images/profile.webp",
+          src: profileImage,
           alt: "Photo of silas Henrique Alves Araújo",
           loading: "lazy",
-          width: "256",
-          height: "256",
+          sizes: "18vw",
         }}
-        borderRadius="16px"
         className={styles.photo}
       />
     </div>

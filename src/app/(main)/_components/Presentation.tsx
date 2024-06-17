@@ -1,18 +1,19 @@
 import ImageModal from "@/components/ImageModal";
+import profileImage from "@/images/profile.png";
 
 import styles from "./presentation.module.scss";
 
 const Presentation = () => (
   <article className={styles.presentation}>
-    <section className="presentationPhoto imageModal">
+    <section>
       <ImageModal
         imageProps={{
-          src: "/images/profile.webp",
+          src: profileImage,
           alt: "Photo of silas Henrique Alves Araújo",
-          width: "256",
-          height: "256",
+          sizes: "256px",
+          width: 256,
         }}
-        borderRadius="50%"
+        className={styles.image}
       />
     </section>
     <section className={styles.presentationText}>
