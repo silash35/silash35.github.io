@@ -1,13 +1,11 @@
 import BundleAnalyzer from "@next/bundle-analyzer";
-/**
- * @type {import('next').NextConfig}
- */
+import type { NextConfig } from "next";
 
-let nextConfig = {
+let nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
   sassOptions: {
-    includePaths: ["./src/styles"],
+    loadPaths: ["src/styles"],
   },
   images: {
     loader: "custom",
@@ -19,14 +17,12 @@ let nextConfig = {
   },
 };
 
-export default () => {
-  if (process.env.ANALYZE === "true") {
-    const withBundleAnalyzer = BundleAnalyzer({
-      enabled: true,
-    });
+if (process.env.ANALYZE === "true") {
+  const withBundleAnalyzer = BundleAnalyzer({
+    enabled: true,
+  });
 
-    nextConfig = withBundleAnalyzer(nextConfig);
-  }
+  nextConfig = withBundleAnalyzer(nextConfig);
+}
 
-  return nextConfig;
-};
+export default nextConfig;
