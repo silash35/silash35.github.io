@@ -104,11 +104,11 @@ const PortfolioCards = () => (
       <h2>ALIS</h2>
       <p>
         An aggregator of accessible places for the deaf, such as stores with attendants who can
-        speak ASL (American Sign Language).
+        speak LIBRAS (Brazilian Sign Language) or ASL (American Sign Language).
       </p>
 
       <Item.actions>
-        <Item.action href="https://alis.vercel.app/" title="The ALIS page">
+        <Item.action href="https://alis.silas.eng.br/" title="The ALIS page">
           <LinkIcon />
           <span>Visit Website</span>
         </Item.action>

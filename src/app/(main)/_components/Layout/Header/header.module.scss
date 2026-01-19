@@ -1,5 +1,5 @@
 @use "helpers/shadow" as s;
-@use "variables" as v;
+@use "variables.module" as v;
 
 .header {
   display: flex;

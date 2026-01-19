@@ -25,7 +25,7 @@ const Social = () => (
       </li>
       <li>
         <TwitterIcon />
-        <Link href="https://twitter.com/silash35" title="twitter of Silas Henrique">
+        <Link href="https://x.com/silash35" title="twitter of Silas Henrique">
           @silash35
         </Link>
       </li>

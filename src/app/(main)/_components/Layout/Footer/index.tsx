@@ -28,16 +28,19 @@ const getRandomSentence = () => sentences[Math.floor(Math.random() * sentences.l
 
 const Footer = () => {
   const [sentence, setSentence] = useState("Checking notes...");
+  const [year, setYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSentence(getRandomSentence());
+    setYear(new Date().getFullYear());
   }, []);
 
   return (
     <footer className={styles.footer}>
-      <p suppressHydrationWarning>
+      <p>
         <PublicDomainIcon />
-        {new Date().getFullYear()} Silas Henrique. No rights reserved.
+        {year} Silas Henrique. No rights reserved.
       </p>
 
       <p>{sentence}</p>

@@ -15,14 +15,11 @@ interface Props {
 
 const ImageModal = ({ className, imageProps }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
-  imageProps.onClick = () => {
-    setIsOpen(true);
-  };
 
   return (
     <>
       <div className={cn(styles.imageModal, className)}>
-        <Image {...imageProps} />
+        <Image {...imageProps} onClick={() => setIsOpen(true)} />
       </div>
 
       <ScreenDarkener

@@ -1,8 +1,10 @@
 import "@/styles/globals.scss";
 
 import { Viewport } from "next";
+
+import variables from "@/styles/variables.module.scss";
 export const viewport: Viewport = {
-  themeColor: "#000",
+  themeColor: variables.black,
 };
 
 import { Ubuntu } from "next/font/google";
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     other: {
       rel: "mask-icon",
       url: "/icons/safari-pinned-tab.svg",
-      color: "#f45d22",
+      color: variables.orange,
     },
   },
 };
