@@ -1,5 +1,6 @@
 @use "variables.module" as v;
 @use "helpers/shadow" as s;
+@use "sass:color";
 
 .body {
   column-gap: 1.5rem;
@@ -48,7 +49,7 @@
   a {
     color: v.$orange;
     &:visited {
-      color: lighten($color: v.$orange, $amount: 10);
+      color: color.adjust($color: v.$orange, $lightness: 10%);
     }
   }
 
