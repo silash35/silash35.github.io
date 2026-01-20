@@ -1,0 +1,50 @@
+@use "variables.module" as v;
+@use "sass:color";
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.label {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+}
+
+.input {
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: v.$borderRadius;
+
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 12px 14px;
+  width: 100%;
+
+  color: white;
+  font-size: 14px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px color.change(v.$orange, $alpha: 0.25);
+    border-color: v.$orange;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+textarea.input {
+  min-height: 240px;
+  resize: none;
+}

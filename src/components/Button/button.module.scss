@@ -10,7 +10,7 @@
 
   gap: 0.5rem;
 
-  border-radius: v.$borderRadius * 2;
+  border-radius: v.$borderRadius;
   padding: 0.5rem 1rem;
   font-weight: 700;
 
@@ -18,14 +18,19 @@
 }
 
 .contained {
-  background-color: v.$white;
-  color: black;
+  background-color: v.$orange;
+  color: v.$white;
+  svg {
+    fill: v.$white;
+  }
+
   @include s.shadow(3, true);
+
   &:hover {
-    background-color: color.adjust(v.$white, $lightness: -10%);
+    background-color: color.adjust(v.$orange, $lightness: -10%);
   }
   &:active {
-    background-color: color.adjust(v.$white, $lightness: -20%);
+    background-color: color.adjust(v.$orange, $lightness: -20%);
   }
 }
 

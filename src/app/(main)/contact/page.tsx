@@ -2,7 +2,8 @@ import { Metadata } from "next";
 
 import Title from "@/components/Title";
 
-import ContactCard from "./_components";
+import ContactCard from "./_components/contactCard";
+import Social from "./_components/social";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
 
 const Contact = () => (
   <>
-    <Title>Where to find me?</Title>
+    <Title>Want to get in touch?</Title>
+    <Social />
     <ContactCard />
   </>
 );
