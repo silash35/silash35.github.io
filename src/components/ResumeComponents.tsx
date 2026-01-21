@@ -62,13 +62,6 @@ export const Formations = ({ formations }: { formations: Formation[] }) => {
           <li key={index}>
             <TextOrLink content={activity.name} />
             <small>{activity.period}</small>
-            {/*
-            <ul>
-              {activity.tasks.map((task, index) => (
-                <li key={index}>{task}</li>
-              ))}
-            </ul>
-            */}
           </li>
         ))}
       </ul>

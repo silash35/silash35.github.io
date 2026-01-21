@@ -17,13 +17,6 @@ const resume: ResumeSection[] = [
           {
             name: "Iniciação Científica - Programa de Recursos Humanos da ANP em Descarbonização e Transformação Digital para a Indústria de Petróleo e Gás (PRH 41/UFBA)",
             period: "Julho de 2024 a Junho de 2026",
-            /*
-            tasks: [
-              "Atuação em pesquisa aplicada à indústria de petróleo e gás.",
-              "Aplicação de técnicas de controle e inteligência artificial em sistemas de engenharia.",
-              "Estudo e aplicação do processo de PSA (Pressure Swing Adsorption) para captura de gás carbônico.",
-            ],
-            */
           },
         ],
       },
@@ -39,10 +32,6 @@ const resume: ResumeSection[] = [
           {
             name: "Monitoria - Projeto ECOIFBA",
             period: "Outubro de 2019 a Setembro de 2020",
-            tasks: [
-              "Realizar a caracterização física dos resíduos sólidos do instituto. Ou seja, pesar e determinar a composição gravimétrica dos resíduos secos e orgânicos.",
-              "Organizar e promover a coleta seletiva de lixo no campus.",
-            ],
           },
           */
           {
@@ -52,13 +41,6 @@ const resume: ResumeSection[] = [
               title: "Certificado de monitoria do projeto de robótica educacional",
             },
             period: "Maio de 2018 a Abril de 2019",
-            /*
-            tasks: [
-              "Ministrar um curso básico de robótica, ensinando automação com Arduino usando sensores e atuadores.",
-              "Prestar apoio e assistência aos alunos que queiram desenvolver os seus projetos, incluindo projetos extracurriculares.",
-              "Limpar e organizar o laboratório de robótica. Incluindo realizar a manutenção dos computadores.",
-            ],
-            */
           },
         ],
       },

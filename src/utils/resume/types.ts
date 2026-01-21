@@ -18,7 +18,6 @@ export interface Job {
 interface Activity {
   name: string | LinkText;
   period: string;
-  tasks?: string[];
 }
 
 export interface Formation {
