@@ -1,5 +1,5 @@
-import resumeEn from "@/components/resume/resumes/en.json";
-import resumePt from "@/components/resume/resumes/pt.json";
+import resumeEn from "@/utils/resume/en";
+import resumePt from "@/utils/resume/pt";
 
 import Body from "./Body";
 import styles from "./curriculum.module.scss";

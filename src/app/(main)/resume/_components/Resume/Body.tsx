@@ -1,6 +1,6 @@
 import Card from "@/components/Card";
-import resume from "@/components/resume/resumes/en.json";
-import { Activities, Jobs, Paragraphs, Topics } from "@/components/resume/utils";
+import { Activities, Jobs, Paragraphs, Topics } from "@/components/ResumeComponents";
+import resume from "@/utils/resume/en";
 
 import styles from "./body.module.scss";
 
@@ -11,10 +11,10 @@ const Body = () => (
         <article>
           <h2>{section.title}</h2>
 
-          <Paragraphs paragraphs={section.paragraphs} />
-          <Topics topics={section.topics} />
-          <Jobs jobs={section.jobs} />
-          <Activities activities={section.activities} />
+          {section.paragraphs && <Paragraphs paragraphs={section.paragraphs} />}
+          {section.topics && <Topics topics={section.topics} />}
+          {section.jobs && <Jobs jobs={section.jobs} />}
+          {section.activities && <Activities activities={section.activities} />}
         </article>
       </Card>
     ))}
