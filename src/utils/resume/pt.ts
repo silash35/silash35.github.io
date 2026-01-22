@@ -4,7 +4,7 @@ const resume: ResumeSection[] = [
   {
     title: "Resumo",
     paragraphs: [
-      "Técnico em Eletromecânica pelo IFBA e graduando em Engenharia de Controle e Automação pela UFBA, com atuação em pesquisa aplicada em controle, redes neurais e sistemas embarcados. Possui experiência em robótica educacional, desenvolvimento web e liderança em empresa júnior.",
+      "Graduando em Engenharia de Controle e Automação pela UFBA e técnico em eletromecânica pelo IFBA, com atuação em pesquisa aplicada em controle, redes neurais e sistemas embarcados. Possui experiência em robótica educacional, desenvolvimento web e liderança em empresa júnior.",
     ],
   },
   {
@@ -78,10 +78,10 @@ const resume: ResumeSection[] = [
     ],
   },
   {
-    title: "Habilidades",
+    title: "Habilidades técnicas",
     topics: [
       {
-        text: "Programação e Desenvolvimento de Aplicações: C++, Qt e Web (HTML, CSS, JS)",
+        text: "Programação e Desenvolvimento de Aplicações: C++ e Web (HTML, CSS, JS)",
         href: "/portfolio",
         title: "Portfólio com projetos em C++/Qt e aplicações Web",
       },
@@ -166,21 +166,10 @@ const resume: ResumeSection[] = [
     ],
   },
   {
-    title: "Idiomas",
-    topics: [
-      "Português - Nativo",
-      {
-        text: "Inglês - Intermediário",
-        href: "https://drive.silas.eng.br/profici-ingles.pdf",
-        title: "Certificado de Inglês",
-      },
-    ],
-  },
-  {
-    title: "Produção Acadêmica",
+    title: "Pesquisa e Produção Acadêmica",
     publications: [
       {
-        workTitle: {
+        title: {
           text: "Embarque de Rede Neural Recorrente Fenomenologicamente Informada para o Controle da Pressão de um Sistema de Gas Lift",
           href: "https://drive.silas.eng.br/cobeq-2025-apresentacao.pdf",
           title:
@@ -201,7 +190,7 @@ const resume: ResumeSection[] = [
         ],
       },
       {
-        workTitle: {
+        title: {
           text: "Embarque de Rede Neural Recorrente Fenomenologicamente Informada para Controle de Nível em Tanques Esféricos",
           href: "https://drive.silas.eng.br/SBAI2025-apresentacao2.pdf",
           title: "Certificado de apresentação no SBAI 2025",
@@ -217,7 +206,7 @@ const resume: ResumeSection[] = [
         ],
       },
       {
-        workTitle: {
+        title: {
           text: "Implementação de PINN Embarcada em Ambiente Software-in-the-Loop como Analisador Virtual para um Sistema de Tanques Esféricos",
           href: "https://drive.silas.eng.br/pse-ne-2024-apresentacao.pdf",
           title: "Certificado de apresentação no PSE NE 2024",
@@ -230,6 +219,17 @@ const resume: ResumeSection[] = [
           "Fontes, Raony M.",
           "Martins, Márcio A. F.",
         ],
+      },
+    ],
+  },
+  {
+    title: "Idiomas",
+    topics: [
+      "Português - Nativo",
+      {
+        text: "Inglês - Intermediário",
+        href: "https://drive.silas.eng.br/profici-ingles.pdf",
+        title: "Certificado de Inglês",
       },
     ],
   },

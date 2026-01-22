@@ -73,7 +73,7 @@ export const Publications = ({ publications }: { publications: Publication[] }) 
   <ul>
     {publications.map((publication, index) => (
       <li key={index}>
-        <TextOrLink content={publication.workTitle} />
+        <TextOrLink content={publication.title} />
         <small key={index}>
           {publication.type} - <TextOrLink content={publication.venue} />
         </small>

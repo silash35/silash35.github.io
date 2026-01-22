@@ -27,7 +27,7 @@ export interface Formation {
 }
 
 export interface Publication {
-  workTitle: string | LinkText;
+  title: string | LinkText;
   type: string;
   venue: string | LinkText;
   authors: string[];
