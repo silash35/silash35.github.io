@@ -1,9 +1,11 @@
+import type { HTMLAttributes } from "react";
+
+import cn from "@/utils/cn";
+
 import styles from "./title.module.scss";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Title = ({ children }: Props) => <h1 className={styles.title}>{children}</h1>;
+const Title = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+  <h1 className={cn(styles.title, className)} {...props} />
+);
 
 export default Title;

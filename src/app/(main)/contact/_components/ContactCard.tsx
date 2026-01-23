@@ -8,7 +8,7 @@ import styles from "./contactCard.module.scss";
 const ContactCard = () => (
   <Card variant="filled" asChild>
     <article className={styles.card}>
-      <h2>Get in Touch</h2>
+      <h2>Start a Conversation</h2>
       <Form />
     </article>
   </Card>

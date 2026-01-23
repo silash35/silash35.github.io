@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Portfolio = () => (
   <>
-    <Title>Some Things I&rsquo;ve Built</Title>
+    <Title>Some Things I’ve Built</Title>
     <PortfolioCards />
   </>
 );

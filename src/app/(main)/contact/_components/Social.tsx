@@ -2,6 +2,7 @@ import Button from "@/components/Button";
 import EmailIcon from "@/components/icons/Email";
 import GitHubIcon from "@/components/icons/GitHub";
 import InstagramIcon from "@/components/icons/Instagram";
+import LinkedInIcon from "@/components/icons/LinkedIn";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import Link from "@/components/Link";
 
@@ -28,17 +29,25 @@ const Social = () => (
       </li>
       <li>
         <Button variant="outlined" asChild>
-          <Link href="https://github.com/silash35" title="GitHub of Silas Henrique">
-            <GitHubIcon />
-            @silash35
+          <Link href="https://www.instagram.com/silash35a/" title="Instagram of Silas Henrique">
+            <InstagramIcon />
+            @silash35a
           </Link>
         </Button>
       </li>
       <li>
         <Button variant="outlined" asChild>
-          <Link href="https://www.instagram.com/silash35a/" title="Instagram of Silas Henrique">
-            <InstagramIcon />
+          <Link href="https://www.linkedin.com/in/silash35/" title="LinkedIn of Silas Henrique">
+            <LinkedInIcon />
             @silash35a
+          </Link>
+        </Button>
+      </li>
+      <li>
+        <Button variant="outlined" asChild>
+          <Link href="https://github.com/silash35" title="GitHub of Silas Henrique">
+            <GitHubIcon />
+            @silash35
           </Link>
         </Button>
       </li>
