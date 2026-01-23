@@ -17,7 +17,7 @@
   transition: transform v.$animeTimeFunction v.$animeDuration;
 
   margin: 0;
-  background-color: black;
+  background-color: v.$neutral-1000;
   padding: 32px 0;
   width: 100%;
 
@@ -33,13 +33,13 @@
     }
 
     &.active a {
-      color: v.$orange;
+      color: v.$orange-400;
     }
 
     a {
       display: block;
 
-      color: v.$white;
+      color: v.$neutral-50;
       font-weight: 500;
       font-size: 1.2rem;
       text-align: left;

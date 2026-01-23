@@ -9,7 +9,7 @@
 }
 
 .label {
-  color: rgba(255, 255, 255, 0.75);
+  color: v.$transparent-700;
   font-size: 16px;
 }
 
@@ -19,28 +19,28 @@
     box-shadow 0.2s,
     background-color 0.2s;
   outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid v.$transparent-200;
   border-radius: v.$borderRadius;
 
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: v.$transparent-50;
   padding: 12px 14px;
   width: 100%;
 
-  color: white;
+  color: v.$neutral-50;
   font-size: 14px;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.35);
+    color: v.$transparent-300;
   }
 
   &:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: v.$transparent-100;
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px color.change(v.$orange, $alpha: 0.25);
-    border-color: v.$orange;
-    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 3px color.change(v.$orange-400, $alpha: 0.2);
+    border-color: v.$orange-400;
+    background: v.$transparent-200;
   }
 }
 

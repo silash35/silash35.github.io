@@ -23,7 +23,7 @@
 
   z-index: -2;
 
-  background-color: black;
+  background-color: v.$neutral-1000;
   overflow: hidden;
   pointer-events: none;
 }
@@ -36,8 +36,8 @@
   opacity: 0.8;
   animation: rotate 20s infinite;
   border-radius: 50%;
-  background-color: white;
-  background: linear-gradient(to right, v.$orange, v.$blue);
+  background-color: v.$neutral-00;
+  background: linear-gradient(to right, v.$orange-400, v.$blue-400);
   aspect-ratio: 1;
   height: 20vmax;
 }

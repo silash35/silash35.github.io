@@ -4,7 +4,6 @@
 
 .button {
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
 
@@ -12,39 +11,50 @@
 
   border-radius: v.$borderRadius;
   padding: 0.5rem 1rem;
-  font-weight: 700;
 
+  color: v.$neutral-200;
+
+  font-weight: 700;
   text-wrap: nowrap;
+
+  a {
+    color: v.$neutral-200;
+  }
+
+  svg {
+    fill: v.$neutral-200;
+  }
 }
 
 .contained {
-  background-color: v.$orange;
-  color: v.$white;
-  svg {
-    fill: v.$white;
-  }
-
+  background-color: v.$orange-400;
   @include s.shadow(3, true);
 
   &:hover {
-    background-color: color.adjust(v.$orange, $lightness: -10%);
+    background-color: v.$orange-500;
   }
   &:active {
-    background-color: color.adjust(v.$orange, $lightness: -20%);
+    background-color: v.$orange-600;
   }
 }
 
 .outlined {
-  @extend .text;
-  border: 2px solid rgba(160, 160, 160, 0.2);
+  border: 2px solid v.$transparent-300;
+
+  &:hover {
+    background-color: v.$transparent-100;
+  }
+  &:active {
+    background-color: v.$transparent-200;
+  }
 }
 
 .text {
-  color: color.adjust(v.$blue, $lightness: 35%);
+  color: v.$blue-200;
   &:hover {
-    background-color: #ffffff10;
+    background-color: v.$transparent-100;
   }
   &:active {
-    background-color: #ffffff1a;
+    background-color: v.$transparent-200;
   }
 }

@@ -1,3 +1,5 @@
+@use "variables.module" as v;
+
 @page {
   size: A4;
   margin: 3cm 2cm 2cm 3cm;
@@ -8,14 +10,14 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    background-color: #d1d1d1;
+    background-color: v.$neutral-300;
   }
 }
 
 .page {
-  background-color: #ffffff;
+  background-color: v.$neutral-00;
   padding: 32px;
-  color: #1a1a1a;
+  color: v.$neutral-900;
 
   @media print {
     padding: 0;

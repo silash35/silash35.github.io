@@ -6,7 +6,7 @@
   column-gap: 1.5rem;
   column-count: 2;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     column-count: 1;
   }
 }
@@ -15,7 +15,7 @@
   display: inline-block;
   box-sizing: border-box;
   margin-bottom: 1.5rem;
-  padding: 32px;
+  padding: 16px 32px;
   width: 100%;
 
   line-height: 1.5;
@@ -32,7 +32,11 @@
 
   h2 {
     font-weight: 400;
-    font-size: calc(1.8rem + 1vw);
+    font-size: 2.5rem;
+
+    @media (max-width: 425px) {
+      font-size: 2rem;
+    }
   }
 
   h3 {
@@ -44,12 +48,15 @@
     li {
       padding: 4px 16px;
     }
+    li::marker {
+      color: v.$orange-400;
+    }
   }
 
   a {
-    color: v.$orange;
+    color: v.$orange-400;
     &:visited {
-      color: color.adjust($color: v.$orange, $lightness: 10%);
+      color: v.$orange-300;
     }
   }
 

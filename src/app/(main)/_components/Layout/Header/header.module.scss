@@ -14,7 +14,7 @@
   height: 96px;
 
   @media (max-width: 1023px) {
-    background-color: black;
+    background-color: v.$neutral-1000;
     @include s.shadow(3);
   }
 }
@@ -34,12 +34,12 @@
   li {
     list-style: none;
     &.active > a {
-      color: v.$orange;
+      color: v.$orange-400;
     }
   }
 
   a {
-    color: v.$white;
+    color: v.$neutral-50;
     font-weight: 500;
     font-size: 1.2rem;
     text-decoration: none;
@@ -47,7 +47,7 @@
     text-transform: uppercase;
 
     &:hover {
-      color: v.$orange;
+      color: v.$orange-400;
     }
   }
 
