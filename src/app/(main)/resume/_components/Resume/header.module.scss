@@ -1,11 +1,7 @@
 @use "variables.module" as v;
 @use "helpers/shadow" as s;
 
-.wrapper {
-  display: contents;
-}
-
-.title {
+.header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -15,6 +11,7 @@
   h1 {
     flex-grow: 1;
     margin: 0;
+    margin-bottom: 32px;
     font-weight: 300;
     font-size: calc(1rem + 3.5vw);
     text-align: center;
