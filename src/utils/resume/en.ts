@@ -56,7 +56,7 @@ const resume: ResumeSection[] = [
         ],
         activities: [
           "Leadership and management of the Marketing Department",
-          "Development of the company's new website",
+          "Development of the company’s new website",
           "Design of corporate and promotional materials, including social media content",
         ],
       },
@@ -187,7 +187,7 @@ const resume: ResumeSection[] = [
   },
   {
     title: "Additional Information",
-    topics: ["Valid Brazilian driver's license for passenger cars"],
+    topics: ["Valid Brazilian driver’s license for passenger cars"],
   },
 ];
 
@@ -216,7 +216,7 @@ const resume: ResumeSection[] = [
         ],
         activities: [
           "Leadership and management of the Marketing Department",
-          "Development of the company's new website",
+          "Development of the company’s new website",
           "Design of corporate and promotional materials, including artwork for social media",
         ],
       },

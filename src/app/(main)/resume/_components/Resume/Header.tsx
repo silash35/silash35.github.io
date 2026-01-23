@@ -30,7 +30,7 @@ const Header = () => (
       </li>
       <li>
         <EmailIcon />
-        <a href="mailto:silash35@gmail.com" title="Silas Henrique's e-mail address">
+        <a href="mailto:silash35@gmail.com" title="Silas Henrique’s e-mail address">
           silash35@gmail.com
         </a>
       </li>

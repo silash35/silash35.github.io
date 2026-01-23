@@ -12,7 +12,7 @@ const Social = () => (
     <ul>
       <li>
         <Button variant="outlined" asChild>
-          <Link href="mailto:silash35@gmail.com" title="Silas Henrique's e-mail address">
+          <Link href="mailto:silash35@gmail.com" title="Silas Henrique’s e-mail address">
             <EmailIcon />
             silash35@gmail.com
           </Link>
