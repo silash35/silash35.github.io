@@ -9,10 +9,10 @@ interface Props {
 
 const Layout = ({ children }: Props) => (
   <>
-    <MouseTrailer />
     <Header />
     <Main>{children}</Main>
     <Footer />
+    <MouseTrailer />
   </>
 );
 

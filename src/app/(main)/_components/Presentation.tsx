@@ -12,6 +12,7 @@ const Presentation = () => (
           alt: "Photo of silas Henrique Alves Araújo",
           sizes: "282px",
           width: 256,
+          preload: true,
         }}
         className={styles.image}
       />

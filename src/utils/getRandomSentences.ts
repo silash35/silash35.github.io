@@ -1,5 +1,6 @@
 /* spell-checker: disable */
 const sentences = [
+  "Made with Next.js",
   // "Wibbly wobbly, timey wimey",
   "Allons-y!",
   "Geronimo!",

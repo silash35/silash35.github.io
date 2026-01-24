@@ -1,7 +1,5 @@
 import { MetadataRoute } from "next";
 
-import variables from "@/styles/variables.module.scss";
-
 type Concrete<Type> = {
   [Property in keyof Type]-?: Type[Property];
 };
@@ -37,8 +35,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "My personal website. Here you will find my resume, contact information and some of my projects",
     start_url: "/",
     display: "standalone",
-    background_color: variables.black,
-    theme_color: variables.black,
+    background_color: "black",
+    theme_color: "#f45d22",
     icons: [
       ...normalIcons.map((size) => createIconEntry(size)),
       ...maskableIcons.map((size) => createIconEntry(size, true)),

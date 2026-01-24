@@ -40,7 +40,7 @@ const Header = () => {
     <header className={styles.header}>
       <Link className={styles.logoContainer} href="/" title="Home page">
         <picture>
-          <source media="(min-width: 425px)" srcSet="/logo.svg" />
+          <source height="48" media="(min-width: 425px)" srcSet="/logo.svg" />
           <img alt="Silas Henrique logo" height="48" src="/silas-icon.svg" />
         </picture>
       </Link>

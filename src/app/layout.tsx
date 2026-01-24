@@ -2,9 +2,8 @@ import "@/styles/globals.scss";
 
 import { Viewport } from "next";
 
-import variables from "@/styles/variables.module.scss";
 export const viewport: Viewport = {
-  themeColor: variables.black,
+  themeColor: "black",
 };
 
 import { Ubuntu } from "next/font/google";
@@ -20,7 +19,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: { template: "%s | Silas Henrique", default: "Silas Henrique" },
   description:
-    "Silas Henrique, Electromechanical Technician, developer and Engineering student. Explore my resume, contacts, projects and more.",
+    "Silas Henrique is a Control and Automation Engineering student and front-end developer. Explore his portfolio, resume, and contact information.",
   authors: [{ name: "Silas Henrique Alves Araújo" }],
   metadataBase: new URL(process.env.SITE_URL as string),
   twitter: {
@@ -30,21 +29,13 @@ export const metadata: Metadata = {
     url: process.env.SITE_URL,
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        url: "/card.png",
-        width: 1200,
-        height: 628,
-        alt: "icon of an orange dollar sign with dark gray background",
-      },
-    ],
   },
   icons: {
     shortcut: "/favicon.ico",
     other: {
       rel: "mask-icon",
       url: "/icons/safari-pinned-tab.svg",
-      color: variables.orange,
+      color: "#f45d22",
     },
   },
 };
