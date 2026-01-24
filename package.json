@@ -14,12 +14,11 @@
     "dev": "next dev",
     "build": "next build && next-image-export-optimizer",
     "export": "next export",
-    "analyze": "ANALYZE=true pnpm build",
+    "analyze": "next experimental-analyze",
     "start": "next start",
     "lint": "eslint ./next.config.ts ./src && prettier --check ."
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^16.1.4",
     "@types/node": "^25.0.10",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",

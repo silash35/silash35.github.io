@@ -1,7 +1,6 @@
-import BundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
 
-let nextConfig: NextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
   sassOptions: {
@@ -16,13 +15,5 @@ let nextConfig: NextConfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
   },
 };
-
-if (process.env.ANALYZE === "true") {
-  const withBundleAnalyzer = BundleAnalyzer({
-    enabled: true,
-  });
-
-  nextConfig = withBundleAnalyzer(nextConfig);
-}
 
 export default nextConfig;
