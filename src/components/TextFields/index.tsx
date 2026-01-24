@@ -11,7 +11,7 @@ const Input = ({ label, ...inputProps }: InputProps) => {
     <div className={styles.field}>
       <label className={styles.label}>
         {label}
-        {inputProps?.required && "*"}
+        {inputProps?.required && <span>*</span>}
       </label>
 
       <input className={styles.input} {...inputProps} />

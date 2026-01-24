@@ -27,14 +27,22 @@
 }
 
 .contained {
-  background-color: v.$orange-400;
+  background-color: v.$orange-600;
   @include s.shadow(3, true);
 
+  color: v.$neutral-100;
+  a {
+    color: v.$neutral-100;
+  }
+  svg {
+    fill: v.$neutral-100;
+  }
+
   &:hover {
-    background-color: v.$orange-500;
+    background-color: v.$orange-700;
   }
   &:active {
-    background-color: v.$orange-600;
+    background-color: v.$orange-800;
   }
 }
 
@@ -51,6 +59,7 @@
 
 .text {
   color: v.$blue-200;
+
   &:hover {
     background-color: v.$transparent-100;
   }

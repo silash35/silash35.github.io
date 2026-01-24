@@ -11,6 +11,10 @@
 .label {
   color: v.$transparent-700;
   font-size: 16px;
+
+  span {
+    color: v.$orange-400;
+  }
 }
 
 .input {

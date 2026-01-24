@@ -39,7 +39,7 @@ const Social = () => (
         <Button variant="outlined" asChild>
           <Link href="https://www.linkedin.com/in/silash35/" title="LinkedIn of Silas Henrique">
             <LinkedInIcon />
-            @silash35a
+            @silash35
           </Link>
         </Button>
       </li>

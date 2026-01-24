@@ -33,7 +33,7 @@ const PortfolioCards = () => (
           title="The OPTIMUS Jr. website project on github"
         >
           <GitHubIcon />
-          <span>See project GitHub</span>
+          <span>View on GitHub</span>
         </Item.action>
       </Item.actions>
     </Item>
@@ -60,7 +60,7 @@ const PortfolioCards = () => (
           title="The OpenSOM project on github"
         >
           <GitHubIcon />
-          <span>See project GitHub</span>
+          <span>View on GitHub</span>
         </Item.action>
       </Item.actions>
     </Item>
@@ -83,14 +83,14 @@ const PortfolioCards = () => (
           title="The Qpdf Tools documentation on github"
         >
           <DocumentIcon />
-          <span>Learn More</span>
+          <span>Read Docs</span>
         </Item.action>
         <Item.action
           href="https://github.com/silash35/qpdftools"
           title="The Qpdf Tools project on github"
         >
           <GitHubIcon />
-          <span>See project GitHub</span>
+          <span>View on GitHub</span>
         </Item.action>
       </Item.actions>
     </Item>
@@ -114,7 +114,7 @@ const PortfolioCards = () => (
         </Item.action>
         <Item.action href="https://github.com/silash35/ALIS" title="The ALIS project on github">
           <GitHubIcon />
-          <span>See project GitHub</span>
+          <span>View on GitHub</span>
         </Item.action>
       </Item.actions>
     </Item>
