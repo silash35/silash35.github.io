@@ -6,7 +6,7 @@
 
   gap: 32px;
   margin: 64px;
-  padding: 64px;
+  padding: 32px;
 
   width: 800px;
   max-width: 90vw;
@@ -19,5 +19,9 @@
 
   form {
     display: contents;
+  }
+
+  @media (min-width: 768px) {
+    padding: 64px;
   }
 }

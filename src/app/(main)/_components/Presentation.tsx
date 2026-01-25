@@ -13,6 +13,7 @@ const Presentation = () => (
           sizes: "282px",
           width: 256,
           preload: true,
+          fetchPriority: "high",
         }}
         className={styles.image}
       />

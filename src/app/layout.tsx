@@ -19,13 +19,16 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: { template: "%s | Silas Henrique", default: "Silas Henrique" },
   description:
-    "Silas Henrique is a Control and Automation Engineering student and front-end developer. Explore his portfolio, resume, and contact information.",
+    "Silas Henrique is a Control and Automation Engineering student and software developer. Explore his portfolio, resume, and contact information.",
   authors: [{ name: "Silas Henrique Alves Araújo" }],
   metadataBase: new URL(process.env.SITE_URL as string),
   twitter: {
+    title: "Silas Henrique’s Website",
+    card: "summary_large_image",
     creator: "@silash35",
   },
   openGraph: {
+    title: "Silas Henrique’s Website",
     url: process.env.SITE_URL,
     type: "website",
     locale: "en_US",
